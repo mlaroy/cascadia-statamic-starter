@@ -83,6 +83,7 @@ export default () => ({
 			}, false);
 		}
 
+        // trigger the filtering function on init
         setTimeout( () => {
             this.filterMarkers()
         }, 0 )

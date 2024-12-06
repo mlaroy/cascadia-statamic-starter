@@ -1,11 +1,18 @@
 {
   "resources/css/site.css": {
-    "file": "assets/site-a9d0559c.css",
+    "file": "assets/site-e033f187.css",
     "isEntry": true,
     "src": "resources/css/site.css"
   },
+  "resources/js/site.css": {
+    "file": "assets/site-9b46434c.css",
+    "src": "resources/js/site.css"
+  },
   "resources/js/site.js": {
-    "file": "assets/site-f7e62ddb.js",
+    "css": [
+      "assets/site-9b46434c.css"
+    ],
+    "file": "assets/site-c1352104.js",
     "isEntry": true,
     "src": "resources/js/site.js"
   }
