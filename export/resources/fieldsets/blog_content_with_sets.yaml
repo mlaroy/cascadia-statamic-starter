@@ -1,0 +1,68 @@
+title: 'Blog Content with Sets'
+fields:
+  -
+    handle: bard_content
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - image
+      smart_typography: false
+      save_html: false
+      inline: false
+      toolbar_mode: fixed
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Content
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      sets:
+        content_items:
+          display: 'Content Items'
+          instructions: null
+          icon: null
+          sets:
+            block_quote:
+              display: 'Block Quote'
+              instructions: null
+              icon: text-formatting-quotation
+              fields:
+                -
+                  import: blockquote_set
+            image_carousel:
+              display: 'Image Carousel'
+              instructions: null
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: image_carousel
+            tabbed_content:
+              display: 'Tabbed Content'
+              instructions: null
+              icon: layout-table-column-insert
+              fields:
+                -
+                  import: tabbed_content

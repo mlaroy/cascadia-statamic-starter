@@ -1,0 +1,52 @@
+<footer class="mt-auto py-16 lg:pt-24 bg-surface text-body theme-dark">
+    <div class="container">
+        <div class="grid lg:grid-cols-8 mb-24 gap-16 lg:gap-8">
+            <div class="lg:col-span-2">
+                {{ if brand_assets:light_logo }}
+                    <a href="/" class="font-semibold text-lg">
+                        {{ glide :src="brand_assets:light_logo" width="200" }}
+                            <img src="{{ url }}" alt="{{ alt }}" class="h-16 w-auto">
+                        {{ /glide }}
+                        <span class="sr-only">
+                            {{ site:name }}
+                        </span>
+                    </a>
+                {{ else }}
+                    <a href="/" class="font-semibold text-lg">
+                        {{ site:name }}
+                    </a>
+                {{ /if }}
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Menu</h4>
+                {{ partial:nav.footer }}
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Our Socials</h4>
+                {{ if organization_info:social_links }}
+                    <ul class="list-none flex gap-2">
+                        {{ organization_info:social_links }}
+                            <li>
+                                <a href="{{ link }}" class="underline hover:text-muted transition-colors">
+                                    <span class="size-8 block">
+                                        {{ partial src="svg/{social_platform:value}" }}
+                                    </span>
+                                    <span class="sr-only">{{ social_platform:label }}</span>
+                                </a>
+                            </li>
+                        {{ /organization_info:social_links }}
+                    </ul>
+                {{ /if }}
+            </div>
+            <div class="lg:col-span-2">
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Our Location</h4>
+                <div class="text-sm space-y-2">
+                    <p>{{ organization_info:address }}</p>
+                    <p>{{ organization_info:phone_number }}</p>
+                    <p>{{ organization_info:email }}</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-xs text-center text-body-muted">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>
+    </div>
+</footer>

@@ -1,0 +1,24 @@
+{{ if variant == "inverted" }}
+    {{ variant_class = "button-inverted" }}
+{{ elseif variant == "ghost" }}
+    {{ variant_class = "button-ghost" }}
+
+{{ elseif variant == "link" }}
+    {{ variant_class = "text-link underline hover:text-link-hover" }}
+{{ else }}
+    {{ variant_class = "button" }}
+{{ /if }}
+
+{{ if size == "small" }}
+    {{ size_class = "button-small" }}
+{{ else }}
+    {{ size_class = "" }}
+{{ /if }}
+
+<a href="{{ href }}" class="{{ variant_class}} {{ size_class }}">
+    {{ if text }}
+        {{ text }}
+    {{ else }}
+        {{ slot }}
+    {{ /if }}
+</a>

@@ -1,0 +1,22 @@
+tree:
+  -
+    id: b479db84-687f-4931-8d7f-1fe42be59dd6
+    title: Company
+    url: /about
+    children:
+      -
+        id: cb5d2f05-e019-472c-839a-2d8df5bc0d0b
+        title: 'About Page'
+        url: about
+  -
+    id: 7b9ddfe9-b876-4219-b520-bc4577d14238
+    title: Blog
+    url: /blog
+  -
+    id: e4630760-e5c0-4b55-b19e-83ca01992362
+    title: Contact
+    url: /contact
+  -
+    id: ec7294c8-ac1b-4e69-a1c7-6060437e591c
+    title: Team
+    url: /team

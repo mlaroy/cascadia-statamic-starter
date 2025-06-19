@@ -1,0 +1,70 @@
+{{#
+    @name Form
+    @desc The form page builder block.
+    @set page.page_builder.form
+#}}
+
+<!-- /page_builder/_form.antlers.html -->
+{{ partial:page_builder/block }}
+<div class="contact-form-container py-16 lg:py-24 bg-white">
+    <div class="container">
+        <div class="max-w-xl" x-data="contactForm">
+            <h2 class="mb-4 font-bold text-xl lg:text-2xl">Get in touch</h2>
+
+            {{# Render form and use Alpine based Statamic conditional logic. #}}
+            {{ if contact_form }}
+                {{ form:contact attr:x-ref="form" attr:@submit.prevent="submitForm" }}
+
+                    <template x-if="errors.length">
+                        <div class="p-4 bg-red-600 rounded shadow text-white font-semibold mb-8">
+                            <p class="flex items-center gap-4">
+                                <span>
+                                    ⚠️
+                                </span>
+                                <span>
+                                    There were some errors with your submission:
+                                </span>
+                            </p>
+                            <ul class="list-disc list-inside mt-4">
+                                <template x-for="error in errors">
+                                    <li x-text="error"></li>
+                                </template>
+                            </ul>
+                        </div>
+                    </template>
+
+                    <template x-if="success">
+                        <div class="p-4 bg-green-600 rounded shadow text-white font-semibold mb-8">
+                            <p>
+                                Thanks for your submission!
+                            </p>
+                        </div>
+                    </template>
+
+                    <label class="input-wrap relative flex flex-col gap-2">
+                        <span class="block text-sm font-semibold">Name</span>
+                        <input type="text" x-model="formData.name" name="name" placeholder="Name" value="{{ old:name }}" class="p-2 border rounded border-stone-200 inline-block">
+                    </label>
+
+                    <label class="input-wrap relative flex flex-col gap-2 mt-4">
+                        <span class="block text-sm font-semibold">Email</span>
+                        <input type="email" name="email" x-model="formData.email" placeholder="Email"  value="{{ old:email }}" class="p-2 border rounded border-stone-200 inline-block">
+                    </label>
+
+                    <div class="input-wrap relative mt-4">
+                        <label for="message" class="block text-sm font-semibold">Message</label>
+                        <textarea id="message" x-model="formData.message" name="message" placeholder="Message" class="p-2 block w-full border rounded border-stone-200 h-24">
+                            {{ old:message }}
+                        </textarea>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" name="submit" class="button cursor-pointer">Submit</button>
+                    </div>
+                {{ /form:contact }}
+            {{ /if }}
+        </div>
+    </div>
+</div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_form.antlers.html -->

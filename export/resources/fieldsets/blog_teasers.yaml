@@ -1,0 +1,29 @@
+title: 'Blog Teaser'
+fields:
+  -
+    handle: heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Heading
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: blog_posts
+    field:
+      max_items: 3
+      mode: default
+      create: true
+      collections:
+        - blog
+      type: entries
+      display: 'Blog Posts'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

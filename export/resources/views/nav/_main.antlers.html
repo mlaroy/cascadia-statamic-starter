@@ -1,0 +1,136 @@
+<nav id="main-nav">
+    <button type="button" @click="toggleMenu" class="flex lg:hidden gap-2 items-center">
+        <span>Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+        </svg>
+    </button>
+    <div class="nav-container-desktop">
+        {{# Desktop Nav #}}
+        <ul class="gap-6 items-center justify-end hidden lg:flex">
+            {{ nav:main_nav }}
+                {{ if children }}
+                <li x-data="{
+                    open: false,
+                    toggle() {
+                        if (this.open) {
+                            return this.close()
+                        }
+
+                        this.$refs.button.focus()
+
+                        this.open = true
+                    },
+                    close(focusAfter) {
+                        if (! this.open) return
+
+                        this.open = false
+
+                        focusAfter && focusAfter.focus()
+                    }
+                }"
+                x-on:keydown.escape.prevent.stop="close($refs.button)"
+                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                x-id="['dropdown-button']"
+                class="relative">
+                    <button
+                        x-ref="button"
+                        x-on:click="toggle()"
+                        :aria-expanded="open"
+                        :aria-controls="$id('dropdown-button')"
+                        class="focus:outline-none focus-visible:ring-2 ring-primary flex items-center gap-2 {{ is_current || is_parent ? 'underline' : '' }}">
+                        {{ title }}
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div
+                        x-ref="panel"
+                        x-show="open"
+                        x-cloak
+                        x-on:click.outside="close($refs.button)"
+                        x-transition.origin.top.left
+                        class="absolute left-0 mt-2 w-40 z-10 bg-white text-slate-800 px-4 py-3 rounded-sm shadow"
+                    >
+                        <ul>
+                            {{ children }}
+                                <li class="py-1"><a href="/{{ url }}">{{ title }}</a></li>
+                            {{ /children }}
+                        </ul>
+                    </div>
+                </li>
+                {{ else }}
+                <li>
+                    <a href="{{ url }}" class="focus:outline-none focus-visible:ring-2 ring-primary {{ is_current || is_parent ? 'underline' : '' }}">
+                        {{ title }}
+                    </a>
+                </li>
+                {{ /if }}
+
+            {{ /nav:main_nav }}
+            {{ if site_config:show_secondary_nav && site_config:secondary_nav_location == 'off_canvas' }}
+                <button @click="isOffcanvasOpen = !isOffcanvasOpen">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            {{ /if }}
+        </div>
+        </ul>
+    </div>
+
+    {{# Mobile Nav #}}
+    <div class="nav-container-mobile lg:hidden w-screen h-screen fixed top-0 left-0 z-50 bg-white text-slate-800" x-show="isMenuOpen" x-transition x-trap="isMenuOpen">
+        <div class="container relative pt-8">
+            <div class="flex justify-between">
+
+                {{ if brand_assets:dark_logo }}
+                    <a href="/" class="font-semibold text-lg">
+                        {{ glide :src="brand_assets:dark_logo" width="200" }}
+                            <img src="{{ url }}" alt="{{ alt }}" class="h-12 w-auto">
+                        {{ /glide }}
+                        <span class="sr-only">
+                            {{ site:name }}`
+                        </span>
+                    </a>
+                {{ /if }}
+                <button type="button" @click="toggleMenu" class="flex gap-2 items-center ml-auto">
+                    <span>Close</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="justify-start flex flex-col mt-8">
+                {{ nav:main_nav }}
+                    <li x-data="{ isItemOpen: false }" class="menu-item relative py-2">
+                        {{ if children }}
+                            <button @click="isItemOpen = !isItemOpen" class="focus:outline-none focus-visible:ring-2 ring-primary flex justify-between items-center gap-2 w-full {{ is_current || is_parent ? 'underline' : '' }}">
+                                {{ title }}
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div x-show="isItemOpen" class="menu-item-children">
+                                <ul>
+                                    {{ children }}
+                                        <li class="py-2"><a href="{{ url }}">{{ title }}</a></li>
+                                    {{ /children }}
+                                </ul>
+                            </div>
+                        {{ else }}
+                            <a href="{{ url }}" class="focus:outline-none focus-visible:ring-2 ring-primary {{ is_current || is_parent ? 'underline' : '' }}">
+                                {{ title }}
+                            </a>
+                        {{ /if }}
+                    </li>
+                {{ /nav:main_nav }}
+            </ul>
+        </div>
+    </div>
+</nav>

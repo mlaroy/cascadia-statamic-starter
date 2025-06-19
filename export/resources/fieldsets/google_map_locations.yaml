@@ -1,0 +1,106 @@
+title: 'Google Map Locations'
+fields:
+  -
+    handle: locations
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            location_info:
+              display: 'Location Info'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Name
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: longitude
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Longitude
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: latitude
+                  field:
+                    input_type: text
+                    antlers: false
+                    type: text
+                    display: Latitude
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: short_description
+                  field:
+                    restrict: false
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - quote
+                      - link
+                      - image
+                      - table
+                    automatic_line_breaks: true
+                    automatic_links: false
+                    escape_markup: false
+                    heading_anchors: false
+                    smartypants: false
+                    table_of_contents: false
+                    antlers: false
+                    type: markdown
+                    display: 'Short Description'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: location_type
+                  field:
+                    max_items: 1
+                    mode: default
+                    create: true
+                    taxonomies:
+                      - location_types
+                    type: terms
+                    display: 'Location Type'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: Locations
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

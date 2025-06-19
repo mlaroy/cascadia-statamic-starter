@@ -1,0 +1,105 @@
+@theme {
+
+    /* main theme */
+    --color-body: var(--color-stone-950);
+    --color-body-muted: var(--color-muted-dark);
+
+    --color-heading: var(--color-body);
+
+    --color-surface: var(--color-white);
+    --color-surface-muted: var(--color-light);
+
+    --color-surface-inverted: var(--color-dark);
+    --color-surface-inverted-muted: var(--color-muted-dark);
+
+    --color-border: var(--color-muted-base);
+    --color-border-muted: var(--color-muted-dark);
+
+    --color-link: var(--color-accent);
+    --color-link-hover: var(--color-highlight);
+
+    --color-button: var(--color-surface);
+    --color-button-bg: var(--color-accent);
+
+    --color-button-inverted: var(--color-body);
+    --color-button-inverted-bg: var(--color-soft);
+    --color-button-inverted-hover: var(--color-muted-dark);
+
+    --color-button-ghost: var(--color-body);
+    --color-button-ghost-bg: transparent;
+    --color-button-ghost-hover: var(--color-accent);
+
+}
+
+.theme-muted {
+    --color-surface: var(--color-light);
+}
+
+/* Dark theme override */
+.theme-dark {
+    --color-body: var(--color-light);
+    --color-body-muted: var(--color-soft);
+
+    --color-heading: var(--color-body);
+
+    --color-surface: var(--color-dark);
+    --color-surface-muted: var(--color-accent-dark);
+
+    --color-surface-inverted: var(--color-light);
+    --color-surface-inverted-muted: var(--color-soft);
+
+    --color-border: var(--color-muted-dark);
+    --color-border-muted: var(--color-muted-dark);
+
+    --color-link: var(--color-highlight);
+    --color-link-hover: var(--color-accent);
+
+    --color-button: var(--color-surface-inverted);
+    /* --color-button-bg: var(--color-accent); */
+
+    --color-button-inverted: var(--color-surface);
+
+    --color-button-ghost: var(--color-body);
+    --color-button-ghost-bg: transparent;
+    --color-button-ghost-hover: var(--color-soft);
+}
+
+/* Accent theme override */
+.theme-accent {
+    --color-body: var(--color-light);
+    --color-body-muted: var(--color-soft);
+
+    --color-surface: var(--color-accent);
+    --color-surface-muted: var(--color-highlight);
+
+    --color-surface-inverted: var(--color-light);
+    --color-surface-inverted-muted: var(--color-soft);
+
+    --color-border: var(--color-accent-dark);
+    --color-border-muted: var(--color-muted-dark);
+
+    --color-link: var(--color-light);
+    --color-link-hover: var(--color-accent);
+
+    --color-button: var(--color-highlight);
+    --color-button-bg: var(--color-dark);
+    --color-button-inverted: var(--color-surface);
+
+    --color-button-ghost: var(--color-body);
+    --color-button-ghost-bg: transparent;
+    --color-button-ghost-hover: var(--color-soft);
+}
+
+.theme-accent-text {
+    --color-heading: var(--color-accent);
+}
+
+
+[class^="bg-"],
+[class^="text-"] {
+    @apply transition-colors duration-200;
+}
+
+.text-heading {
+    @apply mb-8 md:mb-12;
+}

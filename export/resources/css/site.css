@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+    /* Color palette */
+    --color-dark: #132b25;            /* deep green base */
+    --color-accent-dark: #184a40;     /* rich pine green */
+    --color-accent: #2f7e6b;          /* vibrant moss green */
+    --color-highlight: #55bfa2;       /* minty accent highlight */
+    --color-muted-dark: #64706b;      /* muted deep green-gray */
+    --color-muted-base: #98a29e;      /* soft gray-green */
+    --color-soft: #dbe8e4;            /* soft pastel background */
+    --color-light: #f3f9f7;           /* nearly white green-tinted */
+}
+
+@import "./theme/theme.css";
+@import "./theme/config.css";
+@import "./theme/components.css";
+@import "./utils/animations.css";
+@plugin "@tailwindcss/typography";
+
+/* This is all you. */
+
+/**
+* @Alpine
+* Hide cloaked elements
+*/
+[x-cloak] {
+    display: none;
+}
+
+/* Vimeo Embed */
+#player iframe {
+    @apply w-full h-full absolute top-0 left-0;
+}
+
+#youtube-player iframe {
+    @apply w-full h-full absolute top-0 left-0 object-cover pointer-events-none border-none;
+}
+
+#youtube-player {
+    @apply scale-150 origin-center;
+}
+
+
+.form-field input {
+    @apply px-4 leading-[2.4rem];
+}

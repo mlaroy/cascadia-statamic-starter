@@ -1,0 +1,15 @@
+title: Team
+template: team/show
+layout: layout
+mount: 6aee559e-fc5c-489d-b30c-309d28773733
+revisions: false
+route: '{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

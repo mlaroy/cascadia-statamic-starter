@@ -1,0 +1,32 @@
+<div class="container mt-8 pb-16" id="article-content">
+    <div class="mx-auto text-center py-12">
+        <h1 class="text-xl md:text-3xl lg:text-5xl font-bold text-heading mb-2">{{ title }}</h1>
+        <time class="text-xs mt-4 text-body-muted mb-2">{{ date }}</time>
+        <p class="text-body text-base">By: {{ author:name }}</p>
+
+        <ul class="inline-flex gap-2 mx-auto mt-4">
+            {{ categories }}
+                <li>
+                    {{ partial:components.button href="/categories/{{ slug }}" :text="title" variant="primary" size="small" }}
+                </li>
+            {{ /categories }}
+        </ul>
+    </div>
+
+    <figure class="relative overflow-hidden aspect-video mt-8 mx-auto max-w-7xl">
+        {{ glide :src="image" width="1200" height="800" }}
+            <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full">
+        {{ /glide }}
+    </figure>
+    <article class="mx-4 lg:mx-auto max-w-4xl lg:max-w-7xl -mt-24 z-10 relative ">
+        <div class="prose lg:prose-xl w-full bg-surface-muted p-8 lg:p-16 mx-auto relative shadow-md rounded">
+            {{ bard_content }}
+                {{ partial src="sets/{type}" }}
+            {{ /bard_content }}
+
+            <div class="mt-4 bg-surface p-4 rounded not-prose">
+                <p class="text-body text-base">{{ author:name }}</p>
+            </div>
+        </div>
+    </article>
+</div>

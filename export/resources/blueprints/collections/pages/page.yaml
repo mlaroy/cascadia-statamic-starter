@@ -1,0 +1,94 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: General
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              localizable: true
+              listable: true
+              display: Title
+              validate:
+                - required
+      -
+        display: 'Page Config'
+        fields:
+          -
+            handle: main_header_style
+            field:
+              options:
+                -
+                  key: default
+                  value: Default
+                -
+                  key: transparent
+                  value: Transparent
+              default: default
+              type: radio
+              display: 'Main Header Style'
+              inline: true
+          -
+            handle: show_page_title
+            field:
+              type: toggle
+              display: 'Show Page Title'
+          -
+            handle: use_banner
+            field:
+              inline_label: 'Use banner'
+              inline_label_when_true: 'Uses banner'
+              type: toggle
+              display: 'Use Banner'
+              if:
+                show_page_title: 'equals true'
+          -
+            handle: banner
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              type: assets
+              display: Banner
+              if:
+                use_banner: 'equals true'
+                show_page_title: 'equals true'
+      -
+        display: 'Page builder'
+        fields:
+          -
+            import: page_builder
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: Meta
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+              display: Slug
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
+              display: Parent
+      -
+        display: SEO
+        fields:
+          -
+            import: seo_fields

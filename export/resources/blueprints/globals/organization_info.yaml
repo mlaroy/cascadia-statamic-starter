@@ -1,0 +1,29 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Location
+        fields:
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Address
+          -
+            handle: phone_number
+            field:
+              input_type: tel
+              type: text
+              display: 'Phone Number'
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: Email
+      -
+        display: Socials
+        fields:
+          -
+            import: social_links

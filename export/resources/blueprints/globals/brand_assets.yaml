@@ -1,0 +1,33 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: dark_logo
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              type: assets
+              display: 'Dark Logo'
+              width: 50
+          -
+            handle: light_logo
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              type: assets
+              display: 'Light Logo'
+              width: 50
+          -
+            handle: favicon
+            field:
+              max_files: 1
+              mode: grid
+              container: assets
+              type: assets
+              display: Favicon
+              width: 50

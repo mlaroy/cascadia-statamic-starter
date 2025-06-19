@@ -1,0 +1,30 @@
+{{ partial:components/page_header }}
+
+<div class="container mt-8 pb-16">
+
+    <ul class="inline-flex gap-2 mt-4">
+        {{ taxonomy:categories }}
+            <li>
+                <a href="{{ url }}" class="button button-small">
+                    {{ title }}
+                </a>
+            </li>
+        {{ /taxonomy:categories }}
+    </ul>
+
+
+    {{ collection:blog as="posts" paginate="true" limit="1" sort="date:desc" on_each_side="1"  }}
+        <ul class="list-none text-lg lg:text-xl mt-8 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            {{ posts }}
+                <li>
+                    {{ partial:blog.teaser }}
+                </li>
+            {{ /posts }}
+
+        </ul>
+
+        <div class="mt-8">
+            {{ partial:/components/pagination }}
+        </div>
+    {{ /collection:blog }}
+</div>

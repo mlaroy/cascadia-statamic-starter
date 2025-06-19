@@ -1,0 +1,16 @@
+<article class="bg-surface-muted">
+    <a href="{{ url }}" class="aspect-video overflow-hidden relative block">
+        {{ glide :src="image" width="800" height="600" }}
+            <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300">
+        {{ /glide }}
+    </a>
+    <div class="blog-teaser-content p-4">
+        {{# <p>{{ has_timestamp }}</p> #}}
+        <time class="text-sm block mb-2 text-body-muted">{{ date }}</time>
+        <h3 class="text-xl lg:text-2xl font-semibold mb-2 text-body">
+            <a href="{{ url }}">{{ title }}</a>
+        </h3>
+        {{# <div class="text-gray-600 text-sm">{{ bard_content | truncate(150, '...') }}</div> #}}
+        <a href="{{ url }}" class="underline text-link text-sm">Read More</a>
+    </div>
+</article>

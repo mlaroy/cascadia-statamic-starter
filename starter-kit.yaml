@@ -9,7 +9,6 @@ export_paths:
   - resources/fieldsets
   - public
   - package.json
-  - tailwind.config.js
   - vite.config.js
   - cascadia-kit.jpg
   - readme.md

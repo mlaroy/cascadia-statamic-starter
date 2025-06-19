@@ -1,0 +1,58 @@
+{{ if site_config:show_secondary_nav && site_config:secondary_nav_location == 'top' }}
+    <div class="py-2 bg-slate-200">
+        <div class="container">
+            <ul class="flex justify-end gap-2 text-xs items-center">
+                {{ partial:nav.secondary}}
+            </ul>
+        </div>
+    </div>
+{{ /if }}
+{{ if site_config:show_secondary_nav && site_config:secondary_nav_location == 'off_canvas' }}
+    {{ partial:nav.off_canvas }}
+{{ /if }}
+
+{{ $header_styles = main_header_style == 'transparent' ? 'py-8 lg:pt-8 lg:pb-16 absolute left-0 w-full z-10 top-0 text-white bg-gradient-to-b from-black/60 to-transparent will-change-transform' : 'py-4 lg:py-8' }}
+
+<header class="{{ $header_styles }} {{ $top }}" x-ref="header"
+    {{ if main_header_style == 'transparent' }}
+    :class="[
+        notificationBarVisible ? 'translate-y-[40px]' : 'translate-y-0',
+        transitionEnabled ? 'transition-transform duration-300' : ''
+    ]"
+    {{ /if }}
+>
+    <div class="container">
+        <div class="flex justify-between items-center">
+            <div>
+                <h1>
+                    {{ if main_header_style !== 'transparent' && brand_assets:dark_logo }}
+                        <a href="/" class="font-semibold text-lg">
+                            {{ glide :src="brand_assets:dark_logo" width="200" }}
+                                <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto">
+                            {{ /glide }}
+                            <span class="sr-only">
+                                {{ site:name }}`
+                            </span>
+                        </a>
+                    {{ elseif main_header_style == 'transparent' && brand_assets:light_logo }}
+                        <a href="/" class="font-semibold text-lg">
+                            {{ glide :src="brand_assets:light_logo" width="200" }}
+                                <img src="{{ url }}" alt="{{ alt }}" class="h-12 lg:h-16 w-auto">
+                            {{ /glide }}
+                            <span class="sr-only">
+                                {{ site:name }}`
+                            </span>
+                        </a>
+                    {{ else }}
+                        <a href="/" class="font-semibold text-lg">
+                            {{ site:name }}
+                        </a>
+                    {{ /if }}
+                </h1>
+            </div>
+            <div>
+                {{ partial:nav.main }}
+            </div>
+        </div>
+    </div>
+</header>

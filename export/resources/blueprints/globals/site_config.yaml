@@ -1,0 +1,34 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: show_secondary_nav
+            field:
+              default: false
+              type: toggle
+              display: 'Show Secondary Nav'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: secondary_nav_location
+            field:
+              options:
+                top: Top
+                off_canvas: 'Off Canvas'
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: 'Secondary Nav Location'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                show_secondary_nav: 'equals true'

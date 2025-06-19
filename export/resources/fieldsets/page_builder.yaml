@@ -1,0 +1,237 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      hide_display: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      sets:
+        interactive:
+          display: Interactive
+          instructions: 'Interactive blocks.'
+          icon: programming-script-code
+          sets:
+            blog_teaser:
+              display: 'Blog Teaser'
+              icon: content-book-open
+              fields:
+                -
+                  import: theme
+                -
+                  import: blog_teasers
+            google_map:
+              display: 'Google Map'
+              icon: travel-map
+              fields:
+                -
+                  import: theme
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  import: google_map_locations
+            tabs_explorer:
+              display: 'Tabs Explorer'
+              icon: layout-header-sidebar-left
+              fields:
+                -
+                  import: theme
+                -
+                  import: side_tabs_explorer
+            image_carousel:
+              display: 'Image Carousel'
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: theme
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  import: image_carousel
+            contact_form:
+              display: 'Contact Form'
+              icon: form-text-field
+              fields:
+                -
+                  import: theme
+                -
+                  handle: contact_form
+                  field:
+                    max_items: 1
+                    type: form
+                    display: 'Contact Form'
+        text:
+          display: Text
+          instructions: 'Text based blocks.'
+          icon: text-formatting-initial-letter
+          sets:
+            hero:
+              display: Hero
+              icon: align-object-top
+              fields:
+                -
+                  import: theme
+                -
+                  handle: main_heading
+                  field:
+                    type: text
+                    display: 'Main Heading'
+                -
+                  handle: sub_heading
+                  field:
+                    type: text
+                    display: 'Sub Heading'
+                -
+                  handle: background_option
+                  field:
+                    options:
+                      -
+                        key: image
+                        value: Image
+                      -
+                        key: video
+                        value: Video
+                    default: image
+                    type: radio
+                    display: 'Background Media'
+                    inline: true
+                    width: 50
+                -
+                  handle: video_source
+                  field:
+                    options:
+                      -
+                        key: vimeo
+                        value: Vimeo
+                      -
+                        key: youtube
+                        value: YouTube
+                      -
+                        key: asset
+                        value: 'Video Asset'
+                    default: vimeo
+                    type: radio
+                    display: 'Video Source'
+                    inline: true
+                    width: 50
+                    if:
+                      background_option: 'equals video'
+                -
+                  handle: background_image
+                  field:
+                    container: assets
+                    type: assets
+                    display: 'Background Image'
+                    if:
+                      background_option: 'equals image'
+                -
+                  handle: vimeo_id
+                  field:
+                    placeholder: '449787858'
+                    type: text
+                    display: 'Vimeo ID'
+                    if:
+                      background_option: 'equals video'
+                      video_source: 'equals vimeo'
+                -
+                  handle: youtube_id
+                  field:
+                    placeholder: dQw4w9WgXcQ
+                    type: text
+                    display: 'YouTube ID'
+                    if:
+                      background_option: 'equals video'
+                      video_source: 'equals youtube'
+                -
+                  handle: video_file
+                  field:
+                    max_files: 1
+                    mode: grid
+                    container: assets
+                    type: assets
+                    display: 'Video File'
+                    if:
+                      background_option: 'equals video'
+                      video_source: 'equals asset'
+                -
+                  handle: cta_link
+                  field:
+                    max_items: 1
+                    collections:
+                      - pages
+                    type: entries
+                    display: 'CTA Link'
+                    width: 50
+                -
+                  handle: cta_text
+                  field:
+                    placeholder: 'Learn more'
+                    type: text
+                    display: 'CTA Text'
+                    width: 50
+                -
+                  handle: show_modal
+                  field:
+                    type: toggle
+                    display: 'Show Modal Items?'
+                -
+                  import: modal_popup
+                -
+                  handle: darken_bg
+                  field:
+                    type: toggle
+                    display: 'Darken BG'
+                    instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'
+            intro:
+              display: Intro
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: theme
+                -
+                  import: intro_section
+            accordion:
+              display: Accordion
+              fields:
+                -
+                  import: theme
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  import: accordion
+            fifty_split:
+              display: '50/50 Split'
+              icon: layout-split-verical
+              fields:
+                -
+                  import: theme
+                -
+                  import: fifty_split
+            cta_bumper:
+              display: 'CTA Bumper'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: theme
+                -
+                  import: cta_bumper
+            callout_grid:
+              display: 'Callout Grid'
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: theme
+                -
+                  import: callout_grid

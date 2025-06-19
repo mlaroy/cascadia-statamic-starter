@@ -1,0 +1,46 @@
+title: 'Image Carousel'
+fields:
+  -
+    handle: images
+    field:
+      max_files: 8
+      mode: grid
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Images
+      instructions: "Max 8 images, so that it doesn't get too unwieldy!"
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: auto_play
+    field:
+      default: false
+      type: toggle
+      display: 'Auto Play'
+      instructions: 'Enable to auto play carousel'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      width: 50
+  -
+    handle: show_index
+    field:
+      default: false
+      type: toggle
+      display: 'Show Index'
+      instructions: 'Toggle to display current index, and total number of images'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

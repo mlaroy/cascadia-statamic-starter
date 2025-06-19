@@ -1,0 +1,65 @@
+title: 'Social Links'
+fields:
+  -
+    handle: social_links
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            social_link:
+              display: 'Social Link'
+              instructions: null
+              icon: null
+              fields:
+                -
+                  handle: social_platform
+                  field:
+                    options:
+                      linkedin: LinkedIn
+                      facebook: Facebook
+                      instagram: Instagram
+                      twitter: X/Twitter
+                      youtube: YouTube
+                      pinterest: Pinterest
+                      threads: Threads
+                      tiktok: TikTok
+                    taggable: false
+                    push_tags: false
+                    multiple: false
+                    clearable: false
+                    searchable: true
+                    cast_booleans: false
+                    type: select
+                    display: 'Social Platform'
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                -
+                  handle: link
+                  field:
+                    input_type: url
+                    antlers: false
+                    type: text
+                    display: Link
+                    width: 50
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+      type: replicator
+      display: 'Social Links'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

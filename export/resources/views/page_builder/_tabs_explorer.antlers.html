@@ -1,0 +1,57 @@
+{{#
+    @name Blog Teaser
+    @desc The Blog Teaser page builder block.
+    @set page.page_builder.blog_teaser
+#}}
+
+<!-- /page_builder/_blog_teaser.antlers.html -->
+{{ partial:page_builder/block }}
+    <div class="tabs-explorer py-16 lg:py-24 bg-surface">
+        <div class="container">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-heading">{{ heading }}</h2>
+
+            <div class="grid lg:grid-cols-6 gap-12" x-data="{ activeItem: 0 }">
+                <div class="lg:col-span-2 divide-y ">
+                    {{ tab_items }}
+                        <h4 class="py-4">
+                            <button
+                                @click="activeItem = {{ index }}"
+                                class="flex items-center justify-between w-full text-lg lg:text-xl text-body hover:text-body-muted"
+                                :class="{ 'underline': activeItem == {{ index }} }"
+                                aria-controls="tab-{{ index }}"
+                            >
+                                {{ title }}
+                                <span class="inline-block ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+
+                                </span>
+                            </button>
+                        </h4>
+                    {{ /tab_items }}
+                </div>
+                <div class="lg:col-span-4 relative">
+                    {{ tab_items }}
+                        <div
+                            id="tab-{{ index }}"
+                            :aria-expanded="activeItem == {{ index }}"
+                            x-cloak
+                            x-show="activeItem == {{ index }}"
+                            class="transition-opacity animate-fade-in"
+                            >
+                            <div class="relative overflow-hidden aspect-video mb-4 opacity-100">
+                                {{ glide :src="image" width="1000" height="700" }}
+                                    <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 block">
+                                {{ /glide }}
+                            </div>
+                            <h4 class="text-xl lg:text-2xl font-semibold mb-4 text-heading">{{ title }}</h4>
+                            <div class="text-muted">{{ description }}</div>
+                        </div>
+                    {{ /tab_items }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_cards.antlers.html -->

@@ -1,0 +1,49 @@
+[class^="button"] {
+    @apply px-3 py-2 md:px-4 md:py-2 text-sm md:text-base font-semibold border inline-flex items-center justify-center rounded cursor-pointer transition-colors;
+}
+
+.button {
+    /* @apply px-4 py-2 rounded text-center inline-block cursor-pointer transition-colors; */
+    color: var(--color-button);
+    background-color: var(--color-button-bg);
+    border: 1px solid var(--color-button-bg);
+
+    &:hover,
+    &:focus {
+        color: var(--color-surface);
+        background-color: var(--color-highlight);
+        border-color: var(--color-highlight);
+    }
+
+}
+
+.button-inverted {
+    /* @apply px-4 py-2 rounded font-semibold text-center inline-block cursor-pointer transition-colors; */
+    color: var(--color-button-inverted);
+    background-color: var(--color-button-inverted-bg);
+    border: 1px solid var(--color-button-inverted-bg);
+
+    &:hover,
+    &:focus {
+        color: var(--color-surface);
+        background-color: var(--color-button-inverted-hover);
+        border-color: var(--color-button-inverted-hover);
+    }
+}
+
+.button-ghost {
+    @apply bg-transparent;
+    color: var(--color-button-ghost);
+    border-color: var(--color-button-ghost);
+
+    &:hover,
+    &:focus {
+        color: var(--color-surface);
+        background-color: var(--color-button-ghost-hover);
+        border-color: var(--color-butto-ghost-hover);
+    }
+}
+
+.button-small {
+    @apply px-2 py-1 text-xs;
+}

@@ -1,0 +1,30 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "kit:export": "php please starter-kit:export ../starter-kit-tailwind-alpine"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.7",
+        "@tailwindcss/typography": "^0.5.16",
+        "@tailwindcss/vite": "^4.1.7",
+        "autoprefixer": "^10.4.21",
+        "laravel-vite-plugin": "^1.2.0",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^4.1.7",
+        "vite": "^6.3.5"
+    },
+    "dependencies": {
+        "@alpinejs/collapse": "^3.14.9",
+        "@alpinejs/focus": "^3.14.9",
+        "@alpinejs/intersect": "^3.14.9",
+        "@alpinejs/ui": "^3.14.9",
+        "@splidejs/splide": "^4.1.4",
+        "@vimeo/player": "^2.27.1",
+        "alpinejs": "^3.14.9",
+        "laravel-precognition-alpine": "^0.5.6",
+        "lodash": "^4.17.21"
+    }
+}

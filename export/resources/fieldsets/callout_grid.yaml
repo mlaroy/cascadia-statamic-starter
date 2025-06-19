@@ -1,0 +1,36 @@
+title: 'Callout Grid'
+fields:
+  -
+    handle: callout_item
+    field:
+      max_rows: 4
+      min_rows: 2
+      type: grid
+      display: 'Callout Item'
+      fields:
+        -
+          handle: grid_image
+          field:
+            max_files: 1
+            mode: grid
+            container: assets
+            type: assets
+            display: 'Grid Image'
+        -
+          handle: grid_headline
+          field:
+            type: text
+            display: Headline
+        -
+          handle: grid_content
+          field:
+            buttons:
+              - bold
+              - italic
+              - unorderedlist
+              - orderedlist
+              - removeformat
+              - anchor
+            remove_empty_nodes: false
+            type: bard
+            display: Content

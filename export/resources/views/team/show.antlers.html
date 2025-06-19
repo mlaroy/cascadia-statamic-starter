@@ -1,0 +1,44 @@
+{{ partial:components/page_header }}
+
+<div class="container">
+    <div class="grid grid-cols-8 gap-16">
+        <div class="col-span-8 lg:col-span-3">
+            {{ glide :src="headshot" width="800" height="600" }}
+                <img src="{{ url }}" alt="{{ alt }}" class="block">
+            {{ /glide }}
+        </div>
+        <div class="col-span-8 lg:col-span-5 pb-16">
+            <h1 class="text-3xl lg:text-4xl font-semibold mb-4">{{ title }}</h1>
+            <div class="prose prose-xl prose-p:text-body-muted">
+                {{ content }}
+            </div>
+            <div class="mt-8">
+                {{ if position }}
+                    <p class="font-semibold text-body-muted-dark">{{ position }}</span>
+                {{ /if }}
+                {{ if email }}
+                    <p class="text-sm text-slate-900/80">
+                        <a href="mailto:{{ email }}" class="text-link hover:text-link-hover transition">
+                            {{ email }}
+                        </a>
+                    </p>
+                {{ /if }}
+
+                {{ if social_links }}
+                    <ul class="flex gap-4 mt-4">
+                        {{ social_links }}
+                            <li>
+                                <a href="{{ link }}" class="underline text-body-muted hover:text-muted-dark">
+                                    <span class="size-8 block">
+                                        {{ partial src="svg/{social_platform:value}" }}
+                                    </span>
+                                    <span class="sr-only">{{ social_platform:label }}</span>
+                                </a>
+                            </li>
+                        {{ /social_links }}
+                    </ul>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+{{ partial:components/page_header }}
+
+<div class="container mt-8 pb-16">
+
+    {{ collection:team as="posts" }}
+        <ul class="list-none text-lg lg:text-xl mt-8 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            {{ posts }}
+                <li>
+                    {{ partial:team.teaser }}
+                </li>
+            {{ /posts }}
+
+        </ul>
+    {{ /collection:team }}
+</div>

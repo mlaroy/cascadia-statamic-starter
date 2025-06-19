@@ -1,0 +1,70 @@
+title: 'CTA Bumper'
+fields:
+  -
+    handle: cta_heading
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'CTA Heading'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: short_description
+    field:
+      restrict: false
+      buttons:
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - quote
+        - link
+        - image
+        - table
+      automatic_line_breaks: true
+      automatic_links: false
+      escape_markup: false
+      heading_anchors: false
+      smartypants: false
+      table_of_contents: false
+      antlers: false
+      type: markdown
+      display: 'Short Description'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: cta_link
+    field:
+      mode: default
+      create: true
+      collections:
+        - pages
+      type: entries
+      display: 'CTA Link'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      max_items: 1
+  -
+    handle: cta_text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'CTA Text'
+      width: 50
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,0 +1,21 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: nav_location
+            field:
+              options:
+                top: Top
+                off_canvas: 'Off Canvas'
+              inline: false
+              cast_booleans: false
+              type: radio
+              display: Location
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

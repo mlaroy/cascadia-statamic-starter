@@ -1,0 +1,41 @@
+title: 'Page Config'
+fields:
+  -
+    handle: main_header_style
+    field:
+      options:
+        -
+          key: default
+          value: Default
+        -
+          key: transparent
+          value: Transparent
+      default: default
+      type: radio
+      display: 'Main Header Style'
+      inline: true
+  -
+    handle: show_page_title
+    field:
+      type: toggle
+      display: 'Show Page Title'
+  -
+    handle: use_banner
+    field:
+      inline_label: 'Use banner'
+      inline_label_when_true: 'Uses banner'
+      type: toggle
+      display: 'Use Banner'
+      if:
+        show_page_title: 'equals true'
+  -
+    handle: banner
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: Banner
+      if:
+        use_banner: 'equals true'
+        show_page_title: 'equals true'
