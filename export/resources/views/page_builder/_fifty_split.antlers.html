@@ -11,7 +11,7 @@
             {{ sections }}
                 <div class="fifty-fifty-item  flex flex-col {{ orientation == 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row'}} lg:gap-8 mx-auto justify-center items-center lg:px-24">
                     <div class="aspect-square relative overflow-hidden bg-black w-full lg:w-1/2">
-                        {{ glide :src="image" width="600" height="600" }}
+                        {{ glide :src="image" width="800" height="800" }}
                             <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full block">
                         {{ /glide }}
                     </div>

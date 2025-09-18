@@ -3,13 +3,14 @@ import Splide from '@splidejs/splide';
 import '@splidejs/splide/css/core';
 
 
-export default (autoPlay = false ) => ({
+export default (autoPlay = false, items = 1 ) => ({
     init() {
 
         const slider = new Splide( this.$refs.carousel,  {
             useIndex: true,
             arrows: false,
-            autoplay: autoPlay
+            autoplay: autoPlay,
+            perPage: items
         }).mount();
 
         this.totalSlides = slider.length;

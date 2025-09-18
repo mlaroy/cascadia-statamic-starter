@@ -2,7 +2,7 @@
 
     /* main theme */
     --color-body: var(--color-stone-950);
-    --color-body-muted: var(--color-muted-dark);
+    --color-body-muted: var(--color-muted-base);
 
     --color-heading: var(--color-body);
 
@@ -10,20 +10,26 @@
     --color-surface-muted: var(--color-light);
 
     --color-surface-inverted: var(--color-dark);
-    --color-surface-inverted-muted: var(--color-muted-dark);
+    --color-surface-inverted-muted: var(--color-muted);
 
-    --color-border: var(--color-muted-base);
-    --color-border-muted: var(--color-muted-dark);
+    --color-border: var(--color-muted);
+    --color-border-muted: var(--color-muted);
 
     --color-link: var(--color-accent);
     --color-link-hover: var(--color-highlight);
 
-    --color-button: var(--color-surface);
+    /* --color-button: var(--color-surface);
     --color-button-bg: var(--color-accent);
+    --color-button-hover-bg: var(--color-dark); */
+
+    --color-button: var(--color-white);
+    --color-button-bg: var(--color-accent);
+    --color-button-hover: var(--color-white);
+    --color-button-hover-bg: var(--color-dark);
 
     --color-button-inverted: var(--color-body);
     --color-button-inverted-bg: var(--color-soft);
-    --color-button-inverted-hover: var(--color-muted-dark);
+    --color-button-inverted-hover: var(--color-muted);
 
     --color-button-ghost: var(--color-body);
     --color-button-ghost-bg: transparent;
@@ -79,11 +85,16 @@
     --color-border-muted: var(--color-muted-dark);
 
     --color-link: var(--color-light);
-    --color-link-hover: var(--color-accent);
+    --color-link-hover: var(--color-highlight);
 
-    --color-button: var(--color-highlight);
+    --color-button: var(--color-body);
     --color-button-bg: var(--color-dark);
+    --color-button-hover: var(--color-dark);
+    --color-button-hover-bg: var(--color-highlight);
+
     --color-button-inverted: var(--color-surface);
+    --color-button-inverted-hover: var(--color-surface);
+    --color-button-inverted-hover-bg: var(--color-highlight);
 
     --color-button-ghost: var(--color-body);
     --color-button-ghost-bg: transparent;
@@ -95,11 +106,23 @@
 }
 
 
+.theme-accent-dark {
+    --color-surface: var(--color-accent-dark);
+    --color-body: var(--color-muted);
+    --color-link: var(--color-white);
+    --color-heading: var(--color-muted);
+
+    --color-button: var(--color-white);
+
+    --color-button-ghost: var(--color-white);
+}
+
+
 [class^="bg-"],
 [class^="text-"] {
     @apply transition-colors duration-200;
 }
 
 .text-heading {
-    @apply mb-8 md:mb-12;
+    @apply mb-4;
 }

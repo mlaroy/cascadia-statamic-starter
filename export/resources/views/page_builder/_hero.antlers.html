@@ -58,7 +58,7 @@
 
             <div class="hero-cta mt-4 lg:mt-8 flex gap-4">
                 {{ if cta_link && cta_text !== '' }}
-                    {{ partial:components.button :href="cta_link:url" :text="cta_text" }}
+                    {{ partial:components.button :href="cta_link:url" :text="cta_text" variant="inverted" }}
                 {{ /if }}
 
                 {{ if show_modal == true }}

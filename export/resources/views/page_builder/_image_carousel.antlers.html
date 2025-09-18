@@ -6,9 +6,10 @@
 
 <!-- /page_builder/_image_carousel.antlers.html -->
 {{ partial:page_builder/block }}
-    <div class="carousel-container py-16 lg:py-24 overflow-hidden bg-surface" x-data="carousel( {{ auto_play ? 'true' : 'false' }} )">
+    <div class="carousel-container py-16 lg:py-24 overflow-hidden bg-surface" x-data="carousel( {{ auto_play ? 'true' : 'false' }}, {{ items_to_show || 1 }} )">
         <div class="container">
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-heading">{{ heading }}</h2>
+            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-body">{{ heading }}</h2>
             <div class="splide w-full" x-ref="carousel">
                 <div class="splide__track">
                     <ul class="splide__list">

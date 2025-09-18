@@ -1,0 +1,24 @@
+{{#
+    @name Intro
+    @desc The Intro page builder block.
+    @set page.page_builder.intro
+#}}
+
+<!-- /page_builder/_basic_hero.antlers.html -->
+{{ partial:page_builder/block }}
+    <div class="basic-hero-container py-16 lg:py-24 bg-surface">
+        <div class="container lg:px-32">
+            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-balance text-body">{{ heading }}</h1>
+            <div class="prose prose-xl prose-p:text-body-muted mt-4">
+                {{ description }}
+            </div>
+            {{ if linked_entry && link_style }}
+                <div class="mt-8">
+                    {{ partial:components.button :href="linked_entry:url" :text="linked_entry:title" :variant="link_style" }}
+                </div>
+            {{ /if }}
+        </div>
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_basic_hero.antlers.html -->

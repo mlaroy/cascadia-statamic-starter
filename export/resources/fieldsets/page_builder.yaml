@@ -51,6 +51,11 @@ fields:
                 -
                   import: theme
                 -
+                  handle: eyebrow_text
+                  field:
+                    type: text
+                    display: 'Eyebrow Text'
+                -
                   handle: heading
                   field:
                     type: text
@@ -74,8 +79,36 @@ fields:
           instructions: 'Text based blocks.'
           icon: text-formatting-initial-letter
           sets:
-            hero:
+            basic_hero:
               display: Hero
+              icon: layout-header
+              fields:
+                -
+                  import: theme
+                -
+                  handle: eyebrow_text
+                  field:
+                    type: text
+                    display: 'Eyebrow Text'
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: description
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - anchor
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Description
+                -
+                  import: link
+            hero:
+              display: 'Video Hero'
               icon: align-object-top
               fields:
                 -
@@ -198,12 +231,22 @@ fields:
                 -
                   import: theme
                 -
+                  handle: eyebrow_text
+                  field:
+                    type: text
+                    display: 'Eyebrow Text'
+                -
                   import: intro_section
             accordion:
               display: Accordion
               fields:
                 -
                   import: theme
+                -
+                  handle: eyebrow_text
+                  field:
+                    type: text
+                    display: 'Eyebrow Text'
                 -
                   handle: heading
                   field:
@@ -235,3 +278,11 @@ fields:
                   import: theme
                 -
                   import: callout_grid
+            image_callout:
+              display: 'Image Callout'
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  import: theme
+                -
+                  import: image_callout

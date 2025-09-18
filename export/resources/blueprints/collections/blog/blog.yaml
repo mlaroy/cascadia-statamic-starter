@@ -31,39 +31,21 @@ tabs:
               localizable: true
               validate: 'max:200'
           -
-            handle: category
+            handle: categories
             field:
               type: terms
               taxonomies:
                 - categories
-              display: Category
-              mode: select
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
-              create: true
-              hide_display: false
+              display: Categories
           -
             handle: date
             field:
               type: date
               required: true
               default: now
-              mode: single
               inline: true
-              full_width: false
-              columns: 1
-              rows: 1
-              time_enabled: false
-              time_seconds_enabled: false
               earliest_date: '2024-02-16'
               display: 'Date Field'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               validate:
                 - required
           -
@@ -79,25 +61,7 @@ tabs:
             field:
               mode: grid
               container: assets
-              restrict: false
-              allow_uploads: true
-              show_filename: true
-              show_set_alt: true
               type: assets
               display: Image
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
       -
         display: Categories
-        fields:
-          -
-            handle: categories
-            field:
-              type: terms
-              taxonomies:
-                - categories
-              display: Categories
-              mode: select

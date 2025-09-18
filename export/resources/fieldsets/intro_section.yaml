@@ -10,6 +10,11 @@ fields:
       type: radio
       display: Layout
   -
+    handle: eyebrow_text
+    field:
+      type: text
+      display: 'Eyebrow Text'
+  -
     handle: heading
     field:
       type: text

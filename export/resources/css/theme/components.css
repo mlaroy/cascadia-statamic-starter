@@ -10,9 +10,9 @@
 
     &:hover,
     &:focus {
-        color: var(--color-surface);
-        background-color: var(--color-highlight);
-        border-color: var(--color-highlight);
+        color: var(--color-button-hover);
+        background-color: var(--color-button-hover-bg);
+        border-color: var(--color-button-hover-bg);
     }
 
 }
@@ -25,9 +25,9 @@
 
     &:hover,
     &:focus {
-        color: var(--color-surface);
-        background-color: var(--color-button-inverted-hover);
-        border-color: var(--color-button-inverted-hover);
+        color: var(--color-button-inverted-hover);
+        background-color: var(--color-button-inverted-hover-bg);
+        border-color: var(--color-button-inverted-hover-bg);
     }
 }
 
@@ -46,4 +46,8 @@
 
 .button-small {
     @apply px-2 py-1 text-xs;
+}
+
+.eyebrow {
+    @apply uppercase font-semibold tracking-wider text-xs text-body;
 }

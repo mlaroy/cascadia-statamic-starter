@@ -3,7 +3,7 @@ id: 726ad294-cf9c-40fd-b204-277118b5aed5
 blueprint: page
 title: Contact
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1747927850
+updated_at: 1758217047
 page_builder:
   -
     id: ltf2swiw
@@ -54,9 +54,20 @@ page_builder:
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     cta_text: 'Get started'
     type: cta_bumper
-    enabled: true
+    enabled: false
     theme: muted
     short_description: 'Write some supporting copy for this CTA bumper block.'
+  -
+    id: mfpozr5u
+    theme: accent
+    heading: 'Book an Adventure'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation'
+    link_style: ghost
+    link_to_external: false
+    linked_entry: 6c6cc987-6958-4c55-a2d0-08ded8af0daf
+    background_image: camping.jpg
+    type: image_callout
+    enabled: true
   -
     id: ly7qx7uz
     contact_form: contact
@@ -64,5 +75,7 @@ page_builder:
     enabled: true
     theme: default
 main_header_style: default
-show_page_title: false
+show_page_title: true
+use_banner: true
+banner: hiker.jpg
 ---
