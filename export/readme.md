@@ -2,6 +2,8 @@
 
 Cascadia is a mostly-unopinionated starter kit, with just enough CSS and JS to get you going with the essentials.
 
+[See the demo](https://starter.cascadiadigital.dev/)
+
 ![Cascadia Starter Logo](cascadia-kit.jpg)
 
 ## Components
@@ -10,6 +12,8 @@ Cascadia comes with a bunch of Page Builder components with some sensible preset
 - Blog Teaser
 - Contact Form
 - CTA Bumper
+- 50/50 Group
+- Stats
 - Google Map
 - Hero
 - Image Carousel
@@ -18,7 +22,7 @@ Cascadia comes with a bunch of Page Builder components with some sensible preset
 
 ### Google Maps
 
-To use the Google Maps component, be sure to add your API key as `GOOGLE_MAP_API` in your `.env` file.
+To use the Google Maps component, be sure to add your API key as `GOOGLE_MAP_API_KEY` in your `.env` file.
 
 ## Sets
 In addition, it has a few Sets built in that you can insert into any Bard field:
