@@ -14,17 +14,12 @@
             <div class="flex flex-col lg:items-center">
                 <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
                 <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-balance text-body">{{ heading }}</h2>
-                <div class="prose prose-xl prose-p:text-body-muted lg:text-center mt-4">
+                <div class="prose lg:prose-xl prose-p:text-body-muted lg:text-center mt-4">
                     {{ description }}
                 </div>
 
-                <div class="text-xl col-span-2 md:col-span-1 ">
-
-                    {{ if linked_entry && link_style }}
-                        <div class="mt-8">
-                            {{ partial:components.button :href="linked_entry:url" :text="linked_entry:title" :variant="link_style" }}
-                        </div>
-                    {{ /if }}
+                <div class="text-xl col-span-2 md:col-span-1">
+                    {{ partial:components.link }}
                 </div>
             </div>
 

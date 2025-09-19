@@ -6,7 +6,7 @@
     role="dialog"
     aria-modal="true"
     x-id="['offcanvas-title']"
-    class="fixed inset-0 overflow-hidden z-30"
+    class="fixed inset-0 overflow-hidden z-50"
 >
     <!-- Overlay -->
     <div x-show="isOffcanvasOpen" x-on:click="isOffcanvasOpen = !isOffcanvasOpen" x-transition.opacity class="fixed inset-0 bg-black/50"></div>
@@ -24,7 +24,7 @@
             x-cloak
             class="h-full w-full transform transition-all"
         >
-            <div class="h-full flex flex-col justify-between bg-surface shadow-lg overflow-y-auto theme-accent-dark">
+            <div class="h-full flex flex-col justify-between bg-surface shadow-lg overflow-y-auto theme-accent-dark" x-trap="isOffcanvasOpen">
                 <!-- Close Button -->
                 <div class="absolute top-0 right-0 pt-4 pr-4">
                     <button type="button" @click="isOffcanvasOpen = false" class=" rounded-lg p-2 text-body focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 cursor-pointer">

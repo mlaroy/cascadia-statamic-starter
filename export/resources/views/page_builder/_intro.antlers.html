@@ -8,7 +8,7 @@
 {{ partial:page_builder/block }}
     <div class="intro-container py-16 lg:py-24 bg-surface">
         <div class="container">
-            <p class="eyebrow mb-4">Eyebrow</p>
+            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
             <div class="grid gap-8 {{ intro_layout == 'vertical' ? ' grid-cols-1 ' : 'grid-cols-1 md:grid-cols-2' }}">
                 <div class="col-span-2 md:col-span-1">
                     <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-balance text-body">{{ heading }}</h2>
@@ -18,11 +18,7 @@
                         {{ intro_text }}
                     </div>
 
-                    {{ if linked_entry && link_style }}
-                        <div class="mt-8">
-                            {{ partial:components.button :href="linked_entry:url" :text="linked_entry:title" :variant="link_style" }}
-                        </div>
-                    {{ /if }}
+                     {{ partial:components.link }}
                 </div>
             </div>
 

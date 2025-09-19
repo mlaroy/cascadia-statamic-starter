@@ -1,0 +1,33 @@
+{{#
+    @name Intro
+    @desc The Intro page builder block.
+    @set page.page_builder.intro
+#}}
+
+<!-- /page_builder/_stats.antlers.html -->
+{{ partial:page_builder/block }}
+    <div class="intro-container py-16 lg:py-24 bg-surface text-body">
+        <div class="container">
+            <div class="text-center">
+                <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-balance text-body">{{ heading }}</h2>
+            </div>
+            <div class="grid gap-8 grid-cols-1 md:grid-cols-3 mt-16 lg:mt-24">
+                {{ stat_items }}
+                    <div class="flex flex-col justify-center item-center text-center">
+                        <p class="font-bold text-2xl lg:text-7xl" aria-hidden="true">{{ stat_value }}</p>
+                        <h3 class="text-xl mt-2 font-semibold">
+                            <span class="sr-only">{{ stat_value }}</span>
+                            {{ stat_heading }}
+                        </h3>
+                        <div class="mt-4 text-sm">
+                            {{ stat_description }}
+                        </div>
+                    </div>
+                {{ /stat_items }}
+            </div>
+
+        </div>
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_stats.antlers.html -->

@@ -17,7 +17,7 @@
     ) : null }}
 
 {{ partial:page_builder/block }}
-    <div class="hero-container bg-black/60 flex justify-center items-center relative w-full overflow-hidden {{ $style }}" x-data="heroVideo({
+    <div class="hero-container transition duration-300 bg-black/60 flex justify-center items-center relative w-full overflow-hidden {{ $style }}" x-data="heroVideo({
         videoId: '{{ video_id }}',
         source: '{{ video_source }}',
     })">

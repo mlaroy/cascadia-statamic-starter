@@ -1,6 +1,6 @@
 export default () => ({
     async init() {
-        console.log('google-map.js');
+        // console.log('google-map.js');
         this.initMap();
     },
 

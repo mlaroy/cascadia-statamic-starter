@@ -9,21 +9,21 @@
     <div class="fifty-fifty-container py-16 lg:py-24 bg-surface">
         <div class="container space-y-8">
             {{ sections }}
-                <div class="fifty-fifty-item  flex flex-col {{ orientation == 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row'}} lg:gap-8 mx-auto justify-center items-center lg:px-24">
-                    <div class="aspect-square relative overflow-hidden bg-black w-full lg:w-1/2">
+                <div class="fifty-fifty-item  flex flex-col {{ orientation == 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row' }} lg:gap-8 mx-auto justify-center items-center">
+                    <div class="aspect-video lg:aspect-square relative lg:overflow-hidden bg-black w-full lg:w-1/2">
                         {{ glide :src="image" width="800" height="800" }}
                             <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full block">
                         {{ /glide }}
                     </div>
-                    <div class="h-full w-full lg:w-1/2 bg-surface-muted p-8">
+                    <div class="h-full w-full lg:w-1/2  p-8 lg:px-12">
                         <div>
+                            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
                             <h3 class="font-semibold text-xl lg:text-3xl mb-4 text-heading">{{ heading }}</h3>
-                            <div class="prose prose-xl mb-4 text-muted">
+                            <div class="prose lg:prose-xl mb-4 prose-p:text-muted-dark">
                                 {{ content }}
                             </div>
-                            {{ if cta_link && cta_text !== '' }}
-                                {{ partial:components.button :href="cta_link:url" :text="cta_text" variant="ghost" }}
-                            {{ /if }}
+
+                            {{ partial:components.link }}
                         </div>
                     </div>
                 </div>

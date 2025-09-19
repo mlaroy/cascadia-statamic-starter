@@ -18,11 +18,11 @@
                 {{ /if }}
             </div>
             <div class="lg:col-span-2">
-                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Menu</h4>
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border-muted text-body">Menu</h4>
                 {{ partial:nav.footer }}
             </div>
             <div class="lg:col-span-2">
-                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Our Socials</h4>
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border-muted text-body">Our Socials</h4>
                 {{ if organization_info:social_links }}
                     <ul class="list-none flex gap-2">
                         {{ organization_info:social_links }}
@@ -39,14 +39,16 @@
                 {{ /if }}
             </div>
             <div class="lg:col-span-2">
-                <h4 class="font-semibold mb-5 pb-5 border-b border-border text-body-muted">Our Location</h4>
+                <h4 class="font-semibold mb-5 pb-5 border-b border-border-muted text-body">Our Location</h4>
                 <div class="text-sm space-y-2">
                     <p>{{ organization_info:address }}</p>
                     <p>{{ organization_info:phone_number }}</p>
-                    <p>{{ organization_info:email }}</p>
+                    <p class="hover:text-muted transition-colors">
+                        <a href="mailto:{{ organization_info:email | obfuscate }}">{{ organization_info:email | obfuscate }}</a>
+                    </p>
                 </div>
             </div>
         </div>
-        <p class="text-xs text-center text-body-muted">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>
+        <p class="text-xs text-center text-body-muted/80 mt-32">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>
     </div>
 </footer>

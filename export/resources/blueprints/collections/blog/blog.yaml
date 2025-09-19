@@ -13,6 +13,16 @@ tabs:
               validate:
                 - required
           -
+            handle: excerpt
+            field:
+              buttons:
+                - bold
+                - italic
+                - link
+              type: markdown
+              display: Excerpt
+              instructions: 'Displays on index pages and card views.'
+          -
             import: blog_content_with_sets
   sidebar:
     display: Sidebar

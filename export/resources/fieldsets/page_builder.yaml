@@ -106,6 +106,14 @@ fields:
                     type: bard
                     display: Description
                 -
+                  handle: featured_image
+                  field:
+                    max_files: 1
+                    mode: grid
+                    container: assets
+                    type: assets
+                    display: 'Featured Image'
+                -
                   import: link
             hero:
               display: 'Video Hero'
@@ -286,3 +294,11 @@ fields:
                   import: theme
                 -
                   import: image_callout
+            stats:
+              display: Stats
+              icon: layout-three-columns
+              fields:
+                -
+                  import: theme
+                -
+                  import: stats

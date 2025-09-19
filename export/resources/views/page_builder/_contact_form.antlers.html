@@ -6,7 +6,7 @@
 
 <!-- /page_builder/_form.antlers.html -->
 {{ partial:page_builder/block }}
-<div class="contact-form-container py-16 lg:py-24 bg-white">
+<div class="contact-form-container py-16 lg:py-24 bg-surface text-body">
     <div class="container">
         <div class="max-w-xl" x-data="contactForm">
             <h2 class="mb-4 font-bold text-xl lg:text-2xl">Get in touch</h2>
@@ -43,17 +43,17 @@
 
                     <label class="input-wrap relative flex flex-col gap-2">
                         <span class="block text-sm font-semibold">Name</span>
-                        <input type="text" x-model="formData.name" name="name" placeholder="Name" value="{{ old:name }}" class="p-2 border rounded border-stone-200 inline-block">
+                        <input type="text" x-model="formData.name" name="name" placeholder="Name" value="{{ old:name }}" class="p-2 border rounded border-stone-200 inline-block bg-white">
                     </label>
 
                     <label class="input-wrap relative flex flex-col gap-2 mt-4">
                         <span class="block text-sm font-semibold">Email</span>
-                        <input type="email" name="email" x-model="formData.email" placeholder="Email"  value="{{ old:email }}" class="p-2 border rounded border-stone-200 inline-block">
+                        <input type="email" name="email" x-model="formData.email" placeholder="Email"  value="{{ old:email }}" class="p-2 border rounded border-stone-200 inline-block bg-white">
                     </label>
 
                     <div class="input-wrap relative mt-4">
                         <label for="message" class="block text-sm font-semibold">Message</label>
-                        <textarea id="message" x-model="formData.message" name="message" placeholder="Message" class="p-2 block w-full border rounded border-stone-200 h-24">
+                        <textarea id="message" x-model="formData.message" name="message" placeholder="Message" class="p-2 block w-full border rounded border-stone-200 h-24 bg-white">
                             {{ old:message }}
                         </textarea>
                     </div>

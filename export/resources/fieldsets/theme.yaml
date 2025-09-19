@@ -11,14 +11,11 @@ fields:
           key: dark
           value: Dark
         -
-          key: muted
-          value: Muted
-        -
           key: accent
           value: Accent
         -
-          key: accent-text
-          value: 'Accent Text'
+          key: muted
+          value: Muted
       max_items: 1
       default: default
       type: select

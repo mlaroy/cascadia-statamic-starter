@@ -1,0 +1,5 @@
+{{ if linked_entry && link_style }}
+    <div class="mt-8">
+        {{ partial:components.button :href="linked_entry:url" :text="linked_entry:title" :variant="link_style" }}
+    </div>
+{{ /if }}

@@ -5,12 +5,13 @@
         {{ /glide }}
     </a>
     <div class="blog-teaser-content p-4">
-        {{# <p>{{ has_timestamp }}</p> #}}
-        <time class="text-sm block mb-2 text-body-muted">{{ date }}</time>
-        <h3 class="text-xl lg:text-2xl font-semibold mb-2 text-body">
+        <time class="eyebrow block mb-2 text-body-muted">{{ date }}</time>
+        <h3 class="text-xl lg:text-2xl font-semibold text-body">
             <a href="{{ url }}">{{ title }}</a>
         </h3>
-        {{# <div class="text-gray-600 text-sm">{{ bard_content | truncate(150, '...') }}</div> #}}
+        <div class="text-gray-600 text-sm my-4">
+            {{ excerpt | safe_truncate(150, '...') }}
+        </div>
         <a href="{{ url }}" class="underline text-link text-sm">Read More</a>
     </div>
 </article>

@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758218102
+updated_at: 1758317332
 page_builder:
   -
     id: ltgcaf0k
@@ -30,19 +30,19 @@ page_builder:
     video_file: 3135808-hd_1920_1080_24fps.mp4
   -
     id: lu1r429d
-    heading: 'Welcome to the starter kit that is so awesome'
+    heading: 'Welcome to the Cascadia Starter Kit'
     intro_text:
       -
         type: paragraph
         content:
           -
             type: text
-            text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.'
+            text: 'The Cascadia Starter Kit is meant to be a more-or-less un-opinionated starter for developers. It has a number of common features already included in a Page Builder, with components that are easy to style according to your design.'
     intro_layout: horizontal
     type: intro
     enabled: true
     theme: accent
-    link_style: button
+    link_style: inverted
     linked_entry: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     link_to_external: false
   -
@@ -55,7 +55,7 @@ page_builder:
         image:
           - under-city-iron-bridge.jpeg
           - hiker.jpg
-        description: 'This is a truly awesome thing'
+        description: 'Hiking is pretty awesome.'
         type: tab_item
         enabled: true
       -
@@ -64,7 +64,7 @@ page_builder:
         image:
           - urban-street-in-morning.jpeg
           - camping.jpg
-        description: 'This is also a truly awesome thing'
+        description: 'Camping is pretty awesome too.'
         type: tab_item
         enabled: true
       -
@@ -74,16 +74,71 @@ page_builder:
           - skiing.jpg
         type: tab_item
         enabled: true
+        description: 'Skiing is cool, I guess.'
     type: tabs_explorer
     enabled: true
-    theme: default
+    theme: muted
     eyebrow_text: Explore
+  -
+    id: ltgg2024
+    sections:
+      -
+        id: ltgg0afl
+        orientation: left
+        image:
+          - camping.jpg
+        heading: 'Sleep Under the Stars'
+        type: section
+        enabled: true
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        cta_text: 'Contact Us'
+        entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
+        cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
+        eyebrow_text: Camping
+        link_style: button
+        link_to_external: false
+        linked_entry: 6c6cc987-6958-4c55-a2d0-08ded8af0daf
+      -
+        id: ltt0zyf7
+        orientation: right
+        image:
+          - hiker.jpg
+        heading: 'Explore the Trails'
+        type: section
+        enabled: true
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        cta_text: 'Contact Us'
+        entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
+        cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
+        eyebrow_text: Hiking
+        link_style: button
+        link_to_external: false
+        linked_entry: 29fa7ae7-8985-4e8b-b6d6-d47476033020
+      -
+        id: mfrcey39
+        orientation: left
+        image:
+          - skiing.jpg
+        heading: 'Enjoy the Alpine Snow'
+        type: section
+        enabled: true
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        cta_text: 'Contact Us'
+        entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
+        cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
+        eyebrow_text: Skiing
+        link_style: button
+        link_to_external: false
+        linked_entry: aa04bb78-a9ca-4a66-8539-87849e850a65
+    type: fifty_split
+    enabled: true
+    theme: default
   -
     id: lt92fsja
     heading: 'Recent Posts'
     type: blog_teaser
     enabled: true
-    theme: default
+    theme: muted
   -
     id: mfpmd7ot
     theme: dark
@@ -91,10 +146,11 @@ page_builder:
     enabled: true
     heading: 'Get to know the Pacific Northwest'
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    link_style: link
+    link_style: ghost
     link_to_external: false
     background_image: hiker.jpg
     eyebrow_text: Discover
+    linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
   -
     id: malldcwi
     callout_item:
@@ -174,7 +230,7 @@ page_builder:
     images:
       - camping.jpg
       - hiker.jpg
-      - shadows-touching-ancient-stone.jpeg
+      - skiing.jpg
     auto_play: true
     show_index: false
     type: image_carousel
@@ -235,13 +291,17 @@ page_builder:
     eyebrow_text: Learn
   -
     id: lvgwz0kp
-    cta_heading: 'This is the CTA Heading.'
-    short_description: 'This is the sort description text to complement the heading above.'
+    cta_heading: 'Book Your Adventure Now'
+    short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     type: cta_bumper
     enabled: true
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     cta_text: 'Get started'
     theme: accent
+    eyebrow_text: 'Get in Touch'
+    link_style: button
+    link_to_external: false
+    linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
 main_header_style: transparent
 show_page_title: false
 ---

@@ -2,7 +2,7 @@
 
     /* main theme */
     --color-body: var(--color-stone-950);
-    --color-body-muted: var(--color-muted-base);
+    --color-body-muted: var(--color-accent-dark);
 
     --color-heading: var(--color-body);
 
@@ -16,7 +16,7 @@
     --color-border-muted: var(--color-muted);
 
     --color-link: var(--color-accent);
-    --color-link-hover: var(--color-highlight);
+    --color-link-hover: var(--color-accent-dark);
 
     /* --color-button: var(--color-surface);
     --color-button-bg: var(--color-accent);
@@ -85,7 +85,7 @@
     --color-border-muted: var(--color-muted-dark);
 
     --color-link: var(--color-light);
-    --color-link-hover: var(--color-highlight);
+    --color-link-hover: var(--color-accent-dark);
 
     --color-button: var(--color-body);
     --color-button-bg: var(--color-dark);
@@ -100,11 +100,6 @@
     --color-button-ghost-bg: transparent;
     --color-button-ghost-hover: var(--color-soft);
 }
-
-.theme-accent-text {
-    --color-heading: var(--color-accent);
-}
-
 
 .theme-accent-dark {
     --color-surface: var(--color-accent-dark);
@@ -125,4 +120,9 @@
 
 .text-heading {
     @apply mb-4;
+}
+
+
+@view-transition {
+    navigation: auto;
 }

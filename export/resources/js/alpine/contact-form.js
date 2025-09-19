@@ -1,6 +1,6 @@
 export default () => ({
     init() {
-        console.log('Contact form initialized');
+        // console.log('Contact form initialized');
         const form = this.$refs.form;
         this.form = this.$refs.form;
         this.formData._token = this.form.querySelector('input[name="_token"]').value;

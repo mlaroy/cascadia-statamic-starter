@@ -49,5 +49,5 @@
 }
 
 .eyebrow {
-    @apply uppercase font-semibold tracking-wider text-xs text-body;
+    @apply uppercase font-bold tracking-wider text-xs text-body-muted;
 }

@@ -5,7 +5,7 @@
             @click="isOpen = !isOpen"
             :aria-controls="$id('collapse')"
             @keydown.escape.prevent.stop="isOpen = false"
-            class="relative flex w-full text-lg lg:text-xl font-semibold text-body">
+            class="relative flex w-full text-lg lg:text-xl font-semibold text-body cursor-pointer">
             {{ heading }}
 
             <span class="inline-block ml-auto cursor-pointer">
