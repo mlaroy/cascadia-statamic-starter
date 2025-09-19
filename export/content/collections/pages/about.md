@@ -3,7 +3,7 @@ id: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
 blueprint: page
 title: About
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758316837
+updated_at: 1758323649
 meta_title: 'About Page'
 page_builder:
   -
@@ -26,7 +26,7 @@ page_builder:
     featured_image: water-fall.jpg
   -
     id: mfrbzli9
-    theme: accent
+    theme: dark
     eyebrow_text: 'Who We Are'
     heading: "We're proud of these numbers"
     stat_items:
@@ -146,6 +146,8 @@ page_builder:
     type: cta_bumper
     enabled: true
     short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+    link_style: link
+    link_to_external: false
 main_header_style: default
 show_page_title: false
 ---

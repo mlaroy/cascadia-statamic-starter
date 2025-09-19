@@ -14,7 +14,10 @@
         {{ /taxonomy:categories }}
     </ul>
 
-    {{ blog:taxonomy as="posts" category="{{ slug }}" }}
+    {{ collection:blog taxonomy:categories="{{ slug }}" as="posts" paginate="12"  }}
+        {{ unless posts }}
+            <p class="mt-8">No posts in the <strong>{{ slug }}</strong> category.</p>
+        {{ /unless }}
         <ul class="list-none text-lg lg:text-xl mt-8 grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
             {{ posts }}
                 <li>
@@ -22,5 +25,5 @@
                 </li>
             {{ /posts }}
         </ul>
-    {{ /blog:taxonomy }}
+    {{ /collection:blog  }}
 </div>
