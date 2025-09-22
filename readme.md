@@ -10,6 +10,7 @@ Cascadia is a mostly-unopinionated starter kit, with just enough CSS and JS to g
 Cascadia comes with a bunch of Page Builder components with some sensible presets that you can customize to your liking. These include:
 - Accordion
 - Blog Teaser
+- Logo Cloud
 - Contact Form
 - CTA Bumper
 - 50/50 Group
