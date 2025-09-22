@@ -15,7 +15,18 @@
     {{ size_class = "" }}
 {{ /if }}
 
-<a href="{{ href }}" class="{{ variant_class}} {{ size_class }}">
+<a
+    href="{{ href }}"
+    class="{{ variant_class}} {{ size_class }}"
+    x-ref="link"
+    @click="handleAnalyticsEvent(
+        {
+            href: `{{ href }}`,
+            title: `{{ text }}`,
+            type: 'button',
+            current_url: `{{ current_url }}`
+        })"
+    >
     {{ if text }}
         {{ text }}
     {{ else }}

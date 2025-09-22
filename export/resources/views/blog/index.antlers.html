@@ -5,7 +5,7 @@
     <ul class="inline-flex gap-2 mt-4">
         {{ taxonomy:categories }}
             <li>
-                <a href="{{ url }}" class="button button-small">
+                <a href="{{ url }}" class="button button-small button-inverted">
                     {{ title }}
                 </a>
             </li>
@@ -23,9 +23,11 @@
 
         </ul>
 
-        <div class="mt-24">
-            {{ partial:components/pagination }}
-        </div>
+        {{ if pagination }}
+            <div class="mt-24">
+                {{ partial:components/pagination }}
+            </div>
+        {{ /if }}
     {{ /collection:blog }}
 </div>
 

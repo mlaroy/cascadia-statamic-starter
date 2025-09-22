@@ -7,7 +7,12 @@
         <ul class="inline-flex gap-2 mx-auto mt-4">
             {{ categories }}
                 <li>
-                    {{ partial:components.button href="/categories/{{ slug }}" :text="title" variant="primary" size="small" }}
+                    {{ partial:components.button
+                        href="/categories/{{ slug }}"
+                        :text="title"
+                        variant="inverted"
+                        size="small"
+                    }}
                 </li>
             {{ /categories }}
         </ul>

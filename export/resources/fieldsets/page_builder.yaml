@@ -74,6 +74,12 @@ fields:
                     max_items: 1
                     type: form
                     display: 'Contact Form'
+            logo_cloud:
+              display: 'Logo Cloud'
+              icon: favorite-award
+              fields:
+                -
+                  import: logo_cloud
         text:
           display: Text
           instructions: 'Text based blocks.'

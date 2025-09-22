@@ -14,6 +14,7 @@
 @import "./theme/theme.css";
 @import "./theme/config.css";
 @import "./theme/components.css";
+@import "./theme/buttons.css";
 @import "./utils/animations.css";
 @plugin "@tailwindcss/typography";
 

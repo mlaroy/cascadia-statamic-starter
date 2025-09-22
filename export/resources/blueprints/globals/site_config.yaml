@@ -7,28 +7,41 @@ tabs:
           -
             handle: show_secondary_nav
             field:
-              default: false
               type: toggle
               display: 'Show Secondary Nav'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
           -
             handle: secondary_nav_location
             field:
               options:
                 top: Top
                 off_canvas: 'Off Canvas'
-              inline: false
-              cast_booleans: false
               type: radio
               display: 'Secondary Nav Location'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
               if:
                 show_secondary_nav: 'equals true'
+      -
+        display: Analytics
+        fields:
+          -
+            handle: enable_fathom
+            field:
+              type: toggle
+              display: 'Enable Fathom'
+              instructions: 'Enable Fathom Analytics script. Be sure to add your tracking ID to your .env file using FATHOM_SITE_ID. Works on Production environment only.'
+              width: 33
+          -
+            handle: enable_ga4
+            field:
+              type: toggle
+              display: 'Enable GA4'
+              instructions: 'Enable GA4 script. Be sure to add your tracking ID to your .env file using GOOGLE_ANALYTICS_ID. Works on Production environment only.'
+              width: 33
+          -
+            handle: enable_event_tracking
+            field:
+              type: toggle
+              display: 'Enable Event Tracking'
+              instructions: 'Add analytics event tracking to Fathom or GA.'
+              if_any:
+                enable_fathom: 'equals true'
+                enable_ga4: 'equals true'

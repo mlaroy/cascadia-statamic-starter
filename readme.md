@@ -35,3 +35,24 @@ Cascadia leverages Alpine.js and TailwindCSS, such that you can configure the vi
 ## Navigation
 
 Cascadia comes with 2 separate Navs out of the box, with the secondary nav being placed either in a smaller menu above the main nav, or in an off-canvas drawer, which can be configured in the Globals -> Site Config.
+
+## Theming
+
+Each page-builder component has a Theme Selector field, starting with the default (light), Accent, Muted, and Dark themes, for easy theming of components. Add more themes to the field, and set up the CSS in the `theme.css` file.
+
+The theme system uses CSS variables to set up Tailwind classes like `bg-surface` which will change values, depending on the theme selected. Override these values to your liking in the CSS.
+
+Classes for theming include:
+- bg-surface
+- text-body
+- button (and variants)
+- eyebrow
+
+Explore the `theme.css` to see all the available theme classes, and add your own.
+
+
+## Analytics
+
+Optionally choose between Fathom or GA with a toggle, and add your tracking ID to your `.env` file. The `button` component, used for CTA buttons throughout, will fire an event that can be used for sending data to your analytics platform of choice.
+
+To modify the available data, look at the `button` component, and explore the `app.js` file for the `handleAnalyticsEvent` method, and follow the code from there.

@@ -1,0 +1,31 @@
+{{#
+    @name Callout Grid
+    @desc The Callout Grid page builder block.
+    @set page.page_builder._logo_cloud
+#}}
+
+<!-- /page_builder/_logo_cloud.antlers.html -->
+{{ partial:page_builder/block }}
+    <div class="logo-cloud py-16 lg:py-24 bg-surface">
+        <div class="container">
+            <div class="flex flex-col items-center">
+                <div class="w-full lg:w-1/2 mx-auto lg:text-center">
+                    <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  mb-4 font-semibold text-body">{{ heading }}</h2>
+
+                   {{ if logos }}
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-12 mt-16">
+                            {{ glide:logos width="350" }}
+                                <div class="flex justify-center items-center">
+                                    <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center block w-32">
+                                </div>
+                            {{ /glide:logos }}
+                        </div>
+                   {{ /if }}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{{ /partial:page_builder/block }}
+{{# End: /page_builder/_logo_cloud.antlers.html #}}

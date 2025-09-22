@@ -6,6 +6,8 @@
 
     --color-heading: var(--color-body);
 
+    --color-eyebrow: var(--color-highlight-dark);
+
     --color-surface: var(--color-white);
     --color-surface-muted: var(--color-light);
 
@@ -31,6 +33,9 @@
     --color-button-inverted-bg: var(--color-soft);
     --color-button-inverted-hover: var(--color-muted);
 
+    --color-button-inverted-hover: var(--color-muted-dark);
+    --color-button-inverted-hover-bg: var(--color-light);
+
     --color-button-ghost: var(--color-body);
     --color-button-ghost-bg: transparent;
     --color-button-ghost-hover: var(--color-accent);
@@ -48,20 +53,24 @@
 
     --color-heading: var(--color-body);
 
+    --color-eyebrow: var(--color-highlight);
+
     --color-surface: var(--color-dark);
     --color-surface-muted: var(--color-accent-dark);
 
     --color-surface-inverted: var(--color-light);
     --color-surface-inverted-muted: var(--color-soft);
 
-    --color-border: var(--color-muted-dark);
-    --color-border-muted: var(--color-muted-dark);
+    --color-border: var(--color-soft);
+    --color-border-muted: var(--color-muted);
 
     --color-link: var(--color-highlight);
     --color-link-hover: var(--color-accent);
 
     --color-button: var(--color-surface-inverted);
     /* --color-button-bg: var(--color-accent); */
+
+    --color-accent: var(--color-highlight);
 
     --color-button-inverted: var(--color-surface);
 
@@ -74,6 +83,8 @@
 .theme-accent {
     --color-body: var(--color-light);
     --color-body-muted: var(--color-soft);
+
+    --color-eyebrow: var(--color-highlight);
 
     --color-surface: var(--color-accent);
     --color-surface-muted: var(--color-highlight);
@@ -113,15 +124,11 @@
 }
 
 
+/* Utility classes for animations and transitions */
 [class^="bg-"],
 [class^="text-"] {
     @apply transition-colors duration-200;
 }
-
-.text-heading {
-    @apply mb-4;
-}
-
 
 @view-transition {
     navigation: auto;

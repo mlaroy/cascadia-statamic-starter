@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758317332
+updated_at: 1758580326
 page_builder:
   -
     id: ltgcaf0k
@@ -46,6 +46,18 @@ page_builder:
     linked_entry: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     link_to_external: false
   -
+    id: mfvoy1ty
+    theme: muted
+    eyebrow_text: 'Great Clients'
+    heading: 'Brands We Work With'
+    logos:
+      - columbia.png
+      - north_face.png
+      - arcteryx.png
+      - mec_png.png
+    type: logo_cloud
+    enabled: true
+  -
     id: ltg2wqkz
     heading: 'Discover Wilderness'
     tab_items:
@@ -77,7 +89,7 @@ page_builder:
         description: 'Skiing is cool, I guess.'
     type: tabs_explorer
     enabled: true
-    theme: muted
+    theme: dark
     eyebrow_text: Explore
   -
     id: ltgg2024
