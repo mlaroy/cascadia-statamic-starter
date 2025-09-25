@@ -1,19 +1,7 @@
 tree:
   -
-    id: ab691c34-23be-4576-ba77-d4724efc0bca
-    title: Home
-    url: /
+    id: 6921e955-ce9d-4f90-aa47-a309287e967e
+    entry: 56d89016-a702-41f4-a661-b6a462f35e7d
   -
-    id: bbcedf72-719d-4695-a6e7-43b814080da9
-    title: About
-    url: /about
-  -
-    id: 997cb65c-2a5b-472e-a631-e2c870f2238b
-    title: Contact
-    url: /contact
-  -
-    id: 65684497-058d-48cf-9281-559e6c17dc9e
-    title: Team
-    url: /team
-    data:
-      nav_location: off_canvas
+    id: a7856209-cf27-4243-92ce-f6d55024c690
+    entry: 726ad294-cf9c-40fd-b204-277118b5aed5

@@ -1,17 +1,20 @@
 {{#
-    @name Blog Teaser
-    @desc The Blog Teaser page builder block.
-    @set page.page_builder.blog_teaser
+    @name Tabs Explorer
+    @desc The Tabs Explorer page builder block.
+    @set page.page_builder.tabs_explorer
 #}}
 
-<!-- /page_builder/_blog_teaser.antlers.html -->
+<!-- /page_builder/_tabs_explorer.antlers.html -->
 {{ partial:page_builder/block }}
     <div class="tabs-explorer py-16 lg:py-24 bg-surface">
         <div class="container">
-            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-heading">{{ heading }}</h2>
+            {{ partial:components.content_group
+                :eyebrow_text="eyebrow_text"
+                :heading="heading"
+                :content="description"
+            }}
 
-            <div class="grid lg:grid-cols-6 gap-12" x-data="{ activeItem: 0 }">
+            <div class="grid lg:grid-cols-6 gap-12 lg:gap-24 mt-16" x-data="{ activeItem: 0 }">
                 <div class="lg:col-span-2 divide-y divide-border">
                     {{ tab_items }}
                         <h4 class="py-4">
@@ -41,13 +44,17 @@
                             x-show="activeItem == {{ index }}"
                             class="transition-opacity animate-fade-in"
                             >
-                            <div class="relative overflow-hidden aspect-video mb-4 opacity-100">
-                                {{ glide :src="image" width="1200" height="800" }}
-                                    <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 block">
-                                {{ /glide }}
-                            </div>
+                            {{ if image}}
+                                <div class="relative overflow-hidden aspect-video mb-4 opacity-100">
+                                    {{ glide :src="image" width="1200" height="800" }}
+                                        <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 block">
+                                    {{ /glide }}
+                                </div>
+                            {{ /if }}
                             <h4 class="text-xl lg:text-2xl font-semibold mb-4 text-heading">{{ title }}</h4>
-                            <div class="text-muted">{{ description }}</div>
+                            <div class="prose lg:prose-xl prose-p:text-body-muted prose-h3:text-body prose-h4:text-body">
+                                {{ description }}
+                            </div>
                         </div>
                     {{ /tab_items }}
                 </div>
@@ -55,4 +62,4 @@
         </div>
     </div>
 {{ /partial:page_builder/block }}
-<!-- End: /page_builder/_cards.antlers.html -->
+<!-- End: /page_builder/_tabs_explorer.antlers.html -->

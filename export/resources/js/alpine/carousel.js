@@ -10,7 +10,8 @@ export default (autoPlay = false, items = 1 ) => ({
             useIndex: true,
             arrows: false,
             autoplay: autoPlay,
-            perPage: items
+            perPage: items,
+            pagination: false
         }).mount();
 
         this.totalSlides = slider.length;
@@ -26,8 +27,6 @@ export default (autoPlay = false, items = 1 ) => ({
 
         // Initialize button state
         this.updateButtonState();
-        // // trigger resize to get flickity to layout properly
-        // window.dispatchEvent(new Event('resize'));
     },
 
 	carousel: null,

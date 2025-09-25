@@ -15,14 +15,15 @@ fields:
           instructions: 'Interactive blocks.'
           icon: programming-script-code
           sets:
-            blog_teaser:
-              display: 'Blog Teaser'
-              icon: content-book-open
+            accordion:
+              display: Accordion
               fields:
                 -
                   import: theme
                 -
-                  import: blog_teasers
+                  import: content_group
+                -
+                  import: accordion
             google_map:
               display: 'Google Map'
               icon: travel-map
@@ -44,24 +45,6 @@ fields:
                   import: theme
                 -
                   import: side_tabs_explorer
-            image_carousel:
-              display: 'Image Carousel'
-              icon: media-image-picture-gallery
-              fields:
-                -
-                  import: theme
-                -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
-                -
-                  handle: heading
-                  field:
-                    type: text
-                    display: Heading
-                -
-                  import: image_carousel
             contact_form:
               display: 'Contact Form'
               icon: form-text-field
@@ -74,16 +57,103 @@ fields:
                     max_items: 1
                     type: form
                     display: 'Contact Form'
-            logo_cloud:
-              display: 'Logo Cloud'
-              icon: favorite-award
-              fields:
-                -
-                  import: logo_cloud
         text:
-          display: Text
+          display: Content
           instructions: 'Text based blocks.'
           icon: text-formatting-initial-letter
+          sets:
+            basic_content:
+              display: 'Basic Content'
+              icon: form-text-field
+              fields:
+                -
+                  import: blog_content_with_sets
+            intro:
+              display: Intro
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: theme
+                -
+                  handle: eyebrow_text
+                  field:
+                    type: text
+                    display: 'Eyebrow Text'
+                -
+                  import: intro_section
+            blog_teaser:
+              display: 'Blog Teaser'
+              icon: content-book-open
+              fields:
+                -
+                  import: theme
+                -
+                  import: blog_teasers
+            team_members:
+              display: 'Team Members'
+              icon: user-avatar
+              fields:
+                -
+                  import: theme
+                -
+                  import: team_teasers
+            fifty_split:
+              display: '50/50 Split'
+              icon: layout-split-verical
+              fields:
+                -
+                  import: theme
+                -
+                  import: fifty_split
+            testimonials:
+              display: Testimonials
+              icon: text-formatting-quotation
+              fields:
+                -
+                  import: testimonials
+            cta_bumper:
+              display: 'CTA Bumper'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: theme
+                -
+                  import: cta_bumper
+            callout_grid:
+              display: 'Callout Grid'
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: theme
+                -
+                  import: callout_grid
+            image_callout:
+              display: 'Image Callout'
+              icon: media-image-photo-focus-frame
+              fields:
+                -
+                  import: theme
+                -
+                  import: image_callout
+            stats:
+              display: Stats
+              icon: layout-three-columns
+              fields:
+                -
+                  import: theme
+                -
+                  import: stats
+            jobs:
+              display: Jobs
+              icon: user-avatar
+              fields:
+                -
+                  import: theme
+                -
+                  import: jobs_block
+        hero:
+          display: Hero
+          icon: layout-flip-down
           sets:
             basic_hero:
               display: Hero
@@ -238,73 +308,30 @@ fields:
                     type: toggle
                     display: 'Darken BG'
                     instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'
-            intro:
-              display: Intro
-              icon: text-formatting-image-top
+        media:
+          display: Media
+          sets:
+            image_carousel:
+              display: 'Image Carousel'
+              icon: media-image-picture-gallery
               fields:
                 -
                   import: theme
                 -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
+                  import: content_group
                 -
-                  import: intro_section
-            accordion:
-              display: Accordion
+                  import: image_carousel
+            logo_cloud:
+              display: 'Logo Cloud'
+              icon: favorite-award
+              fields:
+                -
+                  import: logo_cloud
+            large_media:
+              display: 'Large Media'
+              icon: media-webcam-video
               fields:
                 -
                   import: theme
                 -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
-                -
-                  handle: heading
-                  field:
-                    type: text
-                    display: Heading
-                -
-                  import: accordion
-            fifty_split:
-              display: '50/50 Split'
-              icon: layout-split-verical
-              fields:
-                -
-                  import: theme
-                -
-                  import: fifty_split
-            cta_bumper:
-              display: 'CTA Bumper'
-              icon: text-formatting-image-top
-              fields:
-                -
-                  import: theme
-                -
-                  import: cta_bumper
-            callout_grid:
-              display: 'Callout Grid'
-              icon: layout-grid-dots
-              fields:
-                -
-                  import: theme
-                -
-                  import: callout_grid
-            image_callout:
-              display: 'Image Callout'
-              icon: media-image-photo-focus-frame
-              fields:
-                -
-                  import: theme
-                -
-                  import: image_callout
-            stats:
-              display: Stats
-              icon: layout-three-columns
-              fields:
-                -
-                  import: theme
-                -
-                  import: stats
+                  import: large_media

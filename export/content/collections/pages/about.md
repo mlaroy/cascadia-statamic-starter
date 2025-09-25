@@ -3,7 +3,7 @@ id: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
 blueprint: page
 title: About
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758580210
+updated_at: 1758817200
 meta_title: 'About Page'
 page_builder:
   -
@@ -59,7 +59,7 @@ page_builder:
     eyebrow_text: Discover
     intro_layout: horizontal
     heading: 'Discover The Outdoors'
-    intro_text:
+    description:
       -
         type: paragraph
         content:
@@ -89,6 +89,13 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: 6c6cc987-6958-4c55-a2d0-08ded8af0daf
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
       -
         id: ltt0zyf7
         orientation: right
@@ -105,6 +112,13 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: 29fa7ae7-8985-4e8b-b6d6-d47476033020
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
       -
         id: mfrcey39
         orientation: left
@@ -121,9 +135,43 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: aa04bb78-a9ca-4a66-8539-87849e850a65
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
     type: fifty_split
     enabled: true
     theme: default
+  -
+    id: mfzmb4r5
+    theme: muted
+    eyebrow_text: People
+    heading: 'Meet Our Team'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Our dynamic team of practitioners are super able to do the things they claim to do, and more.'
+    team_members:
+      - a11e131d-fec5-465b-b6aa-7f8eeb329c64
+      - a3431075-ed07-448f-8097-2e1ecda20e60
+    type: team_members
+    enabled: true
+  -
+    id: mfwvg0jc
+    theme: dark
+    eyebrow_text: 'Success Stories'
+    heading: 'Client Testimonials'
+    testimonials:
+      - 6d4e78f7-acab-42b7-a4ac-ffd57c557eda
+      - aca8f309-80d2-4661-8c61-466ae2bc4eb7
+    type: testimonials
+    enabled: true
   -
     id: ltgejipz
     heading: 'Get to know the forest'
@@ -146,8 +194,9 @@ page_builder:
     type: cta_bumper
     enabled: true
     short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
-    link_style: link
+    link_style: button
     link_to_external: false
+    linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
 main_header_style: default
 show_page_title: false
 ---

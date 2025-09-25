@@ -31,26 +31,6 @@ fields:
                     type: assets
                     display: Image
                 -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
-                -
-                  handle: heading
-                  field:
-                    type: text
-                    display: Heading
-                -
-                  handle: content
-                  field:
-                    buttons:
-                      - bold
-                      - italic
-                      - unorderedlist
-                      - orderedlist
-                      - quote
-                      - link
-                    type: markdown
-                    display: Content
+                  import: content_group
                 -
                   import: link

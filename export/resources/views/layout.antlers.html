@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site:short_locale }}" class="antialiased scroll-smooth">
+<html lang="{{ site:short_locale }}" class="antialiased scroll-smooth overscroll-none">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
     </head>
     <body
         data-analytics-platform="{{ site_config:enable_fathom ? 'fathom' : 'google' }}"
-        :class="isOffcanvasOpen ? 'off-canvas-open' : 'off-canvas-closed'"
+        :class="isMenuOpen || isOffcanvasOpen ? 'off-canvas-open overflow-hidden' : 'off-canvas-closed'"
         class="bg-surface font-sans leading-normal text-primary min-h-[100vh] h-screen flex flex-col" x-data="app({
         showBar: {{ notification_banner:show_news_banner ? 'true' : 'false' }},
         enableEventTracking: {{ site_config:enable_event_tracking ? 'true' : 'false' }},

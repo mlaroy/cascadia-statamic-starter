@@ -1,0 +1,70 @@
+title: Job
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: job_type
+            field:
+              options:
+                -
+                  key: full_time
+                  value: Full-time
+                -
+                  key: part_time
+                  value: Part-time
+              default: full_time
+              type: select
+              display: 'Job Type'
+          -
+            handle: location
+            field:
+              options:
+                -
+                  key: in_office
+                  value: 'In Office'
+                -
+                  key: remote
+                  value: Remote
+              default: in_office
+              type: select
+              display: Location
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: contact_email
+            field:
+              input_type: email
+              type: text
+              display: 'Contact Email'
+          -
+            handle: hr_application_link
+            field:
+              input_type: url
+              type: text
+              display: 'HR Application link'
+              instructions: 'If the application is through Bamboo HR, for example.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

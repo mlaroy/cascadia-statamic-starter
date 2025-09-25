@@ -1,0 +1,23 @@
+title: Testimonials
+fields:
+  -
+    import: theme
+  -
+    handle: eyebrow_text
+    field:
+      type: text
+      display: 'Eyebrow Text'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: testimonials
+    field:
+      max_items: 5
+      mode: select
+      collections:
+        - testimonials
+      type: entries
+      display: Testimonials

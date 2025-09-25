@@ -1,0 +1,11 @@
+title: Jobs
+fields:
+  -
+    import: content_group
+  -
+    handle: jobs
+    field:
+      collections:
+        - jobs
+      type: entries
+      display: Jobs

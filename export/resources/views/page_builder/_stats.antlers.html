@@ -1,16 +1,19 @@
 {{#
-    @name Intro
-    @desc The Intro page builder block.
-    @set page.page_builder.intro
+    @name Stats
+    @desc The Stats page builder block.
+    @set page.page_builder.stats
 #}}
 
 <!-- /page_builder/_stats.antlers.html -->
 {{ partial:page_builder/block }}
-    <div class="intro-container py-16 lg:py-24 bg-surface text-body">
+    <div class="stats-container py-16 lg:py-24 bg-surface text-body">
         <div class="container">
             <div class="text-center">
-                <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-balance text-body">{{ heading }}</h2>
+                {{ partial:components.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="heading"
+                     center="desktop"
+                }}
             </div>
             <div class="grid gap-8 grid-cols-1 md:grid-cols-3 mt-16 lg:mt-24">
                 {{ stat_items }}

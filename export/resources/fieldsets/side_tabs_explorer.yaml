@@ -1,15 +1,7 @@
 title: 'Side Tabs Explorer'
 fields:
   -
-    handle: heading
-    field:
-      type: text
-      display: Heading
-  -
-    handle: eyebrow_text
-    field:
-      type: text
-      display: 'Eyebrow Text'
+    import: content_group
   -
     handle: tab_items
     field:
@@ -56,14 +48,11 @@ fields:
                   field:
                     restrict: false
                     buttons:
+                      - h4
+                      - h4
                       - bold
                       - italic
-                      - unorderedlist
-                      - orderedlist
-                      - quote
                       - link
-                      - image
-                      - table
                     automatic_line_breaks: true
                     automatic_links: false
                     escape_markup: false
@@ -71,7 +60,7 @@ fields:
                     smartypants: false
                     table_of_contents: false
                     antlers: false
-                    type: markdown
+                    type: bard
                     display: Description
                     listable: hidden
                     instructions_position: above

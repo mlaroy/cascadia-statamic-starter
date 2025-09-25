@@ -11,11 +11,13 @@
     <div class="container">
         <div class="flex flex-col items-center">
             <div class="w-full lg:w-1/2 mx-auto lg:text-center">
-                <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-                <h2 class="text-3xl lg:text-4xl mb-4 font-semibold text-body">{{ cta_heading }}</h2>
-                <div class="text-xl text-body-muted">
-                    {{ short_description }}
-                </div>
+                {{ partial:components.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="cta_heading"
+                    :content="short_description"
+                    heading_tag="h2"
+                    center="desktop"
+                }}
 
                {{ partial:components.link }}
             </div>

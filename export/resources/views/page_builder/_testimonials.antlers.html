@@ -1,0 +1,49 @@
+{{#
+    @name Testimonials
+    @desc The Testimonials page builder block.
+    @set page.page_builder.testimonials
+#}}
+
+<!-- /page_builder/_testimonials.antlers.html -->
+{{ partial:page_builder/block }}
+    <div class="testimonials-container py-16 lg:py-24 bg-surface">
+        <div class="container">
+            {{ partial:components.content_group
+                :eyebrow_text="eyebrow_text"
+                :heading="heading"
+            }}
+
+            <div class="grid md:grid-cols-2 gap-24 lg:gap-16 mt-16">
+                {{ testimonials }}
+                    <div class="testimonial-item">
+                        <span class="sr-only">{{ star_rating }} / 5 Stars</span>
+                        {{# {{ _loop_times = star_rating }} #}}
+                        {{ loop times="5" }}
+                        <span class="size-4 inline-block">
+                            {{ if index <= star_rating }}
+                            {{ partial src="svg/star" fill="#f9dc5c" }}
+                            {{ else }}
+                            {{ partial src="svg/star" fill="#D1D5DB" }}
+                            {{ /if }}
+                        </span>
+                        {{ /loop }}
+                        <blockquote class="prose md:prose-lg xl:prose-2xl prose-p:text-body-muted mt-4">
+                            {{ content }}
+                        </blockquote>
+                        <div class="flex gap-6 items-center mt-8">
+                            {{ glide:avatar width="200" height="200" }}
+                                <img src="{{ url }}" alt="{{ alt }}" class="rounded-full size-16 block">
+                            {{ /glide:avatar }}
+                            <p class=" text-body-muted">
+                                <span class="block text-lg font-bold">{{ title }}</span>
+                                {{ position }}
+                            </p>
+                        </div>
+                    </div>
+                {{ /testimonials}}
+            </div>
+
+        </div>
+    </div>
+{{ /partial:page_builder/block }}
+<!-- End: /page_builder/_testimonials.antlers.html -->

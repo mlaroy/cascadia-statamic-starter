@@ -1,0 +1,52 @@
+title: Testimonial
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: star_rating
+            field:
+              min: 1
+              max: 5
+              default: 5
+              type: range
+              display: 'Star Rating'
+              width: 50
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              localizable: true
+          -
+            handle: avatar
+            field:
+              container: assets
+              type: assets
+              display: Avatar
+          -
+            handle: position
+            field:
+              type: text
+              display: Position
+              instructions: 'Job title or position, e.g. CEO - Nike'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -49,6 +49,11 @@
                 </div>
             </div>
         </div>
-        <p class="text-xs text-center text-body-muted/80 mt-32">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>
+        <div class="lg:mx-auto  mt-32">
+            <ul class="flex flex-col lg:flex-row justify-center gap-4 list-none">
+                {{ partial:nav.tertiary }}
+            </ul>
+        </div>
+        <p class="text-xs lg:text-center text-body-muted/80 mt-8">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>
     </div>
 </footer>

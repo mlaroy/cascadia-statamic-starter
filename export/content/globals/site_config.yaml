@@ -2,5 +2,6 @@ title: 'Site Config'
 data:
   show_secondary_nav: true
   secondary_nav_location: off_canvas
-  enable_fathom: false
+  enable_fathom: true
   enable_ga4: false
+  enable_event_tracking: true

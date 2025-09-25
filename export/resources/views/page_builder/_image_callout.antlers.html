@@ -1,22 +1,23 @@
 {{#
     @name Image Callout
     @desc The Image Callout page builder block.
-    @set page.page_builder.intro
+    @set page.page_builder.image_callout
 #}}
 
 <!-- /page_builder/_image_callout.antlers.html -->
 {{ partial:page_builder/block }}
-    <div class="intro-container py-28 lg:py-56 bg-surface overflow-hidden relative">
+    <div class="image-callout-container py-28 lg:py-56 bg-surface overflow-hidden relative">
         {{ glide:background_image }}
             <img src="{{ url }}" alt="{{ alt }}" class="object-cover w-full h-full absolute inset-0 opacity-40 mix-blend-normal">
         {{ /glide:background_image }}
         <div class="container relative z-10">
-            <div class="flex flex-col lg:items-center">
-                <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-balance text-body">{{ heading }}</h2>
-                <div class="prose lg:prose-xl prose-p:text-body-muted lg:text-center mt-4">
-                    {{ description }}
-                </div>
+            <div class="flex flex-col lg:items-center lg:text-center">
+                {{ partial:components.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="heading"
+                    :content="description"
+                     center="desktop"
+                }}
 
                 <div class="text-xl col-span-2 md:col-span-1">
                     {{ partial:components.link }}

@@ -10,28 +10,6 @@ fields:
       type: radio
       display: Layout
   -
-    handle: eyebrow_text
-    field:
-      type: text
-      display: 'Eyebrow Text'
-  -
-    handle: heading
-    field:
-      type: text
-      display: Heading
-  -
-    handle: intro_text
-    field:
-      buttons:
-        - h2
-        - h3
-        - bold
-        - italic
-        - removeformat
-        - quote
-        - anchor
-      remove_empty_nodes: false
-      type: bard
-      display: 'Intro Text'
+    import: content_group
   -
     import: link

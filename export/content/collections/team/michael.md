@@ -4,11 +4,11 @@ blueprint: team
 title: Michael
 headshot: alex.jpg
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1747071400
+updated_at: 1758814860
 main_header_style: default
 show_page_title: true
 use_banner: false
-position: 'CEO, Cascadia Digtial'
+position: 'CEO, Big Co.'
 email: reach_me@tld.com
 social_links:
   -

@@ -1,11 +1,10 @@
 {{#
-    @name Intro
-    @desc The Intro page builder block.
-    @set page.page_builder.intro
+    @name Basic Hero
+    @desc The Basic Hero page builder block.
+    @set page.page_builder.basic_hero
 #}}
 
 <!-- /page_builder/_basic_hero.antlers.html -->
-
 {{ $style = main_header_style == 'transparent' ? 'pb-16 pt-48 lg:pb-24 lg:pt-56' : 'py-24 lg:py-24' }}
 
 {{ partial:page_builder/block }}
@@ -13,11 +12,13 @@
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-8">
                 <div class="flex flex-col justify-center lg:max-w-3/4">
-                    <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-semibold text-balance text-body">{{ heading }}</h1>
-                    <div class="prose prose-xl prose-p:text-body-muted mt-4">
-                        {{ description }}
-                    </div>
+                    {{ partial:components.content_group
+                        :eyebrow_text="eyebrow_text"
+                        :heading="heading"
+                        :content="description"
+                        heading_tag="h1"
+                    }}
+
                     {{ if linked_entry && link_style }}
                         <div class="mt-8">
                             {{ partial:components.button :href="linked_entry:url" :text="linked_entry:title" :variant="link_style" }}

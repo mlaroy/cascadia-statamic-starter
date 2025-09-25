@@ -1,5 +1,5 @@
 <div class="container mt-8 pb-16" id="article-content">
-    <div class="mx-auto text-center py-12">
+    <div class="mx-auto text-center lg:py-12">
         <h1 class="text-xl md:text-3xl lg:text-5xl font-bold text-heading mb-2">{{ title }}</h1>
         <time class="text-xs mt-4 text-body-muted mb-2">{{ date }}</time>
         <p class="text-body text-base">By: {{ author:name }}</p>
@@ -24,13 +24,13 @@
         {{ /glide }}
     </figure>
     <article class="mx-4 lg:mx-auto max-w-4xl lg:max-w-7xl -mt-24 z-10 relative ">
-        <div class="prose lg:prose-xl w-full bg-surface-muted p-8 lg:p-16 mx-auto relative shadow-md rounded">
+        <div class="prose lg:prose-xl w-full bg-surface-muted p-8 pt-4 lg:p-16 lg:pt-4 mx-auto relative shadow-md rounded">
             {{ bard_content }}
                 {{ partial src="sets/{type}" }}
             {{ /bard_content }}
 
-            <div class="mt-4 bg-surface p-4 rounded not-prose">
-                <p class="text-body text-base">{{ author:name }}</p>
+            <div class="mt-16 not-prose border-t border-border pt-4">
+                <p class="text-muted text-base">{{ author:name }}</p>
             </div>
         </div>
     </article>

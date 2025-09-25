@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758580326
+updated_at: 1758818866
 page_builder:
   -
     id: ltgcaf0k
@@ -31,13 +31,6 @@ page_builder:
   -
     id: lu1r429d
     heading: 'Welcome to the Cascadia Starter Kit'
-    intro_text:
-      -
-        type: paragraph
-        content:
-          -
-            type: text
-            text: 'The Cascadia Starter Kit is meant to be a more-or-less un-opinionated starter for developers. It has a number of common features already included in a Page Builder, with components that are easy to style according to your design.'
     intro_layout: horizontal
     type: intro
     enabled: true
@@ -45,11 +38,30 @@ page_builder:
     link_style: inverted
     linked_entry: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     link_to_external: false
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'The Cascadia Starter Kit is meant to be a more-or-less un-opinionated starter for developers. It has a number of common features already included in a Page Builder, with components that are easy to style according to your design.'
   -
     id: mfvoy1ty
     theme: muted
     eyebrow_text: 'Great Clients'
-    heading: 'Brands We Work With'
+    heading: 'Your High Profile Clients'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Look at all the impressive companies we have done work for. '
+          -
+            type: hardBreak
+          -
+            type: text
+            text: 'Here are their logos.'
     logos:
       - columbia.png
       - north_face.png
@@ -58,8 +70,25 @@ page_builder:
     type: logo_cloud
     enabled: true
   -
+    id: mfygckxt
+    theme: default
+    media_type: video
+    video_field: 'https://www.youtube.com/watch?v=KifwE5K0OmI'
+    type: large_media
+    enabled: true
+    eyebrow_text: 'Large Media'
+    heading: 'An Image or a Video'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Choose between a large image or a video embed to go here. Engage your audience with your media of choice!'
+    video: 'https://www.youtube.com/watch?v=29XymHesxa0'
+  -
     id: ltg2wqkz
-    heading: 'Discover Wilderness'
+    heading: 'Tabbed Content'
     tab_items:
       -
         id: ltg2wwy6
@@ -67,16 +96,31 @@ page_builder:
         image:
           - under-city-iron-bridge.jpeg
           - hiker.jpg
-        description: 'Hiking is pretty awesome.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Hiking is pretty awesome.'
         type: tab_item
         enabled: true
       -
         id: ltg2xdow
         title: Camping
         image:
-          - urban-street-in-morning.jpeg
           - camping.jpg
-        description: 'Camping is pretty awesome too.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Camping is pretty awesome too.'
         type: tab_item
         enabled: true
       -
@@ -86,11 +130,58 @@ page_builder:
           - skiing.jpg
         type: tab_item
         enabled: true
-        description: 'Skiing is cool, I guess.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Skiing is cool, I guess.'
+      -
+        id: mfyhegai
+        title: 'This one is just text'
+        description:
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+          -
+            type: heading
+            attrs:
+              level: 4
+            content:
+              -
+                type: text
+                text: 'Inline Heading'
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. '
+          -
+            type: paragraph
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        type: tab_item
+        enabled: true
     type: tabs_explorer
     enabled: true
     theme: dark
     eyebrow_text: Explore
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Images are optional in the tabs. It could be just text if you want to!'
   -
     id: ltgg2024
     sections:
@@ -102,7 +193,15 @@ page_builder:
         heading: 'Sleep Under the Stars'
         type: section
         enabled: true
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
         cta_text: 'Contact Us'
         entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
         cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
@@ -118,7 +217,15 @@ page_builder:
         heading: 'Explore the Trails'
         type: section
         enabled: true
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
         cta_text: 'Contact Us'
         entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
         cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
@@ -134,7 +241,15 @@ page_builder:
         heading: 'Enjoy the Alpine Snow'
         type: section
         enabled: true
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
+        description:
+          -
+            type: paragraph
+            attrs:
+              textAlign: left
+            content:
+              -
+                type: text
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
         cta_text: 'Contact Us'
         entries_field: 726ad294-cf9c-40fd-b204-277118b5aed5
         cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
@@ -147,10 +262,28 @@ page_builder:
     theme: default
   -
     id: lt92fsja
-    heading: 'Recent Posts'
+    heading: 'Read Our Latest News'
     type: blog_teaser
     enabled: true
     theme: muted
+    eyebrow_text: 'Recent Posts'
+  -
+    id: mfzmb4r5
+    theme: light
+    eyebrow_text: People
+    heading: 'Meet Our Team'
+    description:
+      -
+        type: paragraph
+        content:
+          -
+            type: text
+            text: 'Our dynamic team of practitioners are super able to do the things they claim to do, and more.'
+    team_members:
+      - a11e131d-fec5-465b-b6aa-7f8eeb329c64
+      - a3431075-ed07-448f-8097-2e1ecda20e60
+    type: team_members
+    enabled: true
   -
     id: mfpmd7ot
     theme: dark

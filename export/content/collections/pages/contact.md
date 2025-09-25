@@ -3,7 +3,7 @@ id: 726ad294-cf9c-40fd-b204-277118b5aed5
 blueprint: page
 title: Contact
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758314272
+updated_at: 1758749607
 page_builder:
   -
     id: ltf2swiw
@@ -63,6 +63,8 @@ page_builder:
     enabled: false
     theme: muted
     short_description: 'Write some supporting copy for this CTA bumper block.'
+    link_style: link
+    link_to_external: false
   -
     id: mfpozr5u
     theme: dark
@@ -77,5 +79,6 @@ page_builder:
     eyebrow_text: 'Get Started'
 main_header_style: default
 show_page_title: true
-use_banner: false
+use_banner: true
+banner: hiker.jpg
 ---

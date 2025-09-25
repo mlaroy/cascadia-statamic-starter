@@ -1,0 +1,15 @@
+title: Jobs
+template: jobs/show
+layout: layout
+mount: 56d89016-a702-41f4-a661-b6a462f35e7d
+revisions: false
+route: '/{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true

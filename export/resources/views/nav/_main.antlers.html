@@ -82,14 +82,14 @@
     </div>
 
     {{# Mobile Nav #}}
-    <div class="nav-container-mobile lg:hidden w-screen h-screen fixed top-0 left-0 z-50 bg-white text-slate-800" x-show="isMenuOpen" x-transition x-trap="isMenuOpen">
-        <div class="container relative pt-8">
+    <div class="nav-container-mobile lg:hidden w-screen h-dvh fixed top-0 left-0 z-50 bg-white text-slate-800" x-show="isMenuOpen" x-transition.opacity x-trap="isMenuOpen">
+        <div class="container relative pt-4 h-full flex flex-col">
             <div class="flex justify-between">
 
                 {{ if brand_assets:dark_logo }}
                     <a href="/" class="font-semibold text-lg">
                         {{ glide :src="brand_assets:dark_logo" width="200" }}
-                            <img src="{{ url }}" alt="{{ alt }}" class="h-12 w-auto">
+                            <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto">
                         {{ /glide }}
                         <span class="sr-only">
                             {{ site:name }}`
@@ -131,6 +131,16 @@
                     </li>
                 {{ /nav:main_nav }}
             </ul>
+
+            <div class="mt-auto pb-8">
+                <div class="text-xs space-y-2">
+                    <p>{{ organization_info:address }}</p>
+                    <a href="tel:{{ organization_info:phone_number }}" class="inline-block underline text-link">{{ organization_info:phone_number }}</a>
+                    <p class="text-link underline hover:text-muted transition-colors">
+                        <a href="mailto:{{ organization_info:email | obfuscate }}">{{ organization_info:email | obfuscate }}</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

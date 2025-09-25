@@ -33,6 +33,8 @@ fields:
       type: entries
       display: 'Linked Entry'
       width: 50
+      unless:
+        link_to_external: 'equals true'
   -
     handle: external_link
     field:
@@ -40,6 +42,14 @@ fields:
       placeholder: 'https://example.com'
       type: text
       display: 'External Link'
+      width: 50
+      if:
+        link_to_external: 'equals true'
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'Button Text'
       width: 50
       if:
         link_to_external: 'equals true'

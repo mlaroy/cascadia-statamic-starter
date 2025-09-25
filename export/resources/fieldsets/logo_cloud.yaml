@@ -3,15 +3,7 @@ fields:
   -
     import: theme
   -
-    handle: eyebrow_text
-    field:
-      type: text
-      display: 'Eyebrow Text'
-  -
-    handle: heading
-    field:
-      type: text
-      display: Heading
+    import: content_group
   -
     handle: logos
     field:

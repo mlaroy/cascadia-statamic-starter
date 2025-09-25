@@ -8,12 +8,16 @@
 {{ partial:page_builder/block }}
     <div class="carousel-container py-16 lg:py-24 overflow-hidden bg-surface" x-data="carousel( {{ auto_play ? 'true' : 'false' }}, {{ items_to_show || 1 }} )">
         <div class="container">
-            <p class="eyebrow mb-4">{{ eyebrow_text }}</p>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold text-body">{{ heading }}</h2>
-            <div class="splide w-full" x-ref="carousel">
+            {{ partial:components.content_group
+                :eyebrow_text="eyebrow_text"
+                :heading="heading"
+                :content="description"
+                center="desktop"
+            }}
+
+            <div class="splide w-full mt-16" x-ref="carousel">
                 <div class="splide__track">
                     <ul class="splide__list">
-
                         {{ images }}
                             <li class="splide__slide relative aspect-video w-full">
                                 {{ glide :src="url" width="1200" height="800" }}
@@ -31,7 +35,7 @@
             </div>
             {{ /if }}
 
-            <div class="flex justify-center gap-8 text-center mx-auto text-body">
+            <div class="flex justify-center gap-8 text-center mx-auto text-body  {{ if !show_index }} mt-4 {{ /if }}">
                 <button @click="prevSlide" x-bind:disabled="isPrevDisabled" class="disabled:opacity-50 size-12 flex items-center justify-center cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />

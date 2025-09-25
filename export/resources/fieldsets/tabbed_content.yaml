@@ -3,58 +3,40 @@ fields:
   -
     handle: tab_items
     field:
-      collapse: false
-      previews: true
-      fullscreen: true
+      collapse: true
+      type: replicator
+      display: 'Tab Items'
       sets:
         tabs_group:
           display: 'Tabs Group'
-          instructions: null
-          icon: null
           sets:
             tab_item:
               display: 'Tab Item'
-              instructions: null
               icon: layout-table-column-insert
               fields:
                 -
                   handle: tab_title
                   field:
-                    input_type: text
-                    antlers: false
                     type: text
                     display: 'Tab Title'
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                 -
                   handle: image
                   field:
                     mode: grid
                     container: assets
-                    restrict: false
-                    allow_uploads: true
-                    show_filename: true
-                    show_set_alt: true
                     type: assets
                     display: Image
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
                 -
                   handle: tab_content
                   field:
                     restrict: false
                     buttons:
+                      - h3
+                      - h4
                       - bold
                       - italic
                       - unorderedlist
                       - orderedlist
-                      - quote
                       - link
                     automatic_line_breaks: true
                     automatic_links: false
@@ -62,18 +44,6 @@ fields:
                     heading_anchors: false
                     smartypants: false
                     table_of_contents: false
-                    antlers: false
-                    type: markdown
+                    type: bard
                     display: 'Tab Content'
-                    listable: hidden
-                    instructions_position: above
-                    visibility: visible
-                    replicator_preview: true
-                    hide_display: false
-      type: replicator
-      display: 'Tab Items'
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+                    remove_empty_nodes: false

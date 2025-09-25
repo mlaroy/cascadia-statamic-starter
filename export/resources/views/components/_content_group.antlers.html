@@ -1,0 +1,40 @@
+{{#
+    @name Content Group
+    @desc The Content Group component.
+    @set components.content_group
+#}}
+
+<!-- /components/_content_group.antlers.html -->
+
+{{ _heading_tag = (heading_tag | lower | trim ) || 'h2' }}
+{{ _center = (center | lower | trim ) || 'false' }}
+
+<div class="flex flex-col gap-2 lg:gap-4 {{
+
+    switch(
+        (_center == 'desktop') => 'lg:items-center lg:text-center',
+        (_center == 'mobile') => 'items-center text-center',
+        (_center == 'false') => 'items-star text-left',
+        () => ''
+    )
+}}">
+
+    {{ if eyebrow_text }}
+    <p class="eyebrow">{{ eyebrow_text }}</p>
+    {{ /if }}
+    {{ if heading }}
+    <{{ _heading_tag }} class="font-bold text-body
+        {{ switch(
+            (_heading_tag == 'h1') => 'text-3xl lg:text-4xl xl:text-7xl',
+            (_heading_tag == 'h2') => 'text-2xl lg:text-4xl xl:text-5xl',
+            (_heading_tag == 'h3') => 'text-xl md:text-2xl lg:text-4xl',
+            () => 'text-2xl sm:text-3xl md:text-4xl text-balance'
+        ) }}
+    ">{{ heading }}</{{ _heading_tag }}>
+    {{ /if }}
+    {{ if content }}
+    <div class="prose lg:prose-lg prose-p:text-body-muted text-balance">
+        {{ content }}
+    </div>
+    {{ /if }}
+</div>

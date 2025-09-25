@@ -15,11 +15,14 @@ Cascadia comes with a bunch of Page Builder components with some sensible preset
 - CTA Bumper
 - 50/50 Group
 - Stats
+- Testimonals / Ratings
+- Large Media
 - Google Map
 - Hero
 - Image Carousel
 - Intro
 - Tabs Explorer
+- Job Listings
 
 ### Google Maps
 
@@ -54,6 +57,11 @@ Explore the `theme.css` to see all the available theme classes, and add your own
 
 ## Analytics
 
-Optionally choose between Fathom or GA with a toggle, and add your tracking ID to your `.env` file. The `button` component, used for CTA buttons throughout, will fire an event that can be used for sending data to your analytics platform of choice.
+Optionally choose between Fathom or GA with a toggle, and add your tracking ID to your `.env` file. The `button` component, used for CTA buttons throughout, will fire an event that can be used for sending data to your analytics platform of choice. Enable events by setting
+```
+enableEventTracking: true,
+```
+
+in the `js/apline/app.js` file.
 
 To modify the available data, look at the `button` component, and explore the `app.js` file for the `handleAnalyticsEvent` method, and follow the code from there.
