@@ -2,8 +2,8 @@
     "name": "mlaroy/cascadia-statamic-starter",
     "extra": {
         "statamic": {
-            "name": "Tailwind Alpine Starter Kit",
-            "description": "Unopinionated Starter Kit with Tailwind and Alpine JS"
+            "name": "Cascadia Starter Kit",
+            "description": "A (mostly) Unopinionated Developer Starter Kit with Tailwind and Alpine JS"
         }
     }
 }
