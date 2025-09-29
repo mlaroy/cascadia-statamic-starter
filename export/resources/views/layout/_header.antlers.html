@@ -24,11 +24,11 @@
     <div class="container">
         <div class="flex justify-between items-center">
             <div>
-                <h1>
+                <div>
                     {{ if main_header_style !== 'transparent' && brand_assets:dark_logo }}
                         <a href="/" class="font-semibold text-lg">
                             {{ glide :src="brand_assets:dark_logo" width="200" }}
-                                <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto">
+                                <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto" width="200" height="160">
                             {{ /glide }}
                             <span class="sr-only">
                                 {{ site:name }}`
@@ -37,7 +37,7 @@
                     {{ elseif main_header_style == 'transparent' && brand_assets:light_logo }}
                         <a href="/" class="font-semibold text-lg">
                             {{ glide :src="brand_assets:light_logo" width="200" }}
-                                <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto">
+                                <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto" width="200" height="160">
                             {{ /glide }}
                             <span class="sr-only">
                                 {{ site:name }}`
@@ -48,7 +48,7 @@
                             {{ site:name }}
                         </a>
                     {{ /if }}
-                </h1>
+                </div>
             </div>
             <div>
                 {{ partial:nav.main }}

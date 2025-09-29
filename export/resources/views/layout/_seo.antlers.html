@@ -1,10 +1,28 @@
-<title>{{ meta_title ?? title }} | {{ site:name }}</title>
-<meta property="og:title" content="{{ meta_title ?? title }} | {{ site:name }}" />
-{{ if meta_description }}
-    <meta property="og:description" content="{{ meta_description }}" />
-{{ /if }}
+{{# get the meta_title, then the site_config value for title , the fallback to title #}}
+
+{{ _title = meta_title ? meta_title : title  }}
+{{ _title = _title ? _title : site_config:meta_title }}
+
+{{# get the meta_description, then the site_config value for description , the fallback to title #}}
+{{ _description = meta_description ? meta_description : site_config:meta_description }}
+{{ _og_image = og_image ? og_image : site_config:og_image }}
+
+<meta content="{{ is_homepage }}"/>
+<title>{{ _title }}</title>
+<meta property="og:title" content="{{ _title }} {{  if !is_homepage }}| {{ site:name}}{{ /if}}" />
+<meta property="twitter:title" content="{{ _title }} {{ if !is_homepage }}| {{ site:name }}{{ /if}}" />
+<meta name="description" content="{{ _description  }}" />
+<meta property="og:description" content="{{ _description  }}" />
+<meta property="twitter:description" content="{{ _description  }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="{{ config:app:url }}">
+
 {{ if og_image }}
-    <meta property="og:image" content="{{ og_image:url }}" />
+    {{ _og_image }}
+    <meta property="og:image" content="{{ _og_image:url }}" />
+    <meta property="og:image" content="{{ _og_image:url }}" />
+    <meta property="twitter:image" content="{{ _og_image:url }}" />
+    {{ /_og_image }}
 {{ /if }}
 
 {{# Auto add pagination links when using resources/views/components/pagination.antlers.html. #}}

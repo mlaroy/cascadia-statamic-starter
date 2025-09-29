@@ -27,8 +27,8 @@
                 </div>
                 {{ if featured_image }}
                     <div class="flex flex-col items-center justify-center">
-                        {{ glide:featured_image }}
-                            <img src="{{ url }}" alt="{{ alt }}" class="block" />
+                        {{ glide:featured_image width="1200" height="800" }}
+                            <img src="{{ url }}" alt="{{ alt }}" class="block" width="1200" height="800" loading="lazy" />
                         {{ /glide:featured_image }}
                     </div>
                 {{ /if }}

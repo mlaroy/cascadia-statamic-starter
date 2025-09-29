@@ -1,5 +1,6 @@
 {{ if (linked_entry || link_to_external) && link_style }}
-    {{ _button_text = linked_entry ? linked_entry:title : button_text }}
+    {{ _button_text = override_link_text && linked_entry ?  button_text : linked_entry:title }}
+    {{ _button_text = link_to_external ? button_text : _button_text }}
     <div class="mt-8">
         {{ partial:components.button :href="linked_entry:url" :text="_button_text" :variant="link_style" }}
     </div>

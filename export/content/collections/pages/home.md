@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758818866
+updated_at: 1758921155
 page_builder:
   -
     id: ltgcaf0k
@@ -14,7 +14,7 @@ page_builder:
     type: hero
     enabled: true
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
-    cta_text: 'Learn More'
+    cta_text: 'Read More About It'
     modal_type: video
     video: 'https://www.youtube.com/watch?v=nW6Jr38iHdI'
     add_modal: false
@@ -45,6 +45,8 @@ page_builder:
           -
             type: text
             text: 'The Cascadia Starter Kit is meant to be a more-or-less un-opinionated starter for developers. It has a number of common features already included in a Page Builder, with components that are easy to style according to your design.'
+    override_link_text: true
+    button_text: 'Read more about it'
   -
     id: mfvoy1ty
     theme: muted
@@ -72,7 +74,7 @@ page_builder:
   -
     id: mfygckxt
     theme: default
-    media_type: video
+    media_type: image
     video_field: 'https://www.youtube.com/watch?v=KifwE5K0OmI'
     type: large_media
     enabled: true
@@ -85,7 +87,7 @@ page_builder:
           -
             type: text
             text: 'Choose between a large image or a video embed to go here. Engage your audience with your media of choice!'
-    video: 'https://www.youtube.com/watch?v=29XymHesxa0'
+    image: hiker.jpg
   -
     id: ltg2wqkz
     heading: 'Tabbed Content'
@@ -209,6 +211,7 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: 6c6cc987-6958-4c55-a2d0-08ded8af0daf
+        override_link_text: false
       -
         id: ltt0zyf7
         orientation: right
@@ -233,6 +236,7 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: 29fa7ae7-8985-4e8b-b6d6-d47476033020
+        override_link_text: false
       -
         id: mfrcey39
         orientation: left
@@ -257,6 +261,7 @@ page_builder:
         link_style: button
         link_to_external: false
         linked_entry: aa04bb78-a9ca-4a66-8539-87849e850a65
+        override_link_text: false
     type: fifty_split
     enabled: true
     theme: default
@@ -296,6 +301,7 @@ page_builder:
     background_image: hiker.jpg
     eyebrow_text: Discover
     linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
+    override_link_text: false
   -
     id: malldcwi
     callout_item:
@@ -309,6 +315,7 @@ page_builder:
               -
                 type: text
                 text: "This is a super important point that you should consider. Isn't the icon convincing?"
+        grid_image: noun_tree_2.png
       -
         id: 9jtJ2Nv3
         grid_headline: 'Another Good Point'
@@ -328,9 +335,10 @@ page_builder:
               -
                 type: text
                 text: ' convincing?'
+        grid_image: noun_tree_3.png
       -
         id: mb017zme
-        grid_headline: 'Another Good Point'
+        grid_headline: 'A Third Good Point'
         grid_content:
           -
             type: paragraph
@@ -347,9 +355,10 @@ page_builder:
               -
                 type: text
                 text: ' convincing?'
+        grid_image: noun_tree_4.png
       -
         id: mb01816c
-        grid_headline: 'Another Good Point'
+        grid_headline: 'A Final Good Point'
         grid_content:
           -
             type: paragraph
@@ -366,6 +375,7 @@ page_builder:
               -
                 type: text
                 text: ' convincing?'
+        grid_image: noun_tree.png
     type: callout_grid
     enabled: true
     theme: muted
@@ -447,6 +457,11 @@ page_builder:
     link_style: button
     link_to_external: false
     linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
+    override_link_text: false
 main_header_style: transparent
 show_page_title: false
+meta_title: 'Cascadia Starter Kit'
+meta_description: 'The Cascadia Starter Kit is a more-or-less un-opinionated starter for developers. Construct your site with ease using the Page Builder, with components that are easy to style according to your design.'
+og_image:
+  - cascadia-kit-og.jpg
 ---

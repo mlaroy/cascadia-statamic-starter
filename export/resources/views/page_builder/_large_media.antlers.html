@@ -20,12 +20,12 @@
             {{ if media_type == 'image' }}
                 <div class="aspect-video relative overflow-hidden mt-8 lg:mt-16">
                     {{ glide :src="image" width="2400" height="1600" }}
-                        <img src="{{ url }}" alt="{{ alt }}" class="w-full block absolute inset-0 object-cover">
+                        <img src="{{ url }}" alt="{{ alt }}" width="2400" height="1600" class="w-full block absolute inset-0 object-cover" loading="lazy">
                     {{ /glide }}
                 </div>
             {{ else if media_type == 'video'  }}
                 <div class="aspect-video overflow-hidden relative mt-8 lg:mt-16">
-                    <iframe class="w-full h-full absolute inset-0" src="{{ video | embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe title="Video" class="w-full h-full absolute inset-0" src="{{ video | embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             {{ /if }}
             </div>

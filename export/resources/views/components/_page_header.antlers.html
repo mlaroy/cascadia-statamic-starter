@@ -1,19 +1,17 @@
 {{ if show_page_title }}
     {{ if use_banner }}
-        <div class="bg-surface theme-dark overflow-hidden">
-            <div
-            style="background-image: url({{ glide:banner width="2400" height="1600" }});
-            background-position: {{ banner:focus_css }}
-            "
-            class="relative bg-cover bg-no-repeat overflow-hidden pt-[10vw] pb-[8vw] lg:pb-[4vw]">
-                <div class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-transparent to-black/80 p-4 lg:p-8 flex items-center">
-                    <div class="container">
-                        <h1 class="text-2xl lg:text-4xl xl:text-6xl font-bold text-body">{{ title }}</h1>
-                    </div>
+        <div class="bg-surface theme-dark relative overflow-hidden pt-[10vw] pb-[8vw] lg:pb-[4vw]">
+            {{ glide:banner width="2400" height="1600" }}
+                <img src="{{ url }}" alt="{{ alt }}" width="2400" height="1600" class="object-cover object-center absolute inset-0 w-full h-full">
+            {{ /glide:banner }}
+            <div class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-transparent to-black/80 p-4 lg:p-8 flex items-center">
+                <div class="container">
+                    <h1 class="text-2xl lg:text-4xl xl:text-6xl font-bold text-body">{{ title }}</h1>
                 </div>
+            </div>
         </div>
         {{ else }}
-            <div class="container">
+            <div class="container mb-16">
                 <h1 class="text-2xl lg:text-4xl xl:text-6xl font-bold text-heading my-8">{{ title }}</h1>
             </div>
         {{ /if }}

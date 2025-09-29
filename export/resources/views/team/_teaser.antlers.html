@@ -1,15 +1,20 @@
+{{ _htag = heading_size ? heading_size : 'h3' }}
+
 <article class="bg-surface-muted text-body h-full">
     <a href="{{ url }}" class="aspect-video overflow-hidden relative block">
         {{ glide :src="headshot" width="1600" height="1200" }}
-            <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300">
+            <img loading="lazy" src="{{ url }}" alt="{{ alt }}" width="1600" height="1200" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300">
         {{ /glide }}
+        <span class="sr-only">View {{ title }}'s profile</span>
     </a>
     <div class="blog-teaser-content p-4">
         <span class="eyebrow block mb-2 text-body-muted">{{ position }}</span>
-        <h3 class="text-xl font-semibold mb-2">
+        <{{ _htag }} class="text-xl font-semibold mb-2">
             <a href="{{ url }}">{{ title }}</a>
-        </h3>
+        </{{ _htag }}>
         <div class="text-gray-600 text-sm">{{ content | safe_truncate(150, '...') }}</div>
-        <a href="{{ url }}" class="underline text-link transition text-sm inline-block mt-4">Read More</a>
+        <a href="{{ url }}" class="underline text-link transition text-sm inline-block mt-4">View Profile
+            <span class="sr-only">of {{ title }}</span>
+        </a>
     </div>
 </article>

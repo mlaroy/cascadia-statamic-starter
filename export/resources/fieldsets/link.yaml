@@ -25,6 +25,13 @@ fields:
     field:
       type: toggle
       display: 'Link to External'
+      width: 50
+  -
+    handle: override_link_text
+    field:
+      type: toggle
+      display: 'Override Link Text'
+      width: 50
   -
     handle: linked_entry
     field:
@@ -51,5 +58,6 @@ fields:
       type: text
       display: 'Button Text'
       width: 50
-      if:
+      if_any:
         link_to_external: 'equals true'
+        override_link_text: 'equals true'

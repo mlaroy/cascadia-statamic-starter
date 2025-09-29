@@ -8,14 +8,14 @@
 {{ partial:page_builder/block }}
     <div class="callout-grid py-16 lg:py-24 bg-surface">
         <div class="container space-y-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 lg:mx-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                 {{ callout_item }}
                     <div class="flex gap-8">
                         {{ if grid_image }}
-                            <div class="flex-shrink-0 w-16 h-16 bg-surface-muted rounded-full flex items-center justify-center mr-4">
-                                {{ glide :src="grid_image" width="200" height="200" }}
-                                    <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full block">
-                                {{ /glide }}
+                            <div class="flex-shrink-0 flex items-start justify-center mr-4">
+                                {{ glide:grid_image width="200" height="200" }}
+                                    <img src="{{ url }}" alt="{{ alt }}" width="200" height="200" class="object-cover object-center block size-20">
+                                {{ /glide:grid_image }}
                             </div>
                         {{ /if }}
                         <div>

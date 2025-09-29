@@ -2,3 +2,12 @@
     padding-inline: 1rem;
     margin-inline: auto;
 }
+
+/* For uniform h1 sizing
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements#specifying_a_uniform_font_size_for_h1
+*/
+@layer base {
+    :where(h1) {
+        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+    }
+}

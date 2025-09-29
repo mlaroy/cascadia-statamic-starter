@@ -22,6 +22,7 @@ page_builder:
             type: text
             text: 'At Cascadia Starter, we value consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
     featured_image: hiker.jpg
+    override_link_text: false
   -
     id: mfyahis2
     theme: muted
@@ -41,6 +42,7 @@ page_builder:
     type: intro
     enabled: true
     button_text: 'Send Resume'
+    override_link_text: false
   -
     id: mfyaxn9p
     theme: default
@@ -72,8 +74,8 @@ page_builder:
     background_image: hiker.jpg
     eyebrow_text: Discover
     linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
+    override_link_text: false
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758749520
-use_banner: true
-banner: hiker.jpg
+updated_at: 1758918820
+use_banner: false
 ---

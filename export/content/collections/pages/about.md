@@ -3,8 +3,8 @@ id: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
 blueprint: page
 title: About
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758817200
-meta_title: 'About Page'
+updated_at: 1758909606
+meta_title: About
 page_builder:
   -
     id: mfpos1i2

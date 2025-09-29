@@ -45,3 +45,8 @@ tabs:
               if_any:
                 enable_fathom: 'equals true'
                 enable_ga4: 'equals true'
+      -
+        display: SEO
+        fields:
+          -
+            import: seo_fields

@@ -3,9 +3,10 @@
         <button
             type="button"
             @click="isOpen = !isOpen"
+            :aria-expanded="isOpen"
             :aria-controls="$id('collapse')"
             @keydown.escape.prevent.stop="isOpen = false"
-            class="relative flex w-full text-lg lg:text-xl font-semibold text-body cursor-pointer">
+            class="relative flex w-full text-lg lg:text-xl font-semibold text-body cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2">
             {{ heading }}
 
             <span class="inline-block ml-auto cursor-pointer">
@@ -20,7 +21,7 @@
             :id="$id('collapse')"
             x-show="isOpen"
             x-collapse
-            :aria-expanded="isOpen">
+            :aria-hidden="!isOpen">
             <div class="pt-4 text-lg text-body/80">
                 {{ content }}
             </div>
