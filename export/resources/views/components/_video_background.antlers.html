@@ -16,6 +16,7 @@
 {{ else }}
     <div id="inline-player" class="absolute inset-0 pointer-events-none flex items-center justify-center isolate">
         <video
+            tabindex="-1"
             class="relative w-[200vw] aspect-video scale-[200%] xl:w-[150vw] xl:scale-100"
             x-ref="video"
             preload="auto"
@@ -24,17 +25,15 @@
             autoplay
             playsinline
             webkit-playsinline
-            controls="false"
+            controls
             disablepictureinpicture
-            x-init="
-                $el.addEventListener('loadeddata', function() {
-                    if (this.webkitEnterFullscreen) {
-                        this.webkitEnterFullscreen = function() { return false; };
-                    }
-                    if (this.requestFullscreen) {
-                        this.requestFullscreen = function() { return false; };
-                    }
-                });
+            x-on:loadeddata="
+                if ($el.webkitEnterFullscreen) {
+                    $el.webkitEnterFullscreen = function() { return false; };
+                }
+                if ($el.requestFullscreen) {
+                    $el.requestFullscreen = function() { return false; };
+                }
             "
         >
             <source src="{{ video_file }}" type="video/mp4">
