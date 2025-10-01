@@ -4,7 +4,7 @@ blueprint: team
 title: Michael
 headshot: alex.jpg
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758814860
+updated_at: 1759342076
 main_header_style: default
 show_page_title: true
 use_banner: false
@@ -23,5 +23,9 @@ social_links:
     link: 'https://youtube.com/@fromwordpresstostatamic'
     type: social_link
     enabled: true
+meta_title: 'Michael Smith'
+meta_description: 'Michael is a software engineer with over 10 years of experience in the industry.'
+og_image:
+  - alex.jpg
 ---
-Michael is a software engineer with over 10 years of experience in the industry. He has worked on a variety of projects, from small startups to large enterprise applications. He is passionate about building scalable and maintainable software solutions
+Michael is a software engineer with over 10 years of experience in the industry. He has worked on a variety of projects, from small startups to large enterprise applications. He is passionate about building scalable and maintainable software solutions.

@@ -5,6 +5,7 @@
 
 {{# get the meta_description, then the site_config value for description , the fallback to title #}}
 {{ _description = meta_description ? meta_description : site_config:meta_description }}
+
 {{ _og_image = og_image ? og_image : site_config:og_image }}
 
 <meta content="{{ is_homepage }}"/>
@@ -19,9 +20,9 @@
 
 {{ if og_image }}
     {{ _og_image }}
-    <meta property="og:image" content="{{ _og_image:url }}" />
-    <meta property="og:image" content="{{ _og_image:url }}" />
-    <meta property="twitter:image" content="{{ _og_image:url }}" />
+        <meta property="og:image" content="{{ config:app:url }}{{ url }}" />
+        <meta property="og:image" content="{{ config:app:url }}{{ url }}" />
+        <meta property="twitter:image" content="{{ config:app:url }}{{ url }}" />
     {{ /_og_image }}
 {{ /if }}
 
