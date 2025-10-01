@@ -121,6 +121,7 @@
     --color-button: var(--color-white);
 
     --color-button-ghost: var(--color-white);
+    --color-button-ghost-hover: var(--color-soft);
 }
 
 
