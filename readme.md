@@ -63,3 +63,9 @@ enableEventTracking: true,
 in the `js/apline/app.js` file.
 
 To modify the available data, look at the `button` component, and explore the `app.js` file for the `handleAnalyticsEvent` method, and follow the code from there.
+
+## Accessibility
+
+This starter kit has baked-in accessibility features, including full keyboard operation for the accordion and Tab Explorer components, focus trap for the off-canvas menu.
+
+Colour-contrast ratios for text over backrounds meet WCAG 2.1 AA standards. Keep this in mind when making updates to suit your own designs!

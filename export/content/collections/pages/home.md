@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758921155
+updated_at: 1759341267
 page_builder:
   -
     id: ltgcaf0k
@@ -90,7 +90,7 @@ page_builder:
     image: hiker.jpg
   -
     id: ltg2wqkz
-    heading: 'Tabbed Content'
+    heading: 'Accessible Tabbed Content'
     tab_items:
       -
         id: ltg2wwy6
@@ -181,6 +181,11 @@ page_builder:
       -
         type: paragraph
         content:
+          -
+            type: text
+            text: 'Use your arrow keys to navigate between tabs, and the tab key to focus to the next component.'
+          -
+            type: hardBreak
           -
             type: text
             text: 'Images are optional in the tabs. It could be just text if you want to!'

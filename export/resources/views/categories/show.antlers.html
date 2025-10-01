@@ -2,12 +2,12 @@
     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8">{{ title }}</h1>
 
     <ul class="inline-flex gap-2 mt-4">
-        <li><a href="/blog" class="button button-small">All</a></li>
+        <li><a href="/blog" class="button button-small button-inverted">All</a></li>
         {{ taxonomy:categories scope="tax" }}
             <li>
                 <a
                     href="{{ tax:url }}"
-                    class="button button-small {{ if tax:slug == page:slug }}bg-blue-400 current{{ else }} bg-blue-200{{ /if }}">
+                    class="button button-small {{ if tax:slug == page:slug }}current{{ else }} button-inverted{{ /if }}">
                     {{ tax:title }}
                 </a>
             </li>

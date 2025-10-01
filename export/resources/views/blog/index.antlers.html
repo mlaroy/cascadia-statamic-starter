@@ -1,8 +1,10 @@
-{{ partial:components/page_header }}
+{{# {{ partial:components/page_header }} #}}
 
-<div class="container mt-16 pb-16">
+<div class="container mt-8 pb-16">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8">{{ title }}</h1>
 
     <ul class="inline-flex gap-2 mt-4">
+        <li><span class="button button-small current">All</span></li>
         {{ taxonomy:categories }}
             <li>
                 <a href="{{ url }}" class="button button-small button-inverted">

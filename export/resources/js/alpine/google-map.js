@@ -59,12 +59,8 @@ export default () => ({
 				zoom: 8,
                 minZoom: 8,
                 maxZoom: 14,
-                // mapId: '82f1ef3936f63a29',
                 mapId: 'DEMO_MAP_ID',
-				// scrollwheel: false,
 				scaleControl: true,
-				// styles: MAP_STYLES,
-				// streetViewControlOptions: true,
 			});
 
             this.map = map;
