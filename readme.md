@@ -4,6 +4,8 @@ Cascadia is a mostly-unopinionated starter kit, with just enough CSS and JS to g
 
 [See the demo](https://starter.cascadiadigital.dev/)
 
+![Cascadia Starter Logo](cascadia-kit.jpg)
+
 ## Components
 Cascadia comes with a bunch of Page Builder components with some sensible presets that you can customize to your liking. These include:
 - Accordion
@@ -22,7 +24,7 @@ Cascadia comes with a bunch of Page Builder components with some sensible preset
 - Tabs Explorer
 - Job Listings
 
-### Google Maps
+## Google Maps
 
 To use the Google Maps component, be sure to add your API key as `GOOGLE_MAP_API_KEY` in your `.env` file.
 
@@ -52,6 +54,9 @@ Classes for theming include:
 
 Explore the `theme.css` to see all the available theme classes, and add your own.
 
+## SEO
+
+Basic SEO fields are incorporated into the Page, Team, and Blog collections, with fallbacks configured in the Globals: Site Config section.
 
 ## Analytics
 
