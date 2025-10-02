@@ -1,9 +1,3 @@
-{{#
-    @name Hero
-    @desc The Hero page builder block.
-    @set page.page_builder.hero
-#}}
-
 <!-- /page_builder/_hero.antlers.html -->
 
 {{ $style = main_header_style == 'transparent' ? 'py-12 lg:py-0' : 'py-0' }}
@@ -23,14 +17,6 @@
     })">
         {{ if background_option == 'video' }}
             {{ partial:components.video_background }}
-        {{ else }}
-            {{# {{ if background_image }}
-                {{ glide :src="background_image" width="1800" height="1200" }}
-                    <img src="{{ url }}" alt="{{ alt }}" width="1800" height="1200" class="object-cover object-center absolute inset-0 w-full h-full mix-blend-multiply">
-                {{ /glide }}
-            {{ else }}
-                <p class="object-cover object-center absolute inset-0 w-full h-full">Please add a background image or video.</p>
-            {{ /if }} #}}
         {{ /if }}
 
         {{ if darken_bg }}
