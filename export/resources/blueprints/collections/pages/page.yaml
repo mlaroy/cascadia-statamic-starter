@@ -76,3 +76,12 @@ tabs:
               display: Slug
           -
             import: seo_fields
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true
