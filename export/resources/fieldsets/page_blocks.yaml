@@ -12,7 +12,7 @@ fields:
       sets:
         complex_blocks:
           display: Complex
-          instructions: Complex.
+          instructions: Accordions, Google Maps, Tabs Explorer.
           icon: programming-script-code-brackets
           sets:
             accordion:
@@ -48,7 +48,7 @@ fields:
                   import: side_tabs_explorer
         text:
           display: Content
-          instructions: 'Text based blocks.'
+          instructions: 'Text and Entry links.'
           icon: mail-chat-bubble-text
           sets:
             basic_content:
@@ -142,6 +142,7 @@ fields:
                   import: jobs_block
         hero:
           display: Hero
+          instructions: Basic Hero, Video Hero.
           icon: layout-flip-down
           sets:
             basic_hero:
@@ -299,6 +300,7 @@ fields:
                     instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'
         media:
           display: Media
+          instructions: Logo Cloud, Large Media.
           sets:
             image_carousel:
               display: 'Image Carousel'
