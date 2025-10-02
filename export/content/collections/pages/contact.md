@@ -3,7 +3,7 @@ id: 726ad294-cf9c-40fd-b204-277118b5aed5
 blueprint: page
 title: Contact
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1758749607
+updated_at: 1759421371
 page_blocks:
   -
     id: ltf2swiw
@@ -49,12 +49,6 @@ page_blocks:
     enabled: true
     theme: default
   -
-    id: ly7qx7uz
-    contact_form: contact_form
-    type: contact_form
-    enabled: true
-    theme: muted
-  -
     id: lvgxmmq5
     cta_heading: 'Work with Us'
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
@@ -65,6 +59,7 @@ page_blocks:
     short_description: 'Write some supporting copy for this CTA bumper block.'
     link_style: link
     link_to_external: false
+    override_link_text: false
   -
     id: mfpozr5u
     theme: dark
@@ -77,6 +72,7 @@ page_blocks:
     type: image_callout
     enabled: true
     eyebrow_text: 'Get Started'
+    override_link_text: false
 main_header_style: default
 show_page_title: true
 use_banner: true
