@@ -1,6 +1,4 @@
-<!-- /_google_map.antlers.html -->
 {{ partial:page_blocks.component }}
-
 <div class="map-locations-container py-16 lg:py-24 bg-surface text-body" x-data="googleMap">
     <div class="container">
         <div class="grid lg:grid-cols-3 gap-8">
@@ -59,6 +57,4 @@
 <script>
 	window.locationsOfInterest = {{ locations | to_json }};
 </script>
-
 {{ /partial:page_blocks.component }}
-<!-- /_google_map.antlers.html -->

@@ -7,7 +7,7 @@
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
         {{ partial:layout/seo }}
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
-        {{ partial:components/analytics }}
+        {{ partial:components.analytics }}
     </head>
     <body
         data-analytics-platform="{{ site_config:enable_fathom ? 'fathom' : 'google' }}"
@@ -20,7 +20,7 @@
             Skip to content
         </a>
 
-        {{ partial:components/banner }}
+        {{ partial:components.banner }}
 
         {{ partial:layout/header }}
 
