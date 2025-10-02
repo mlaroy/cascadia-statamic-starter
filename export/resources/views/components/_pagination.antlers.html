@@ -1,120 +1,67 @@
-{{#
-    Docs: https://statamic.dev/tags/collection#pagination
+{{ paginate }}
 
-    Params:
-    - class: Optional classes for the container.
-#}}
+    <ul class="pagination flex justify-center gap-4">
 
-{{ if paginate.total_pages > 1 }}
-    <div {{ class | attribute:class }}>
-        {{ paginate }}
-            {{# Section that will be yielded in the <head> of documents for search engines. #}}
-            {{ section:pagination }}
-                {{ if prev_page }}
-                    <link rel="prev" href="{{ prev_page }}">
-                {{ /if }}
-                {{ if next_page }}
-                    <link rel="next" href="{{ next_page }}">
-                {{ /if }}
-            {{ /section:pagination }}
+        {{ if prev_page }}
+            <li><a href="{{ prev_page }}" class="button button-small">&laquo;</a></li>
+        {{ else }}
+            <li class="disabled"><span>&laquo;</span></li>
+        {{ /if }}
 
-            <nav class="flex justify-center items-center md:items-start gap-10">
-                {{ if prev_page }}
-                    <a href="{{ prev_page }}" class="size-8 block shrink-0">
-                        <span class="sr-only">Previous</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
-                    </a>
+
+        {{ links:segments }}
+            {{ first }}
+                {{ if page == current_page }}
+
+                    <li class="active"><span>{{ page }}</span></li>
+
                 {{ else }}
-                    <p class="size-8 block text-center shrink-0" disabled>
-                        <span class="sr-only">Previous</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                        </svg>
-                    </p>
+
+                    <li><a href="{{ url }}" class="underline">{{ page }}</a></li>
+
                 {{ /if }}
 
-                <ul class="flex-wrap gap-1.5 hidden md:flex">
-                    {{ links:segments }}
-                        {{ first }}
-                            {{ if page == current_page }}
-                                <li>
-                                    <p class=" size-8 block text-center pointer-events-none">
-                                        {{ page }}
-                                    </p>
-                                </li>
-                            {{ else }}
-                                <li>
-                                    <a href="{{ url }}" class="size-8 block text-center">{{ page }}</a>
-                                </li>
-                            {{ /if }}
-                        {{ /first }}
+            {{ /first }}
 
-                        {{ if slider }}
-                            <li>
-                                <div class="text-lg size-12 flex items-center justify-center">…</div>
-                            </li>
-                        {{ /if }}
+            {{ if slider }}
+                <li class="disabled"><span>...</span></li>
+            {{ /if }}
 
-                        {{ slider }}
-                            {{ if page === current_page }}
-                                <li>
-                                    <button class="size-8 block text-center pointer-events-none">
-                                        {{ page }}
-                                    </button>
-                                </li>
-                            {{ else }}
-                                <li>
-                                    <a href="{{ url }}" class="rounded-full border border-slate-400 size-8 block text-center btn--round">
-                                        {{ page }}
-                                    </a>
-                                </li>
-                            {{ /if }}
-                        {{ /slider }}
+            {{ slider }}
 
-                        {{ if slider || (!slider && last) }}
-                            <li>
-                                <div class="text-lg size-12 flex items-center justify-center">…</div>
-                            </li>
-                        {{ /if }}
-
-                        {{ last }}
-                            {{ if page === current_page }}
-                                <li>
-                                    <p class="size-8 block text-center pointer-events-none">
-                                        {{ page }}
-                                    </p>
-                                </li>
-                            {{ else }}
-                                <li>
-                                    <a href="{{ url }}" class="rounded-full border border-slate-400 size-8 block text-center btn--round">{{ page }}</a>
-                                </li>
-                            {{ /if }}
-                        {{ /last }}
-                    {{ /links:segments }}
-                </ul>
-
-                <p class="shrink-0 content-sm font-semibold leading-none md:hidden">
-                    {{ current_page }} of {{ total_pages }}
-                </p>
-
-                {{ if next_page }}
-                    <a href="{{ next_page }}" class=" size-8 block text-center shrink-0">
-                        <span class="sr-only">Next</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </a>
+                {{ if page == current_page }}
+                    <li class="active"><span>{{ page }}</span></li>
                 {{ else }}
-                    <p class="size-8 block text-center shrink-0" disabled>
-                        <span class="sr-only">Next</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </p>
+                    <li><a href="{{ url }}">{{ page }}</a></li>
                 {{ /if }}
-            </nav>
-        {{ /paginate }}
-    </div>
-{{ /if }}
+
+            {{ /slider }}
+
+
+
+            {{ if slider || (!slider && last) }}
+                <li class="disabled"><span>...</span></li>
+            {{ /if }}
+
+            {{ last }}
+
+                {{ if page == current_page }}
+                    <li class="active"><span>{{ page }}</span></li>
+                {{ else }}
+                    <li><a href="{{ url }}" class="button button-small">{{ page }}</a></li>
+                {{ /if }}
+
+            {{ /last }}
+
+        {{ /links:segments }}
+
+
+        {{ if next_page }}
+            <li><a href="{{ next_page }}" class="button button-small">&raquo;</a></li>
+        {{ else }}
+            <li class="disabled"><span>&raquo;</span></li>
+        {{ /if }}
+
+    </ul>
+
+{{ /paginate }}
