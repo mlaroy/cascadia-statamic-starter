@@ -1,4 +1,4 @@
-title: 'Notification Banner'
+title: 'Alert Banner'
 data:
   show_news_banner: true
   announcement: 'This is the announcement. [Visit the blog](https://statamic-starter.test/blog) to learn more.'

@@ -1,0 +1,25 @@
+<!-- /_cta_bumper.antlers.html -->
+{{ partial:page_blocks.component }}
+
+<div class="cta-bumper-container py-16 lg:py-24 bg-surface">
+    <div class="container">
+        <div class="flex flex-col items-center">
+            <div class="w-full lg:w-1/2 mx-auto lg:text-center">
+                {{ partial:components.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="cta_heading"
+                    :content="short_description"
+                    heading_tag="h2"
+                    center="desktop"
+                }}
+
+               {{ partial:components.link }}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{{ /partial:page_blocks.component }}
+<!-- /_cta_bumper.antlers.html -->

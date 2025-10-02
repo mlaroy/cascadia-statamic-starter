@@ -9,7 +9,6 @@ Cascadia comes with a bunch of Page Builder components with some sensible preset
 - Accordion
 - Blog Teaser
 - Logo Cloud
-- Contact Form
 - CTA Bumper
 - 50/50 Group
 - Stats

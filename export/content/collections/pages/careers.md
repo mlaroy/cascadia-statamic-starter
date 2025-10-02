@@ -4,7 +4,7 @@ blueprint: page
 title: Careers
 main_header_style: default
 show_page_title: true
-page_builder:
+page_blocks:
   -
     id: mfya862p
     theme: default

@@ -1,0 +1,32 @@
+<!-- /_jobs.antlers.html -->
+{{ partial:page_blocks.component }}
+    <div class="jobs-container py-16 lg:py-24 bg-surface">
+        <div class="container">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+                <div class="col-span-1">
+                    {{ partial:components.content_group
+                        :eyebrow_text="eyebrow_text"
+                        :heading="heading"
+                        :content="description"
+                    }}
+                </div>
+                <div class="col-span1  lg:col-span-2 mt-16 md:mt-0">
+                    {{ if jobs }}
+                         <div class="grid xl:grid-cols-2 gap-8 lg:gap-y-16">
+                             {{ jobs }}
+                                 <div class="">
+                                     <h3 class="text-xl font-semibold mb-2">{{ title }}</h3>
+                                     <div class="text-body-muted mb-4">{{ content | truncate(150, '...') }}</div>
+                                     <a href="{{ hr_application_link }}" class="text-link hover:text-link-hover transition inline-block underline">Apply Now</a>
+                                 </div>
+                             {{ /jobs }}
+                         </div>
+                    {{ /if }}
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{{ /partial:page_blocks.component }}
+{{# End: /page_builder/_jobs.antlers.html #}}

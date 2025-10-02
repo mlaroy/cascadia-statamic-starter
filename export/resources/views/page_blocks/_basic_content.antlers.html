@@ -1,0 +1,13 @@
+<!-- /_basic_content.antlers.html -->
+{{ partial:page_blocks.component }}
+    <div class="basic-content-container py-16 lg:py-24 bg-surface">
+        <div class="container">
+            <div class="prose lg:prose-xl prose-p:text-body prose-h2:text-body-muted prose-h3:text-body-muted prose-h4:text-body-muted">
+                {{ bard_content }}
+                    {{ partial src="sets/{type}" }}
+                {{ /bard_content }}
+            </div>
+        </div>
+    </div>
+{{ /partial:page_blocks.component }}
+<!-- /_basic_content.antlers.html -->

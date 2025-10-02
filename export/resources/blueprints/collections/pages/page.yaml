@@ -4,7 +4,7 @@ tabs:
     display: Main
     sections:
       -
-        display: General
+        display: Configuration
         fields:
           -
             handle: title
@@ -16,9 +16,6 @@ tabs:
               display: Title
               validate:
                 - required
-      -
-        display: 'Page Config'
-        fields:
           -
             handle: main_header_style
             field:
@@ -59,15 +56,15 @@ tabs:
                 use_banner: 'equals true'
                 show_page_title: 'equals true'
       -
-        display: 'Page builder'
+        display: 'Page Blocks'
         fields:
           -
-            import: page_builder
+            import: page_blocks
   sidebar:
     display: Sidebar
     sections:
       -
-        display: Meta
+        display: 'Meta and SEO'
         fields:
           -
             handle: slug
@@ -78,6 +75,8 @@ tabs:
                 - required
               display: Slug
           -
+            import: seo_fields
+          -
             handle: parent
             field:
               type: entries
@@ -86,9 +85,3 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
-              display: Parent
-      -
-        display: SEO
-        fields:
-          -
-            import: seo_fields

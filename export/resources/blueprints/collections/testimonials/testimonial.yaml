@@ -43,6 +43,7 @@ tabs:
     display: Sidebar
     sections:
       -
+        display: Meta
         fields:
           -
             handle: slug

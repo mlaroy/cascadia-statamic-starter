@@ -7,7 +7,7 @@ show_page_title: true
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_at: 1758751663
 use_banner: false
-page_builder:
+page_blocks:
   -
     id: mfyj8vth
     bard_content:

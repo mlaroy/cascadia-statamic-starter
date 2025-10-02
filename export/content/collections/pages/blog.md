@@ -8,7 +8,7 @@ updated_at: 1758307049
 main_header_style: default
 show_page_title: true
 use_banner: false
-page_builder:
+page_blocks:
   -
     id: mfr6jnxy
     theme: dark

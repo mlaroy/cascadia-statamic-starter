@@ -5,7 +5,7 @@ title: About
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_at: 1758909606
 meta_title: About
-page_builder:
+page_blocks:
   -
     id: mfpos1i2
     theme: default

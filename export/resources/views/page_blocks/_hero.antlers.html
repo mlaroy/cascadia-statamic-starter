@@ -1,0 +1,92 @@
+<!-- /_hero.antlers.html -->
+
+{{ $style = main_header_style == 'transparent' ? 'py-12 lg:py-0' : 'py-0' }}
+
+<!-- video background options -->
+{{ video_id = background_option == 'video' ?
+    (video_source == 'youtube' ? youtube_id :
+        (video_source == 'vimeo' ? vimeo_id :
+            (video_source == 'asset' ? video_file : null)
+        )
+    ) : null }}
+
+{{ partial:page_blocks.component }}
+    <div class="hero-container transition duration-300 bg-black/60 flex justify-center items-center relative w-full overflow-hidden {{ $style }}" x-data="heroVideo({
+        videoId: '{{ video_id }}',
+        source: '{{ video_source }}',
+    })">
+        {{ if background_option == 'video' }}
+            {{ partial:components.video_background }}
+        {{ /if }}
+
+        {{ if darken_bg }}
+            <div class="absolute inset-0 bg-black/40 mix-blend-darken"></div>
+        {{ /if }}
+        {{ if background_option == 'video' }}
+                {{ partial:components.video_background }}
+         {{ else }}
+            {{ if background_image }}
+                {{ glide :src="background_image" width="1800" height="1200" }}
+                    <img src="{{ url }}" alt="{{ alt }}" width="1800" height="1200" class="object-cover object-center absolute inset-0 w-full h-full">
+                {{ /glide }}
+            {{ else }}
+                <p class="object-cover object-center absolute inset-0 w-full h-full">Please add a background image or video.</p>
+            {{ /if }}
+        {{ /if }}
+
+        {{ if darken_bg }}
+            <div class="absolute inset-0 bg-black/40 mix-blend-darken"></div>
+        {{ /if }}
+
+        <div class="container relative text-body theme-dark lg:px-24 pt-20 pb-8 sm:pt-[10vh] sm:pb-[7vh] md:pt-[15vh] md:pb-[12vh] lg:pt-[30vh] lg:pb-[18vh]">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-4 font-semibold text-light text-balance">{{ main_heading }}</h1>
+            <p class="text-base lg:text-3xl text-balance text-body-muted">{{ sub_heading }}</p>
+
+            <div class="hero-cta mt-4 lg:mt-8 flex gap-4">
+                {{ if cta_link && cta_text !== '' }}
+                    {{ partial:components.button :href="cta_link:url" :text="cta_text" variant="inverted" }}
+                {{ /if }}
+
+                {{ if show_modal == true }}
+                    <button @click="toggleModal('hero')" type="button" class="button-ghost">
+                        {{ modal_button_text }}
+                    </button>
+                {{ /if }}
+            </div>
+        </div>
+
+            {{ if show_modal == true }}
+                {{ partial:components.modal_slot id="hero"}}
+                    {{ if modal_type == 'video' }}
+                        <div class="aspect-video overflow-hidden relative">
+                            <iframe class="w-full h-full absolute inset-0" src="{{ modal_video }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    {{ else }}
+                        <div class="aspect-video overflow-hidden relative bg-white p-6 rounded">
+                            <div class="prose">
+                                {{ rich_text }}
+                            </div>
+                        </div>
+                    {{ /if }}
+                {{ /partial:components.modal_slot }}
+            {{ /if }}
+
+
+        {{ if background_option == 'video' }}
+            <div x-cloak x-show="isPlayerReady" x-transition class="absolute bottom-6 right-6 z-10">
+                <button x-on:click="toggleVideo" class="rounded-full flex items-center justify-center mt-auto text-white/70 text-sm gap-2">
+                    <svg x-show="isPlaying" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="w-4">
+                        <path class="fill-white/60" d="M5.49952 14.9671H2.49984C1.6718 14.9671 1 14.2953 1 13.4673V2.46847C1 1.64043 1.6718 0.968628 2.49984 0.968628H5.49952C6.32756 0.968628 6.99936 1.64043 6.99936 2.46847V13.4673C6.99936 14.2953 6.32756 14.9671 5.49952 14.9671ZM14.9985 13.4673V2.46847C14.9985 1.64043 14.3267 0.968628 13.4987 0.968628H10.499C9.67095 0.968628 8.99915 1.64043 8.99915 2.46847V13.4673C8.99915 14.2953 9.67095 14.9671 10.499 14.9671H13.4987C14.3267 14.9671 14.9985 14.2953 14.9985 13.4673Z"/>
+                    </svg>
+
+                    <svg x-show="!isPlaying" stroke="1"  viewBox="0 0 24 24" class="w-4 stroke-white/60"  xmlns="http://www.w3.org/2000/svg" >
+                        <path class="fill-white/60" stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"></path>
+                    </svg>
+                    <span x-text="isPlaying ? 'Pause' : 'Play'"></span>
+                </button>
+            </div>
+        {{ /if }}
+
+    </div>
+{{ /partial:page_blocks.component }}
+<!-- /_hero.antlers.html -->

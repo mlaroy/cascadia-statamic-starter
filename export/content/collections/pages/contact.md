@@ -4,7 +4,7 @@ blueprint: page
 title: Contact
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_at: 1758749607
-page_builder:
+page_blocks:
   -
     id: ltf2swiw
     title: 'Location Info'
@@ -50,7 +50,7 @@ page_builder:
     theme: default
   -
     id: ly7qx7uz
-    contact_form: contact
+    contact_form: contact_form
     type: contact_form
     enabled: true
     theme: muted
