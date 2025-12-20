@@ -1,7 +1,0 @@
-title: 'Location Types'
-preview_targets:
-  -
-    label: Term
-    url: '{permalink}'
-    refresh: true
-layout: layout
