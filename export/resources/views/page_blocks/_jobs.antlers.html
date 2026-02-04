@@ -1,13 +1,13 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="jobs-container py-16 lg:py-24 bg-surface">
         <div class="container">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
                 <div class="col-span-1">
-                    {{ partial:components.content_group
+                    <s:partial:components.content_group
                         :eyebrow_text="eyebrow_text"
                         :heading="heading"
                         :content="description"
-                    }}
+                    />
                 </div>
                 <div class="col-span1  lg:col-span-2 mt-16 md:mt-0">
                     {{ if jobs }}
@@ -27,4 +27,4 @@
             </div>
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

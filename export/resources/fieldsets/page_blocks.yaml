@@ -12,12 +12,13 @@ fields:
       sets:
         complex_blocks:
           display: Complex
-          instructions: Accordions, Google Maps, Tabs Explorer.
+          instructions: 'Accordions, Google Maps, Tabs Explorer.'
           icon: programming-script-code-brackets
           sets:
             accordion:
               display: Accordion
-              icon: layout-table-row-insert
+              icon: layout-list
+              image: accordion.png
               fields:
                 -
                   import: theme
@@ -28,6 +29,7 @@ fields:
             google_map:
               display: 'Google Map'
               icon: travel-map
+              image: google-map.png
               fields:
                 -
                   import: theme
@@ -41,6 +43,7 @@ fields:
             tabs_explorer:
               display: 'Tabs Explorer'
               icon: layout-header-sidebar-left
+              image: tabbed_content.png
               fields:
                 -
                   import: theme
@@ -54,12 +57,14 @@ fields:
             basic_content:
               display: 'Basic Content'
               icon: form-text-field
+              image: basic_content.png
               fields:
                 -
                   import: blog_content_with_sets
             intro:
               display: Intro
               icon: text-formatting-image-top
+              image: intro.png
               fields:
                 -
                   import: theme
@@ -73,6 +78,7 @@ fields:
             blog_teaser:
               display: 'Blog Teaser'
               icon: file-content-list
+              image: latest_news.png
               fields:
                 -
                   import: theme
@@ -81,6 +87,7 @@ fields:
             team_members:
               display: 'Team Members'
               icon: user-avatar
+              image: team.png
               fields:
                 -
                   import: theme
@@ -89,6 +96,7 @@ fields:
             fifty_split:
               display: '50/50 Split'
               icon: layout-split-verical
+              image: fifty_fifty.png
               fields:
                 -
                   import: theme
@@ -97,12 +105,14 @@ fields:
             testimonials:
               display: Testimonials
               icon: text-formatting-quotation
+              image: testimonials.png
               fields:
                 -
                   import: testimonials
             cta_bumper:
               display: 'CTA Bumper'
               icon: text-formatting-image-top
+              image: bumper.png
               fields:
                 -
                   import: theme
@@ -111,6 +121,7 @@ fields:
             callout_grid:
               display: 'Callout Grid'
               icon: layout-grid-dots
+              image: callout_grid.png
               fields:
                 -
                   import: theme
@@ -119,6 +130,7 @@ fields:
             image_callout:
               display: 'Image Callout'
               icon: media-image-photo-focus-frame
+              image: image_slider.png
               fields:
                 -
                   import: theme
@@ -127,6 +139,7 @@ fields:
             stats:
               display: Stats
               icon: layout-three-columns
+              image: stats.png
               fields:
                 -
                   import: theme
@@ -135,6 +148,7 @@ fields:
             jobs:
               display: Jobs
               icon: user-avatar
+              image: open_jobs.png
               fields:
                 -
                   import: theme
@@ -142,12 +156,13 @@ fields:
                   import: jobs_block
         hero:
           display: Hero
-          instructions: Basic Hero, Video Hero.
+          instructions: 'Basic Hero, Video Hero.'
           icon: layout-flip-down
           sets:
             basic_hero:
               display: Hero
               icon: layout-header
+              image: hero.png
               fields:
                 -
                   import: theme
@@ -184,6 +199,7 @@ fields:
             hero:
               display: 'Video Hero'
               icon: align-object-top
+              image: video_hero.png
               fields:
                 -
                   import: theme
@@ -300,11 +316,12 @@ fields:
                     instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'
         media:
           display: Media
-          instructions: Logo Cloud, Large Media.
+          instructions: 'Logo Cloud, Large Media.'
           sets:
             image_carousel:
               display: 'Image Carousel'
               icon: media-image-picture-gallery
+              image: image_slider.png
               fields:
                 -
                   import: theme
@@ -315,12 +332,14 @@ fields:
             logo_cloud:
               display: 'Logo Cloud'
               icon: favorite-award
+              image: logos.png
               fields:
                 -
                   import: logo_cloud
             large_media:
               display: 'Large Media'
               icon: media-webcam-video
+              image: image_slider.png
               fields:
                 -
                   import: theme

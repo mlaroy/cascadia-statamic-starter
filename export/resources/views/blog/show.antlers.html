@@ -7,21 +7,21 @@
         <ul class="inline-flex gap-2 mx-auto mt-4">
             {{ categories }}
                 <li>
-                    {{ partial:components.button
+                    <s:partial:components.button
                         href="/categories/{{ slug }}"
                         :text="title"
                         variant="inverted"
                         size="small"
-                    }}
+                    />
                 </li>
             {{ /categories }}
         </ul>
     </div>
 
     <figure class="relative overflow-hidden aspect-video -mx-4 mt-8 lg:mx-auto max-w-7xl">
-        {{ glide :src="image" width="1200" height="800" }}
+        <s:glide :src="image" width="1200" height="800">
             <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full">
-        {{ /glide }}
+        </s:glide>
     </figure>
     <article class="mx-4 lg:mx-auto max-w-4xl lg:max-w-7xl -mt-24 z-10 relative ">
         <div class="prose lg:prose-xl w-full bg-surface-muted p-8 pt-4 lg:p-16 lg:pt-4 mx-auto relative shadow-md rounded">

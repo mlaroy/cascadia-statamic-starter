@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-        {{ partial:layout.seo }}
+        <s:partial:layout.seo />
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
-        {{ partial:components.analytics }}
+        <s:partial:components.analytics />
     </head>
     <body
         data-analytics-platform="{{ site_config:enable_fathom ? 'fathom' : 'google' }}"
@@ -20,16 +20,16 @@
             Skip to content
         </a>
 
-        {{ partial:components.banner }}
+        <s:partial:components.banner />
 
-        {{ partial:layout/header }}
+        <s:partial:layout/header />
 
         <main id="content">
             {{ template_content }}
         </main>
 
-        {{ partial:layout/footer }}
+        <s:partial:layout/footer />
 
-        {{ partial:components.modal }}
+        <s:partial:components.modal />
     </body>
 </html>

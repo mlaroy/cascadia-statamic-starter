@@ -1,21 +1,21 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="carousel-container py-16 lg:py-24 overflow-hidden bg-surface" x-data="carousel( {{ auto_play ? 'true' : 'false' }}, {{ items_to_show || 1 }} )">
         <div class="container">
-            {{ partial:components.content_group
+            <s:partial:components.content_group
                 :eyebrow_text="eyebrow_text"
                 :heading="heading"
                 :content="description"
                 center="desktop"
-            }}
+            />
 
             <div class="splide w-full mt-16" x-ref="carousel">
                 <div class="splide__track">
                     <ul class="splide__list">
                         {{ images }}
                             <li class="splide__slide relative aspect-video w-full">
-                                {{ glide :src="url" width="1200" height="800" }}
+                                <s:glide :src="url" width="1200" height="800">
                                     <img src="{{ url }}" alt="{{ alt }}" width="1200" height="800" class="object-cover object-center w-full h-full" loading="lazy">
-                                {{ /glide }}
+                                </s:glide>
                             </li>
                         {{ /images }}
                     </ul>
@@ -44,4 +44,4 @@
             </div>
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

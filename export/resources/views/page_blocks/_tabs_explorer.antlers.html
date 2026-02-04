@@ -1,11 +1,11 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="tabs-explorer py-16 lg:py-24 bg-surface">
         <div class="container">
-            {{ partial:components.content_group
+            <s:partial:components.content_group
                 :eyebrow_text="eyebrow_text"
                 :heading="heading"
                 :content="description"
-            }}
+            />
 
             <div class="grid lg:grid-cols-6 gap-12 lg:gap-24 mt-16" x-data="{
                 activeItem: 0,
@@ -77,9 +77,9 @@
                             >
                             {{ if image }}
                                 <div class="relative overflow-hidden aspect-video mb-4 opacity-100">
-                                    {{ glide :src="image" width="1200" height="800" }}
+                                    <s:glide :src="image" width="1200" height="800">
                                         <img src="{{ url }}" alt="{{ alt }}" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300 block">
-                                    {{ /glide }}
+                                    </s:glide>
                                 </div>
                             {{ /if }}
                             <h3 class="text-xl lg:text-2xl font-semibold mb-4 text-heading">{{ title }}</h3>
@@ -92,4 +92,4 @@
             </div>
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

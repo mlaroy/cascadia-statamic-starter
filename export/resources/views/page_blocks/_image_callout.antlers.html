@@ -1,22 +1,22 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="image-callout-container py-28 lg:py-56 bg-surface overflow-hidden relative">
-        {{ glide:background_image }}
+        <s:glide:background_image>
             <img src="{{ url }}" alt="{{ alt }}" class="object-cover w-full h-full absolute inset-0 opacity-40 mix-blend-normal" loading="lazy">
-        {{ /glide:background_image }}
+        </s:glide:background_image>
         <div class="container relative z-10">
             <div class="flex flex-col lg:items-center lg:text-center">
-                {{ partial:components.content_group
+                <s:partial:components.content_group
                     :eyebrow_text="eyebrow_text"
                     :heading="heading"
                     :content="description"
                      center="desktop"
-                }}
+                />
 
                 <div class="text-xl col-span-2 md:col-span-1">
-                    {{ partial:components.link }}
+                    <s:partial:components.link />
                 </div>
             </div>
 
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

@@ -5,9 +5,9 @@
             <div class="lg:col-span-2">
                 {{ if brand_assets:light_logo }}
                     <a href="/" class="font-semibold text-lg">
-                        {{ glide :src="brand_assets:light_logo" width="200" }}
+                        <s:glide :src="brand_assets:light_logo" width="200">
                             <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto" width="200" height="160">
-                        {{ /glide }}
+                        </s:glide>
                         <span class="sr-only">
                             {{ site:name }}
                         </span>
@@ -20,7 +20,7 @@
             </div>
             <div class="lg:col-span-2">
                 <h3 class="font-semibold mb-5 pb-5 border-b border-border-muted text-body">Menu</h3>
-                {{ partial:nav.footer }}
+                <s:partial:nav.footer />
             </div>
             <div class="lg:col-span-2">
                 <h3 class="font-semibold mb-5 pb-5 border-b border-border-muted text-body">Our Socials</h3>
@@ -30,7 +30,7 @@
                             <li>
                                 <a href="{{ link }}" class="underline hover:text-muted transition-colors">
                                     <span class="size-8 block">
-                                        {{ partial src="icons/{social_platform:value}" }}
+                                        <s:partial src="icons/{social_platform:value}" />
                                     </span>
                                     <span class="sr-only">{{ social_platform:label }}</span>
                                 </a>
@@ -52,7 +52,7 @@
         </div>
         <div class="lg:mx-auto  mt-32">
             <ul class="flex flex-col lg:flex-row justify-center gap-4 list-none">
-                {{ partial:nav.tertiary }}
+                <s:partial:nav.tertiary />
             </ul>
         </div>
         <p class="text-xs lg:text-center text-body-muted/80 mt-8">&copy; 2024 - {{ date iso_format="YYYY" }} Michael LaRoy - {{ site:name }}. All Rights Reserved.</p>

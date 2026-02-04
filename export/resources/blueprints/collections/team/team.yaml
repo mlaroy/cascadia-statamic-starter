@@ -4,6 +4,9 @@ tabs:
     display: Main
     sections:
       -
+        display: Configuration
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: title
@@ -22,6 +25,8 @@ tabs:
             import: team_member
       -
         display: 'Page Config'
+        collapsible: true
+        collapsed: false
         fields:
           -
             import: page_config
@@ -29,6 +34,9 @@ tabs:
     display: Sidebar
     sections:
       -
+        display: Image
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: slug

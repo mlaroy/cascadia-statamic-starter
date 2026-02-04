@@ -4,6 +4,9 @@ tabs:
     display: Main
     sections:
       -
+        display: Configuration
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: title
@@ -26,13 +29,20 @@ tabs:
             import: blog_content_with_sets
   sidebar:
     display: Sidebar
+    collapsible: true
+    collapsed: false
     sections:
       -
         display: SEO
+        collapsible: true
+        collapsed: false
         fields:
           -
             import: seo_fields
       -
+        display: 'Page Config'
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: slug

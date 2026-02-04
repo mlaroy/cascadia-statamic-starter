@@ -1,10 +1,10 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="testimonials-container py-16 lg:py-24 bg-surface">
         <div class="container">
-            {{ partial:components.content_group
+            <s:partial:components.content_group
                 :eyebrow_text="eyebrow_text"
                 :heading="heading"
-            }}
+            />
 
             <div class="grid md:grid-cols-2 gap-24 lg:gap-16 mt-16">
                 {{ testimonials }}
@@ -14,9 +14,9 @@
                         {{ loop times="5" }}
                         <span class="size-4 inline-block">
                             {{ if index <= star_rating }}
-                            {{ partial src="icons/star" fill="#f9dc5c" }}
+                            <s:partial src="icons/star" fill="#f9dc5c" />
                             {{ else }}
-                            {{ partial src="icons/star" fill="#D1D5DB" }}
+                            <s:partial src="icons/star" fill="#D1D5DB" />
                             {{ /if }}
                         </span>
                         {{ /loop }}
@@ -24,9 +24,9 @@
                             {{ content }}
                         </blockquote>
                         <div class="flex gap-6 items-center mt-8">
-                            {{ glide:avatar width="200" height="200" }}
+                            <s:glide:avatar width="200" height="200">
                                 <img src="{{ url }}" alt="{{ alt }}" class="rounded-full size-16 block">
-                            {{ /glide:avatar }}
+                            </s:glide:avatar>
                             <p class=" text-body-muted">
                                 <span class="block text-lg font-bold">{{ title }}</span>
                                 {{ position }}
@@ -38,4 +38,4 @@
 
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

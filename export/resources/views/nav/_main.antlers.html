@@ -8,7 +8,7 @@
     <div class="nav-container-desktop hidden lg:flex items-center gap-6">
         {{# Desktop Nav #}}
         <ul class="gap-6 items-center justify-end flex">
-            {{ nav:main_nav }}
+            <s:nav:main_nav>
                 {{ if children }}
                 <li x-data="{
                     open: false,
@@ -69,7 +69,7 @@
                 </li>
                 {{ /if }}
 
-            {{ /nav:main_nav }}
+            </s:nav:main_nav>
         </ul>
         {{ if site_config:show_secondary_nav && site_config:secondary_nav_location == 'off_canvas' }}
             <button @click="isOffcanvasOpen = !isOffcanvasOpen" class="cursor-pointer">
@@ -88,9 +88,9 @@
 
                 {{ if brand_assets:dark_logo }}
                     <a href="/" class="font-semibold text-lg">
-                        {{ glide :src="brand_assets:dark_logo" width="200" }}
+                        <s:glide :src="brand_assets:dark_logo" width="200">
                             <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto">
-                        {{ /glide }}
+                        </s:glide>
                         <span class="sr-only">
                             {{ site:name }}`
                         </span>
@@ -105,7 +105,7 @@
             </div>
 
             <ul class="justify-start flex flex-col mt-8">
-                {{ nav:main_nav }}
+                <s:nav:main_nav>
                     <li x-data="{ isItemOpen: false }" class="menu-item relative py-2">
                         {{ if children }}
                             <button @click="isItemOpen = !isItemOpen" class="focus:outline-none focus-visible:ring-2 ring-primary flex justify-between items-center gap-2 w-full {{ is_current || is_parent ? 'underline' : '' }}">
@@ -130,7 +130,7 @@
                             </a>
                         {{ /if }}
                     </li>
-                {{ /nav:main_nav }}
+                </s:nav:main_nav>
             </ul>
 
             <div class="mt-auto pb-8">

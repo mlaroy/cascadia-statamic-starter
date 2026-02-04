@@ -1,4 +1,4 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
 <div class="map-locations-container py-16 lg:py-24 bg-surface text-body" x-data="googleMap">
     <div class="container">
         <div class="grid lg:grid-cols-3 gap-8">
@@ -8,11 +8,11 @@
                     <div class="flex justify-between rounded p-2 border border-border min-w-36 size-fit relative">
                         <select x-on:change="(e) => setLocationFilter(e.target.value)" class="appearance-none w-full z-0 outline-offset-4">
                             <option selected="">All</option>
-                            {{ taxonomy:location_types }}
+                            <s:taxonomy:location_types>
                                 <option value="{{ title }}">
                                     {{ title }}
                                 </option>
-                            {{ /taxonomy:location_types }}
+                            </s:taxonomy:location_types>
                         </select>
                         <!-- Heroicons up/down -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="shrink-0 w-5 h-5 text-gray-500 absolute right-2 top-2 pointer-events-none"><path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd" /></svg>
@@ -57,4 +57,4 @@
 <script>
 	window.locationsOfInterest = {{ locations | to_json }};
 </script>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

@@ -1,11 +1,11 @@
 <nav id="footer-nav" class="footer-nav">
     <ul class="gap-2 flex flex-col">
-        {{ nav:main_nav }}
+        <s:nav:main_nav>
             <li>
                 <a href="{{ url }}" class="focus:outline-none focus-visible:ring-2 hover:text-muted transition-colors ring-primary {{ is_current || is_parent ? 'underline' : '' }}">
                     {{ title }}
                 </a>
             </li>
-        {{ /nav:main_nav }}
+        </s:nav:main_nav>
     </ul>
 </nav>

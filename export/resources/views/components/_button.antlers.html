@@ -23,13 +23,9 @@
         {
             href: `{{ href }}`,
             title: `{{ text }}`,
-            type: 'button',
+            type: 'click',
             current_url: `{{ current_url }}`
         })"
     >
-    {{ if text }}
-        {{ text }}
-    {{ else }}
-        {{ slot }}
-    {{ /if }}
+    {{ text ?? slot }}
 </a>

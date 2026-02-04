@@ -5,6 +5,8 @@ tabs:
     sections:
       -
         display: Configuration
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: title
@@ -57,6 +59,8 @@ tabs:
                 show_page_title: 'equals true'
       -
         display: 'Page Blocks'
+        collapsible: true
+        collapsed: false
         fields:
           -
             import: page_blocks
@@ -65,6 +69,8 @@ tabs:
     sections:
       -
         display: 'Meta and SEO'
+        collapsible: true
+        collapsed: false
         fields:
           -
             handle: slug
@@ -76,12 +82,3 @@ tabs:
               display: Slug
           -
             import: seo_fields
-          -
-            handle: parent
-            field:
-              type: entries
-              collections:
-                - pages
-              max_items: 1
-              listable: false
-              localizable: true

@@ -1,12 +1,12 @@
-{{ partial:page_blocks.component }}
+<s:partial:page_blocks.component>
     <div class="stats-container py-16 lg:py-24 bg-surface text-body">
         <div class="container">
             <div class="text-center">
-                {{ partial:components.content_group
+                <s:partial:components.content_group
                     :eyebrow_text="eyebrow_text"
                     :heading="heading"
                      center="desktop"
-                }}
+                />
             </div>
             <div class="grid gap-8 grid-cols-1 md:grid-cols-3 mt-16 lg:mt-24">
                 {{ stat_items }}
@@ -25,4 +25,4 @@
 
         </div>
     </div>
-{{ /partial:page_blocks.component }}
+</s:partial:page_blocks.component>

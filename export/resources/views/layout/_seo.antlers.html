@@ -1,12 +1,10 @@
-{{# get the meta_title, then the site_config value for title , the fallback to title #}}
+{{# meta_title → title → site_config:meta_title #}}
+{{ _title = meta_title ?? title ?? site_config:meta_title }}
 
-{{ _title = meta_title ? meta_title : title  }}
-{{ _title = _title ? _title : site_config:meta_title }}
+{{# meta_description → site_config:meta_description #}}
+{{ _description = meta_description ?? site_config:meta_description }}
 
-{{# get the meta_description, then the site_config value for description , the fallback to title #}}
-{{ _description = meta_description ? meta_description : site_config:meta_description }}
-
-{{ _og_image = og_image ? og_image : site_config:og_image }}
+{{ _og_image = og_image ?? site_config:og_image }}
 
 <meta content="{{ is_homepage }}"/>
 <title>{{ _title }}</title>

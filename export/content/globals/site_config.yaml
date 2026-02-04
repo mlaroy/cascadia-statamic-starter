@@ -1,11 +1,1 @@
 title: 'Site Config'
-data:
-  show_secondary_nav: true
-  secondary_nav_location: off_canvas
-  enable_fathom: true
-  enable_ga4: false
-  enable_event_tracking: true
-  meta_title: 'Cascadia Starter Kit'
-  meta_description: 'The Cascadia Starter Kit is a more-or-less un-opinionated starter for developers. Construct your site with ease using the Page Builder, with components that are easy to style according to your design.'
-  og_image:
-    - cascadia-kit-og.jpg

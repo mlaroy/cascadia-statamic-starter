@@ -3,31 +3,31 @@
 
     <ul class="inline-flex gap-2 mt-4">
         <li><span class="button button-small current">All</span></li>
-        {{ taxonomy:categories }}
+        <s:taxonomy:categories>
             <li>
                 <a href="{{ url }}" class="button button-small button-inverted">
                     {{ title }}
                 </a>
             </li>
-        {{ /taxonomy:categories }}
+        </s:taxonomy:categories>
     </ul>
 
 
-    {{ collection:blog as="posts" paginate="true" sort="date:desc" on_each_side="1"  }}
+    <s:collection:blog as="posts" paginate="true" sort="date:desc" on_each_side="1">
         <ul class="list-none text-lg lg:text-xl mt-8 grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
             {{ posts }}
                 <li>
-                    {{ partial:blog.teaser heading_size="h2" }}
+                    <s:partial:blog.teaser heading_size="h2" />
                 </li>
             {{ /posts }}
 
         </ul>
 
         <div class="mt-24">
-            {{ partial:components.pagination }}
+            <s:partial:components.pagination />
         </div>
 
-    {{ /collection:blog }}
+    </s:collection:blog>
 </div>
 
-{{ partial:components.page_blocks }}
+<s:partial:components.page_blocks />

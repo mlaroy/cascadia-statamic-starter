@@ -2,9 +2,9 @@
 
 <article class="bg-surface-muted h-full">
     <a href="{{ url }}" class="aspect-video overflow-hidden relative block">
-        {{ glide :src="image" width="1600" height="1200" }}
+        <s:glide :src="image" width="1600" height="1200">
             <img loading="lazy" src="{{ url }}" alt="{{ alt }}" width="1600" height="1200" class="object-cover object-center absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300">
-        {{ /glide }}
+        </s:glide>
         <span class="sr-only">Read more about{{ title }}</span>
     </a>
     <div class="blog-teaser-content p-4">

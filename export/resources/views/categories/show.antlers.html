@@ -3,7 +3,7 @@
 
     <ul class="inline-flex gap-2 mt-4">
         <li><a href="/blog" class="button button-small button-inverted">All</a></li>
-        {{ taxonomy:categories scope="tax" }}
+        <s:taxonomy:categories scope="tax">
             <li>
                 <a
                     href="{{ tax:url }}"
@@ -11,19 +11,19 @@
                     {{ tax:title }}
                 </a>
             </li>
-        {{ /taxonomy:categories }}
+        </s:taxonomy:categories>
     </ul>
 
-    {{ collection:blog taxonomy:categories="{{ slug }}" as="posts" paginate="12"  }}
+    <s:collection:blog taxonomy:categories="{{ slug }}" as="posts" paginate="12">
         {{ unless posts }}
             <p class="mt-8">No posts in the <strong>{{ slug }}</strong> category.</p>
         {{ /unless }}
         <ul class="list-none text-lg lg:text-xl mt-8 grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8">
             {{ posts }}
                 <li>
-                    {{ partial:blog.teaser }}
+                    <s:partial:blog.teaser />
                 </li>
             {{ /posts }}
         </ul>
-    {{ /collection:blog  }}
+    </s:collection:blog>
 </div>

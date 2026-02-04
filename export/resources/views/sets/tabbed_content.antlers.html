@@ -17,9 +17,9 @@
                 <div class="flex gap-4">
                     <div class="flex-1">
                         <div class="image-container relative aspect-video bg-black w-2/3 mb-2 rounded overflow-hidden">
-                            {{ glide :src="image" width="600" height="400" }}
+                            <s:glide :src="image" width="600" height="400">
                                 <img src="{{ url }}" alt="{{ alt }}" class="absolute inset-0 w-full h-full block object-cover">
-                            {{ /glide }}
+                            </s:glide>
                         </div>
                     </div>
                 </div>

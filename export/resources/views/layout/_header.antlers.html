@@ -2,13 +2,13 @@
     <div class="py-2 bg-slate-200">
         <div class="container">
             <ul class="flex justify-end gap-2 text-xs items-center">
-                {{ partial:nav.secondary}}
+                <s:partial:nav.secondary />
             </ul>
         </div>
     </div>
 {{ /if }}
 {{ if site_config:show_secondary_nav && site_config:secondary_nav_location == 'off_canvas' }}
-    {{ partial:nav.off_canvas }}
+    <s:partial:nav.off_canvas />
 {{ /if }}
 
 {{ $header_styles = main_header_style == 'transparent' ? 'py-4 lg:pt-8 lg:pb-16 absolute left-0 w-full z-10 top-0 text-white bg-gradient-to-b from-black/60 to-transparent will-change-transform' : 'py-4 lg:py-8' }}
@@ -27,18 +27,18 @@
                 <div>
                     {{ if main_header_style !== 'transparent' && brand_assets:dark_logo }}
                         <a href="/" class="font-semibold text-lg">
-                            {{ glide :src="brand_assets:dark_logo" width="200" }}
+                            <s:glide :src="brand_assets:dark_logo" width="200">
                                 <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto" width="200" height="160">
-                            {{ /glide }}
+                            </s:glide>
                             <span class="sr-only">
                                 {{ site:name }}`
                             </span>
                         </a>
                     {{ elseif main_header_style == 'transparent' && brand_assets:light_logo }}
                         <a href="/" class="font-semibold text-lg">
-                            {{ glide :src="brand_assets:light_logo" width="200" }}
+                            <s:glide :src="brand_assets:light_logo" width="200">
                                 <img src="{{ url }}" alt="{{ alt }}" class="h-8 lg:h-16 w-auto" width="200" height="160">
-                            {{ /glide }}
+                            </s:glide>
                             <span class="sr-only">
                                 {{ site:name }}`
                             </span>
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <div>
-                {{ partial:nav.main }}
+                <s:partial:nav.main />
             </div>
         </div>
     </div>

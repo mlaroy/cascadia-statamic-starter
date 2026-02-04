@@ -41,9 +41,9 @@
 
                     {{ if brand_assets:light_logo }}
                         <a href="/" class="font-semibold text-lg">
-                            {{ glide :src="brand_assets:light_logo" width="200" }}
+                            <s:glide :src="brand_assets:light_logo" width="200">
                                 <img src="{{ url }}" alt="{{ alt }}" class="h-12 w-auto">
-                            {{ /glide }}
+                            </s:glide>
                         </a>
                     {{ /if }}
                     <!-- Title -->
@@ -52,7 +52,7 @@
                     <!-- Content -->
                     <nav class="mt-16 text-center">
                         <ul class="text-xl lg:text-2xl font-bold space-y-4">
-                            {{ partial:nav.secondary }}
+                            <s:partial:nav.secondary />
                         </ul>
                     </nav>
                 </div>
