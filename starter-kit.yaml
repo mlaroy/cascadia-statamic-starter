@@ -1,7 +1,9 @@
 export_paths:
+  - cascadia-kit.jpg
   - content
   - config/filesystems.php
   - config/statamic/assets.php
+  - .env.example
   - resources/blueprints
   - resources/css
   - resources/js
@@ -9,8 +11,6 @@ export_paths:
   - resources/fieldsets
   - public
   - package.json
-  - vite.config.js
-  - cascadia-kit.jpg
-  - readme.md
-  - .env.example
+  - README.md
   - StarterKitPostInstall.php
+  - vite.config.js
