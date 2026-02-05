@@ -12,4 +12,5 @@ export_paths:
   - vite.config.js
   - cascadia-kit.jpg
   - readme.md
+  - .env.example
   - StarterKitPostInstall.php

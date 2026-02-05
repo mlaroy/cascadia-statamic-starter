@@ -53,6 +53,13 @@ Classes for theming include:
 
 Explore the `theme.css` to see all the available theme classes, and add your own.
 
+Update your `.env` file to see the theme images:
+```
+STATAMIC_CUSTOM_CMS_NAME="Cascadia Starter Kit"
+STATAMIC_CUSTOM_LOGO_URL='/cascadia-kit.png'
+STATAMIC_CUSTOM_DARK_LOGO_URL='/cascadia-logo.png'
+```
+
 ## SEO
 
 Basic SEO fields are incorporated into the Page, Team, and Blog collections, with fallbacks configured in the Globals: Site Config section.
