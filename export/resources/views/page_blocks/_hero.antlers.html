@@ -13,9 +13,8 @@
         videoId: '{{ video_id }}',
         source: '{{ video_source }}',
     })">
-
         {{ if background_option == 'video' }}
-                <s:partial:components.video_background />
+            <s:partial:components.video_background />
         {{ elseif background_image }}
             <s:glide :src="background_image" width="1800" height="1200">
                 <img src="{{ url }}" alt="{{ alt }}" width="1800" height="1200" class="object-cover object-center absolute inset-0 w-full h-full">

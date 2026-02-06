@@ -9,13 +9,13 @@
         {{ _button_text = override_link_text ? button_text : linked_entry:title }}
         {{ _target = null }}
     {{ /if }}
-
     <div class="mt-8">
         <s:partial:components.button
             :href="_href"
             :text="_button_text"
             :target="_target"
             :variant="link_style"
+            :target="_target"
         />
     </div>
 {{ /if }}
