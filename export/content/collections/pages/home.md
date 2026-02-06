@@ -5,7 +5,7 @@ title: Home
 template: home
 author: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
 updated_by: b3154f8e-5ed4-4804-a31c-5b768efc6e8e
-updated_at: 1759341267
+updated_at: 1770407214
 page_blocks:
   -
     id: ltgcaf0k

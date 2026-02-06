@@ -1,4 +1,5 @@
 {{ if (linked_entry || link_to_external) && link_style }}
+    {{# Use custom button_text for external links or when override is set; otherwise use the linked entry's title #}}
     {{ if link_to_external }}
         {{ _href = external_link }}
         {{ _button_text = button_text }}
@@ -12,6 +13,7 @@
         <s:partial:components.button
             :href="_href"
             :text="_button_text"
+            :target="_target"
             :variant="link_style"
             :target="_target"
         />
