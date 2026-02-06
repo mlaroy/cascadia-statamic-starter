@@ -13,23 +13,13 @@
         videoId: '{{ video_id }}',
         source: '{{ video_source }}',
     })">
-        {{ if background_option == 'video' }}
-            <s:partial:components.video_background />
-        {{ /if }}
 
-        {{ if darken_bg }}
-            <div class="absolute inset-0 bg-black/40 mix-blend-darken"></div>
-        {{ /if }}
         {{ if background_option == 'video' }}
                 <s:partial:components.video_background />
-         {{ else }}
-            {{ if background_image }}
-                <s:glide :src="background_image" width="1800" height="1200">
-                    <img src="{{ url }}" alt="{{ alt }}" width="1800" height="1200" class="object-cover object-center absolute inset-0 w-full h-full">
-                </s:glide>
-            {{ else }}
-                <p class="object-cover object-center absolute inset-0 w-full h-full">Please add a background image or video.</p>
-            {{ /if }}
+        {{ elseif background_image }}
+            <s:glide :src="background_image" width="1800" height="1200">
+                <img src="{{ url }}" alt="{{ alt }}" width="1800" height="1200" class="object-cover object-center absolute inset-0 w-full h-full">
+            </s:glide>
         {{ /if }}
 
         {{ if darken_bg }}

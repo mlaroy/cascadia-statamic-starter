@@ -1,14 +1,14 @@
 {
-  "_Set-BVULQCam.js": {
-    "file": "assets/Set-BVULQCam.js",
+  "_Set-bbSmBAjj.js": {
+    "file": "assets/Set-bbSmBAjj.js",
     "name": "Set",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/index.js"
     ]
   },
-  "_pusher-eXRtUIBC.js": {
-    "file": "assets/pusher-eXRtUIBC.js",
+  "_pusher-HrRy9NQH.js": {
+    "file": "assets/pusher-HrRy9NQH.js",
     "name": "pusher",
     "isDynamicEntry": true,
     "imports": [
@@ -60,7 +60,7 @@
     "src": "resources/img/favicon.ico"
   },
   "resources/js/components/fieldtypes/CodeFieldtype.vue": {
-    "file": "assets/CodeFieldtype-DZZ_XKMX.js",
+    "file": "assets/CodeFieldtype-D9wSkA4r.js",
     "name": "CodeFieldtype",
     "src": "resources/js/components/fieldtypes/CodeFieldtype.vue",
     "isDynamicEntry": true,
@@ -69,7 +69,7 @@
     ]
   },
   "resources/js/components/fieldtypes/YamlFieldtype.vue": {
-    "file": "assets/YamlFieldtype-BxVLNJmF.js",
+    "file": "assets/YamlFieldtype-BHmYKJPp.js",
     "name": "YamlFieldtype",
     "src": "resources/js/components/fieldtypes/YamlFieldtype.vue",
     "isDynamicEntry": true,
@@ -78,27 +78,27 @@
     ]
   },
   "resources/js/components/fieldtypes/bard/BardFieldtype.vue": {
-    "file": "assets/BardFieldtype-C3lSJGac.js",
+    "file": "assets/BardFieldtype-CzUQrFTz.js",
     "name": "BardFieldtype",
     "src": "resources/js/components/fieldtypes/bard/BardFieldtype.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/index.js",
-      "_Set-BVULQCam.js"
+      "_Set-bbSmBAjj.js"
     ],
     "dynamicImports": [
-      "_Set-BVULQCam.js",
-      "_Set-BVULQCam.js",
-      "_Set-BVULQCam.js",
-      "_Set-BVULQCam.js",
-      "_Set-BVULQCam.js"
+      "_Set-bbSmBAjj.js",
+      "_Set-bbSmBAjj.js",
+      "_Set-bbSmBAjj.js",
+      "_Set-bbSmBAjj.js",
+      "_Set-bbSmBAjj.js"
     ],
     "css": [
       "assets/BardFieldtype-MglIzBdb.css"
     ]
   },
   "resources/js/components/fieldtypes/markdown/MarkdownFieldtype.vue": {
-    "file": "assets/MarkdownFieldtype-BmWp5owu.js",
+    "file": "assets/MarkdownFieldtype-HK6nxG3_.js",
     "name": "MarkdownFieldtype",
     "src": "resources/js/components/fieldtypes/markdown/MarkdownFieldtype.vue",
     "isDynamicEntry": true,
@@ -107,7 +107,7 @@
     ]
   },
   "resources/js/components/structures/PageTree.vue": {
-    "file": "assets/PageTree-DZjGC7N9.js",
+    "file": "assets/PageTree-i0AOSw2t.js",
     "name": "PageTree",
     "src": "resources/js/components/structures/PageTree.vue",
     "isDynamicEntry": true,
@@ -116,7 +116,7 @@
     ]
   },
   "resources/js/index.js": {
-    "file": "assets/index-l20dkeeM.js",
+    "file": "assets/index-DViLjBmV.js",
     "name": "index",
     "src": "resources/js/index.js",
     "isEntry": true,
@@ -668,7 +668,7 @@
       "resources/svg/icons/x.svg?raw",
       "resources/svg/icons/zoom-fit-screen.svg?raw",
       "node_modules/laravel-echo/dist/echo.js",
-      "_pusher-eXRtUIBC.js",
+      "_pusher-HrRy9NQH.js",
       "node_modules/@hoppscotch/vue-toasted/dist/vue-toasted.mjs",
       "resources/js/components/structures/PageTree.vue",
       "resources/js/components/structures/PageTree.vue",
@@ -688,7 +688,7 @@
       "resources/svg/filetypes/xml.svg",
       "resources/js/components/structures/PageTree.vue",
       "resources/js/components/fieldtypes/bard/BardFieldtype.vue",
-      "_Set-BVULQCam.js",
+      "_Set-bbSmBAjj.js",
       "resources/js/components/fieldtypes/CodeFieldtype.vue",
       "resources/js/components/fieldtypes/markdown/MarkdownFieldtype.vue",
       "resources/js/components/fieldtypes/YamlFieldtype.vue"
@@ -706,7 +706,7 @@
     "src": "resources/svg/drag-dots.svg"
   },
   "resources/svg/filetypes/archive.svg": {
-    "file": "assets/archive-s9_JMHIT.js",
+    "file": "assets/archive-B-7F4ogz.js",
     "name": "archive",
     "src": "resources/svg/filetypes/archive.svg",
     "isDynamicEntry": true,
@@ -715,7 +715,7 @@
     ]
   },
   "resources/svg/filetypes/audio.svg": {
-    "file": "assets/audio-DHSRdgsu.js",
+    "file": "assets/audio-B36CKT-F.js",
     "name": "audio",
     "src": "resources/svg/filetypes/audio.svg",
     "isDynamicEntry": true,
@@ -724,7 +724,7 @@
     ]
   },
   "resources/svg/filetypes/doc.svg": {
-    "file": "assets/doc-Chc9Wo-H.js",
+    "file": "assets/doc-C9iRIiLy.js",
     "name": "doc",
     "src": "resources/svg/filetypes/doc.svg",
     "isDynamicEntry": true,
@@ -733,7 +733,7 @@
     ]
   },
   "resources/svg/filetypes/excel.svg": {
-    "file": "assets/excel-B8tKYYzi.js",
+    "file": "assets/excel-Dp1WgWRa.js",
     "name": "excel",
     "src": "resources/svg/filetypes/excel.svg",
     "isDynamicEntry": true,
@@ -742,7 +742,7 @@
     ]
   },
   "resources/svg/filetypes/folder.svg": {
-    "file": "assets/folder-Ca0uS103.js",
+    "file": "assets/folder-Dufc-IbC.js",
     "name": "folder",
     "src": "resources/svg/filetypes/folder.svg",
     "isDynamicEntry": true,
@@ -751,7 +751,7 @@
     ]
   },
   "resources/svg/filetypes/generic.svg": {
-    "file": "assets/generic-CRVd4VSU.js",
+    "file": "assets/generic-CxFnJLuF.js",
     "name": "generic",
     "src": "resources/svg/filetypes/generic.svg",
     "isDynamicEntry": true,
@@ -760,7 +760,7 @@
     ]
   },
   "resources/svg/filetypes/image.svg": {
-    "file": "assets/image-CiONMXcj.js",
+    "file": "assets/image-CZOObAXY.js",
     "name": "image",
     "src": "resources/svg/filetypes/image.svg",
     "isDynamicEntry": true,
@@ -769,7 +769,7 @@
     ]
   },
   "resources/svg/filetypes/json.svg": {
-    "file": "assets/json-sqGBQmgh.js",
+    "file": "assets/json-OymAE98Z.js",
     "name": "json",
     "src": "resources/svg/filetypes/json.svg",
     "isDynamicEntry": true,
@@ -778,7 +778,7 @@
     ]
   },
   "resources/svg/filetypes/layered.svg": {
-    "file": "assets/layered-Bm3yHI4T.js",
+    "file": "assets/layered-Bd2K3cZ9.js",
     "name": "layered",
     "src": "resources/svg/filetypes/layered.svg",
     "isDynamicEntry": true,
@@ -787,7 +787,7 @@
     ]
   },
   "resources/svg/filetypes/pdf.svg": {
-    "file": "assets/pdf-BQnWgNZC.js",
+    "file": "assets/pdf-D0d7kzEQ.js",
     "name": "pdf",
     "src": "resources/svg/filetypes/pdf.svg",
     "isDynamicEntry": true,
@@ -796,7 +796,7 @@
     ]
   },
   "resources/svg/filetypes/picture.svg": {
-    "file": "assets/picture-DjtHb_HA.js",
+    "file": "assets/picture-B9EglxDy.js",
     "name": "picture",
     "src": "resources/svg/filetypes/picture.svg",
     "isDynamicEntry": true,
@@ -805,7 +805,7 @@
     ]
   },
   "resources/svg/filetypes/presentation.svg": {
-    "file": "assets/presentation-BahJYkqv.js",
+    "file": "assets/presentation-C5aFn6mk.js",
     "name": "presentation",
     "src": "resources/svg/filetypes/presentation.svg",
     "isDynamicEntry": true,
@@ -814,7 +814,7 @@
     ]
   },
   "resources/svg/filetypes/video.svg": {
-    "file": "assets/video-xi6JaZtK.js",
+    "file": "assets/video-CqpIsQ_u.js",
     "name": "video",
     "src": "resources/svg/filetypes/video.svg",
     "isDynamicEntry": true,
@@ -823,7 +823,7 @@
     ]
   },
   "resources/svg/filetypes/xml.svg": {
-    "file": "assets/xml-CFdkl7MB.js",
+    "file": "assets/xml-ButRj2yN.js",
     "name": "xml",
     "src": "resources/svg/filetypes/xml.svg",
     "isDynamicEntry": true,
