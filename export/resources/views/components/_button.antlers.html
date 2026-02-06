@@ -18,6 +18,7 @@
 <a
     href="{{ href }}"
     class="{{ variant_class}} {{ size_class }}"
+    {{ if target }}target="{{ target }}" rel="noopener noreferrer"{{ /if }}
     x-ref="link"
     @click="handleAnalyticsEvent(
         {

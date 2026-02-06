@@ -1,11 +1,19 @@
 {{ if (linked_entry || link_to_external) && link_style }}
-    {{# Use custom button_text for external links or when override is set; otherwise use the linked entry's title #}}
-    {{ _button_text = (link_to_external || (override_link_text && linked_entry)) ? button_text : linked_entry:title }}
+    {{ if link_to_external }}
+        {{ _href = external_link }}
+        {{ _button_text = button_text }}
+        {{ _target = '_blank' }}
+    {{ else }}
+        {{ _href = linked_entry:url }}
+        {{ _button_text = override_link_text ? button_text : linked_entry:title }}
+        {{ _target = null }}
+    {{ /if }}
     <div class="mt-8">
         <s:partial:components.button
-            :href="linked_entry:url"
+            :href="_href"
             :text="_button_text"
             :variant="link_style"
+            :target="_target"
         />
     </div>
 {{ /if }}

@@ -1,6 +1,7 @@
 <s:partial:page_blocks.component>
     <div class="callout-grid py-16 lg:py-24 bg-surface">
         <div class="container space-y-8">
+            {{ if callout_item }}
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
                 {{ callout_item }}
                     <div class="flex gap-8">
@@ -13,13 +14,14 @@
                         {{ /if }}
                         <div>
                             <h3 class="text-xl lg:text-2xl font-semibold mb-4 text-body text-balance">{{ grid_headline }}</h3>
-                            <div class="mb-4 text-body-muted-dark text-lg text-balance">
+                            <div class="mb-4 text-body-muted text-lg text-balance">
                                 {{ grid_content }}
                             </div>
                         </div>
                     </div>
                 {{ /callout_item }}
             </div>
+            {{ /if }}
         </div>
     </div>
 </s:partial:page_blocks.component>
