@@ -16,12 +16,11 @@
                         <img src="{{ url }}" alt="{{ alt }}" width="2400" height="1600" class="w-full block absolute inset-0 object-cover" loading="lazy">
                     </s:glide>
                 </div>
-            {{ elseif media_type == 'video'  }}
+            {{ elseif media_type == 'video' }}
                 <div class="aspect-video overflow-hidden relative mt-8 lg:mt-16">
                     <iframe title="Video" class="w-full h-full absolute inset-0" src="{{ video | embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             {{ /if }}
-            </div>
         </div>
     </div>
 </s:partial:page_blocks.component>
