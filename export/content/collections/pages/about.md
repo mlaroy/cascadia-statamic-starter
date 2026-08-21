@@ -21,7 +21,7 @@ page_blocks:
     link_style: button
     link_to_external: false
     linked_entry: 29fa7ae7-8985-4e8b-b6d6-d47476033020
-    type: basic_hero
+    type: content_basic_hero
     enabled: true
     featured_image: water-fall.jpg
   -
@@ -51,7 +51,7 @@ page_blocks:
         stat_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         type: stat_item
         enabled: true
-    type: stats
+    type: content_stats
     enabled: true
   -
     id: mfr771ip
@@ -68,7 +68,7 @@ page_blocks:
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
     link_style: link
     link_to_external: false
-    type: intro
+    type: content_intro
     enabled: true
   -
     id: ltgg0976
@@ -142,7 +142,7 @@ page_blocks:
               -
                 type: text
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
-    type: fifty_split
+    type: content_fifty_split
     enabled: true
     theme: default
   -
@@ -160,7 +160,7 @@ page_blocks:
     team_members:
       - a11e131d-fec5-465b-b6aa-7f8eeb329c64
       - a3431075-ed07-448f-8097-2e1ecda20e60
-    type: team_members
+    type: content_team_members
     enabled: true
   -
     id: mfwvg0jc
@@ -170,7 +170,7 @@ page_blocks:
     testimonials:
       - 6d4e78f7-acab-42b7-a4ac-ffd57c557eda
       - aca8f309-80d2-4661-8c61-466ae2bc4eb7
-    type: testimonials
+    type: content_testimonials
     enabled: true
   -
     id: ltgejipz
@@ -178,7 +178,7 @@ page_blocks:
     images:
       - camping.jpg
       - hiker.jpg
-    type: image_carousel
+    type: content_image_carousel
     enabled: true
     auto_play: false
     show_index: true
@@ -191,7 +191,7 @@ page_blocks:
     cta_heading: 'Book Your Adventure'
     cta_link: 726ad294-cf9c-40fd-b204-277118b5aed5
     cta_text: 'Book Now'
-    type: cta_bumper
+    type: callout_cta_bumper
     enabled: true
     short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
     link_style: button

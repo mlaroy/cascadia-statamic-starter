@@ -45,7 +45,7 @@ page_blocks:
         type: location_info
         enabled: true
         location_type: industrial
-    type: google_map
+    type: content_google_map
     enabled: true
     theme: default
   -
@@ -53,7 +53,7 @@ page_blocks:
     cta_heading: 'Work with Us'
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     cta_text: 'Get started'
-    type: cta_bumper
+    type: callout_cta_bumper
     enabled: false
     theme: muted
     short_description: 'Write some supporting copy for this CTA bumper block.'
@@ -69,7 +69,7 @@ page_blocks:
     link_to_external: false
     linked_entry: 6c6cc987-6958-4c55-a2d0-08ded8af0daf
     background_image: camping.jpg
-    type: image_callout
+    type: callout_image
     enabled: true
     eyebrow_text: 'Get Started'
     override_link_text: false

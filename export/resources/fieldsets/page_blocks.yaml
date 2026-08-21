@@ -8,340 +8,140 @@ fields:
       hide_display: true
       collapse: true
       listable: false
-      display: 'Page Blocks'
+      display: 'Page Builder'
       sets:
-        complex_blocks:
-          display: Complex
-          instructions: 'Accordions, Google Maps, Tabs Explorer.'
-          icon: programming-script-code-brackets
+        hero:
+          display: Hero
+          icon: layout-flip-down
           sets:
-            accordion:
-              display: Accordion
-              icon: layout-list
-              image: accordion.png
+            content_basic_hero:
+              display: 'Basic Hero'
+              icon: layout-header
               fields:
                 -
-                  import: theme
-                -
-                  import: content_group
-                -
-                  import: accordion
-            google_map:
-              display: 'Google Map'
-              icon: travel-map
-              image: google-map.png
+                  import: content_basic_hero
+            content_video_hero:
+              display: 'Video Hero'
+              icon: align-object-top
               fields:
                 -
-                  import: theme
-                -
-                  handle: title
-                  field:
-                    type: text
-                    display: Title
-                -
-                  import: google_map_locations
-            tabs_explorer:
-              display: 'Tabs Explorer'
-              icon: layout-header-sidebar-left
-              image: tabbed_content.png
-              fields:
-                -
-                  import: theme
-                -
-                  import: side_tabs_explorer
-        text:
+                  import: content_video_hero
+        content:
           display: Content
-          instructions: 'Text and Entry links.'
           icon: mail-chat-bubble-text
           sets:
-            basic_content:
+            content_basic_content:
               display: 'Basic Content'
               icon: form-text-field
-              image: basic_content.png
               fields:
                 -
-                  import: blog_content_with_sets
-            intro:
+                  import: content_basic_content
+            content_intro:
               display: Intro
               icon: text-formatting-image-top
-              image: intro.png
               fields:
                 -
-                  import: theme
-                -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
-                -
-                  import: intro_section
-            blog_teaser:
+                  import: content_intro
+            content_blog_teaser:
               display: 'Blog Teaser'
               icon: file-content-list
-              image: latest_news.png
               fields:
                 -
-                  import: theme
-                -
-                  import: blog_teasers
-            team_members:
+                  import: content_blog_teaser
+            content_team_members:
               display: 'Team Members'
               icon: user-avatar
-              image: team.png
               fields:
                 -
-                  import: theme
-                -
-                  import: team_teasers
-            fifty_split:
+                  import: content_team_members
+            content_fifty_split:
               display: '50/50 Split'
               icon: layout-split-verical
-              image: fifty_fifty.png
               fields:
                 -
-                  import: theme
-                -
-                  import: fifty_split
-            testimonials:
+                  import: content_fifty_split
+            content_testimonials:
               display: Testimonials
               icon: text-formatting-quotation
-              image: testimonials.png
               fields:
                 -
-                  import: testimonials
-            cta_bumper:
+                  import: content_testimonials
+            content_stats:
+              display: Stats
+              icon: layout-three-columns
+              fields:
+                -
+                  import: content_stats
+            content_jobs:
+              display: Jobs
+              icon: user-avatar
+              fields:
+                -
+                  import: content_jobs
+        callouts:
+          display: Callouts
+          icon: share-mega-phone
+          sets:
+            callout_cta_bumper:
               display: 'CTA Bumper'
               icon: text-formatting-image-top
-              image: bumper.png
               fields:
                 -
-                  import: theme
-                -
-                  import: cta_bumper
+                  import: callout_cta_bumper
             callout_grid:
               display: 'Callout Grid'
               icon: layout-grid-dots
-              image: callout_grid.png
               fields:
-                -
-                  import: theme
                 -
                   import: callout_grid
-            image_callout:
+            callout_image:
               display: 'Image Callout'
               icon: media-image-photo-focus-frame
-              image: image_slider.png
               fields:
                 -
-                  import: theme
-                -
-                  import: image_callout
-            stats:
-              display: Stats
-              icon: layout-three-columns
-              image: stats.png
-              fields:
-                -
-                  import: theme
-                -
-                  import: stats
-            jobs:
-              display: Jobs
-              icon: user-avatar
-              image: open_jobs.png
-              fields:
-                -
-                  import: theme
-                -
-                  import: jobs_block
-        hero:
-          display: Hero
-          instructions: 'Basic Hero, Video Hero.'
-          icon: layout-flip-down
-          sets:
-            basic_hero:
-              display: Hero
-              icon: layout-header
-              image: hero.png
-              fields:
-                -
-                  import: theme
-                -
-                  handle: eyebrow_text
-                  field:
-                    type: text
-                    display: 'Eyebrow Text'
-                -
-                  handle: heading
-                  field:
-                    type: text
-                    display: Heading
-                -
-                  handle: description
-                  field:
-                    buttons:
-                      - bold
-                      - italic
-                      - anchor
-                    remove_empty_nodes: false
-                    type: bard
-                    display: Description
-                -
-                  handle: featured_image
-                  field:
-                    max_files: 1
-                    mode: grid
-                    container: assets
-                    type: assets
-                    display: 'Featured Image'
-                -
-                  import: link
-            hero:
-              display: 'Video Hero'
-              icon: align-object-top
-              image: video_hero.png
-              fields:
-                -
-                  import: theme
-                -
-                  handle: main_heading
-                  field:
-                    type: text
-                    display: 'Main Heading'
-                -
-                  handle: sub_heading
-                  field:
-                    type: text
-                    display: 'Sub Heading'
-                -
-                  handle: background_option
-                  field:
-                    options:
-                      -
-                        key: image
-                        value: Image
-                      -
-                        key: video
-                        value: Video
-                    default: image
-                    type: radio
-                    display: 'Background Media'
-                    inline: true
-                    width: 50
-                -
-                  handle: video_source
-                  field:
-                    options:
-                      -
-                        key: vimeo
-                        value: Vimeo
-                      -
-                        key: youtube
-                        value: YouTube
-                      -
-                        key: asset
-                        value: 'Video Asset'
-                    default: vimeo
-                    type: radio
-                    display: 'Video Source'
-                    inline: true
-                    width: 50
-                    if:
-                      background_option: 'equals video'
-                -
-                  handle: background_image
-                  field:
-                    container: assets
-                    type: assets
-                    display: 'Background Image'
-                    if:
-                      background_option: 'equals image'
-                -
-                  handle: vimeo_id
-                  field:
-                    placeholder: '449787858'
-                    type: text
-                    display: 'Vimeo ID'
-                    if:
-                      background_option: 'equals video'
-                      video_source: 'equals vimeo'
-                -
-                  handle: youtube_id
-                  field:
-                    placeholder: dQw4w9WgXcQ
-                    type: text
-                    display: 'YouTube ID'
-                    if:
-                      background_option: 'equals video'
-                      video_source: 'equals youtube'
-                -
-                  handle: video_file
-                  field:
-                    max_files: 1
-                    mode: grid
-                    container: assets
-                    type: assets
-                    display: 'Video File'
-                    if:
-                      background_option: 'equals video'
-                      video_source: 'equals asset'
-                -
-                  handle: cta_link
-                  field:
-                    max_items: 1
-                    collections:
-                      - pages
-                    type: entries
-                    display: 'CTA Link'
-                    width: 50
-                -
-                  handle: cta_text
-                  field:
-                    placeholder: 'Learn more'
-                    type: text
-                    display: 'CTA Text'
-                    width: 50
-                -
-                  handle: show_modal
-                  field:
-                    type: toggle
-                    display: 'Show Modal Items?'
-                -
-                  import: modal_popup
-                -
-                  handle: darken_bg
-                  field:
-                    type: toggle
-                    display: 'Darken BG'
-                    instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'
+                  import: callout_image
         media:
           display: Media
-          instructions: 'Logo Cloud, Large Media.'
+          icon: media-image-picture-gallery
           sets:
-            image_carousel:
+            content_image_carousel:
               display: 'Image Carousel'
               icon: media-image-picture-gallery
-              image: image_slider.png
               fields:
                 -
-                  import: theme
-                -
-                  import: content_group
-                -
-                  import: image_carousel
-            logo_cloud:
+                  import: content_image_carousel
+            content_logo_cloud:
               display: 'Logo Cloud'
               icon: favorite-award
-              image: logos.png
               fields:
                 -
-                  import: logo_cloud
-            large_media:
+                  import: content_logo_cloud
+            content_large_media:
               display: 'Large Media'
               icon: media-webcam-video
-              image: image_slider.png
               fields:
                 -
-                  import: theme
+                  import: content_large_media
+        complex:
+          display: Complex
+          icon: programming-script-code-brackets
+          instructions: 'Accordions, Google Maps, Tabs Explorer.'
+          sets:
+            content_accordion:
+              display: Accordion
+              icon: layout-table-row-insert
+              fields:
                 -
-                  import: large_media
+                  import: content_accordion
+            content_google_map:
+              display: 'Google Map'
+              icon: travel-map
+              fields:
+                -
+                  import: content_google_map
+            content_tabs_explorer:
+              display: 'Tabs Explorer'
+              icon: layout-header-sidebar-left
+              fields:
+                -
+                  import: content_tabs_explorer

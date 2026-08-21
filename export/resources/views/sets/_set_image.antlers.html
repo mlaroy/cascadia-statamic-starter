@@ -1,0 +1,8 @@
+<figure class="set-image not-prose my-12">
+    {{ glide:single_image format="webp" q="70" w="1200" }}
+        <img src="{{ url }}" width="{{ width }}" height="{{ height }}" alt="{{ alt }}" class="block w-full" loading="lazy" />
+    {{ /glide:single_image }}
+    {{ if image_caption }}
+        <figcaption class="text-sm text-body-muted mt-2">{{ image_caption }}</figcaption>
+    {{ /if }}
+</figure>

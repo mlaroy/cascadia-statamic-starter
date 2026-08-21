@@ -7,7 +7,7 @@
         <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
         <s:partial:layout.seo />
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
-        <s:partial:components.analytics />
+        <s:partial:partials.analytics />
     </head>
     <body
         data-analytics-platform="{{ site_config:enable_fathom ? 'fathom' : 'google' }}"
@@ -20,7 +20,7 @@
             Skip to content
         </a>
 
-        <s:partial:components.banner />
+        <s:partial:partials.banner />
 
         <s:partial:layout/header />
 
@@ -30,6 +30,6 @@
 
         <s:partial:layout/footer />
 
-        <s:partial:components.modal />
+        <s:partial:partials.modal />
     </body>
 </html>

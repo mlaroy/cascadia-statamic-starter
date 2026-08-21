@@ -26,4 +26,4 @@ tabs:
         display: Socials
         fields:
           -
-            import: social_links
+            import: group_social_links

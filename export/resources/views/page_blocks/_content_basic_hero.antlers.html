@@ -1,0 +1,27 @@
+{{ $style = main_header_style == 'transparent' ? 'pb-16 pt-48 lg:pb-24 lg:pt-56' : 'py-24 lg:py-24' }}
+
+{{ partial:partials.section }}
+    <div class="basic-hero-container py-16 bg-surface {{ $style }}">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="flex flex-col justify-center lg:max-w-3/4">
+                    {{ partial:partials.content_group
+                        :eyebrow_text="eyebrow_text"
+                        :heading="heading"
+                        :content="description"
+                        heading_tag="h1"
+                    }}
+
+                    {{ partial:partials.link }}
+                </div>
+                {{ if featured_image }}
+                    <div class="flex flex-col items-center justify-center">
+                        {{ glide:featured_image width="1200" height="800" }}
+                            <img src="{{ url }}" alt="{{ alt }}" class="block" width="1200" height="800" loading="lazy" />
+                        {{ /glide:featured_image }}
+                    </div>
+                {{ /if }}
+            </div>
+        </div>
+    </div>
+{{ /partial:partials.section }}

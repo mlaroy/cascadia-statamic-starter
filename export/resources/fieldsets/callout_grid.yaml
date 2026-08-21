@@ -1,5 +1,7 @@
-title: 'Callout Grid'
+title: 'Callout - Grid'
 fields:
+  -
+    import: group_theme
   -
     handle: callout_item
     field:

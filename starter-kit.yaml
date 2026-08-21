@@ -3,6 +3,9 @@ export_paths:
   - content
   - config/filesystems.php
   - config/statamic/assets.php
+  - config/statamic/cp.php
+  - config/app.php
+  - config/boost.php
   - .env.example
   - resources/blueprints
   - resources/css
@@ -10,7 +13,16 @@ export_paths:
   - resources/views
   - resources/fieldsets
   - public
+  - app
+  - routes
+  - scripts
+  - .ai
+  - docs
   - package.json
   - README.md
   - StarterKitPostInstall.php
   - vite.config.js
+  - vite-cp.config.js
+dependencies:
+  aerni/advanced-seo: ^3.2
+  chrisvasey/statamic-boost: ^1.2

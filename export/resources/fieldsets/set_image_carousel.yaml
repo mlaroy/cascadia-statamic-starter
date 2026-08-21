@@ -1,0 +1,35 @@
+title: 'Set - Image Carousel'
+fields:
+  -
+    handle: images
+    field:
+      max_files: 8
+      mode: grid
+      container: assets
+      type: assets
+      display: Images
+      instructions: "Max 8 images, so that it doesn't get too unwieldy!"
+  -
+    handle: auto_play
+    field:
+      type: toggle
+      display: 'Auto Play'
+      instructions: 'Enable to auto play carousel'
+      width: 33
+  -
+    handle: items_to_show
+    field:
+      type: integer
+      display: 'Items to show'
+      width: 33
+      validate:
+        - 'max:4'
+        - 'min:1'
+      default: '1'
+  -
+    handle: show_index
+    field:
+      type: toggle
+      display: 'Show Index'
+      instructions: 'Toggle to display current index, and total number of images'
+      width: 33

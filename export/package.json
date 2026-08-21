@@ -4,6 +4,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
+        "cp:dev": "vite --config vite-cp.config.js",
+        "cp:build": "vite build --config vite-cp.config.js",
         "kit:export": "php please starter-kit:export ../starter-kit-tailwind-alpine"
     },
     "devDependencies": {
@@ -25,6 +27,7 @@
         "@vimeo/player": "^2.27.1",
         "alpinejs": "^3.14.9",
         "laravel-precognition-alpine": "^0.5.6",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "@statamic/cms": "file:./vendor/statamic/cms/resources/dist-package"
     }
 }

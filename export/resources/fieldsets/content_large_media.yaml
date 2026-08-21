@@ -1,0 +1,8 @@
+title: 'Content - Large Media'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    import: group_media

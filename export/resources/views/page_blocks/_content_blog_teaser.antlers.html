@@ -1,0 +1,26 @@
+{{ partial:partials.section }}
+    <div class="blog-teaser-container py-16 lg:py-24 bg-surface">
+        <div class="container">
+            {{ partial:partials.content_group
+                :eyebrow_text="eyebrow_text"
+                :heading="heading"
+                :content="description"
+            }}
+            <div class="grid md:grid-cols-3 gap-4 md:gap-8 mt-8 lg:mt-16">
+                {{ if blog_posts }}
+                    {{ blog_posts }}
+                        {{ partial:blog.teaser }}
+                    {{ /blog_posts }}
+                {{ else }}
+                    {{ collection:blog limit="3" }}
+                        {{ partial:blog.teaser }}
+                    {{ /collection:blog }}
+                {{ /if }}
+            </div>
+
+            <div class="blog-teaser-cta text-center mt-20">
+                {{ partial:partials.button href="/blog" text="More Posts &rarr;" }}
+            </div>
+        </div>
+    </div>
+{{ /partial:partials.section }}

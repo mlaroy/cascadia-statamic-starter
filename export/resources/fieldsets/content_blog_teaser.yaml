@@ -1,0 +1,14 @@
+title: 'Content - Blog Teaser'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: blog_posts
+    field:
+      max_items: 3
+      collections:
+        - blog
+      type: entries
+      display: 'Blog Posts'

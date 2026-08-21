@@ -1,0 +1,21 @@
+{{ partial:partials.section }}
+<div class="cta-bumper-container py-16 lg:py-24 bg-surface">
+    <div class="container">
+        <div class="flex flex-col items-center">
+            <div class="w-full lg:w-1/2 mx-auto lg:text-center">
+                {{ partial:partials.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="cta_heading"
+                    :content="short_description"
+                    heading_tag="h2"
+                    center="desktop"
+                }}
+
+               {{ partial:partials.link }}
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{{ /partial:partials.section }}

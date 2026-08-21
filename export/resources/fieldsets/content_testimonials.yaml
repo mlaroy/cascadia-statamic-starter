@@ -1,0 +1,15 @@
+title: 'Content - Testimonials'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: testimonials
+    field:
+      max_items: 5
+      mode: select
+      collections:
+        - testimonials
+      type: entries
+      display: Testimonials

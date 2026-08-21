@@ -1,0 +1,34 @@
+title: 'Content - Fifty Split'
+fields:
+  -
+    import: group_theme
+  -
+    handle: sections
+    field:
+      type: replicator
+      display: Sections
+      collapse: true
+      sets:
+        sections:
+          display: Sections
+          sets:
+            section:
+              display: Section
+              icon: layout-split-verical
+              fields:
+                -
+                  handle: orientation
+                  field:
+                    options:
+                      left: 'Content Left'
+                      right: 'Content Right'
+                    inline: true
+                    default: right
+                    type: radio
+                    display: Orientation
+                -
+                  import: group_media
+                -
+                  import: group_content
+                -
+                  import: group_button

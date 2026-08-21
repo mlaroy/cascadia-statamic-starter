@@ -1,0 +1,14 @@
+title: 'Content - Team Members'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: team_members
+    field:
+      max_items: 3
+      collections:
+        - team
+      type: entries
+      display: 'Team Members'

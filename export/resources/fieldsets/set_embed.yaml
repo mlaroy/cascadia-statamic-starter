@@ -1,0 +1,27 @@
+title: 'Set - Embed'
+fields:
+  -
+    handle: url
+    field:
+      input_type: url
+      type: text
+      display: URL
+      required: true
+      validate:
+        - required
+        - url
+  -
+    handle: provider
+    field:
+      type: select
+      display: Provider
+      default: unknown
+      options:
+        twitter: X/Twitter
+        youtube: YouTube
+        vimeo: Vimeo
+        instagram: Instagram
+        facebook: Facebook
+        spotify: Spotify
+        soundcloud: SoundCloud
+        unknown: Other

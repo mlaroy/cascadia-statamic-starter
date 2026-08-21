@@ -1,0 +1,60 @@
+{{ partial:partials.section }}
+<div class="map-locations-container py-16 lg:py-24 bg-surface text-body" x-data="googleMap">
+    <div class="container">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8 font-semibold">{{ title }}</h2>
+                <form class="mb-4">
+                    <div class="flex justify-between rounded p-2 border border-border min-w-36 size-fit relative">
+                        <select x-on:change="(e) => setLocationFilter(e.target.value)" class="appearance-none w-full z-0 outline-offset-4">
+                            <option selected="">All</option>
+                            {{ taxonomy:location_types }}
+                                <option value="{{ title }}">
+                                    {{ title }}
+                                </option>
+                            {{ /taxonomy:location_types }}
+                        </select>
+                        <!-- Heroicons up/down -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="shrink-0 w-5 h-5 text-gray-500 absolute right-2 top-2 pointer-events-none"><path fill-rule="evenodd" d="M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z" clip-rule="evenodd" /></svg>
+                    </div>
+                </form>
+
+                <ul class="space-y-4">
+                    {{ locations }}
+                        <li x-show="locationFilter == 'All' || locationFilter == '{{ location_type['title'] }}'">
+                            <h4>
+                                <button
+                                    type="button"
+                                    data-lat="{{ latitude }}"
+                                    data-lng="{{ longitude }}"
+                                    data-name="{{ name }}"
+                                    @click="focusLocation"
+                                    class="cursor-pointer text-link hover:text-link-hover transition-all hover:underline focus:outline-none focus-visible:ring-2 ring-offset-2 ring-primary text-lg lg:text-xl"
+                                    >
+                                    {{ name }}
+                                </button>
+                            </h4>
+                            <p class="text-lg">{{ short_description }}</p>
+                        </li>
+                    {{ /locations }}
+                </ul>
+            </div>
+            <div class="lg:col-span-2">
+                <div id="google-map-container" class="aspect-video bg-blue-50" x-ref="map">
+                    {{# map goes here #}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "{{ config:app:google_map_api_key }}",
+      v: "weekly",
+    });
+</script>
+<script>
+	window.locationsOfInterest = {{ locations | to_json }};
+</script>
+{{ /partial:partials.section }}

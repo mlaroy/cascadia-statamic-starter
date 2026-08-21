@@ -1,0 +1,21 @@
+title: 'Callout - CTA Bumper'
+fields:
+  -
+    import: group_theme
+  -
+    handle: eyebrow_text
+    field:
+      type: text
+      display: 'Eyebrow Text'
+  -
+    handle: cta_heading
+    field:
+      type: text
+      display: 'CTA Heading'
+  -
+    handle: short_description
+    field:
+      type: markdown
+      display: 'Short Description'
+  -
+    import: group_button

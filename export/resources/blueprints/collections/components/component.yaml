@@ -1,0 +1,93 @@
+title: Component
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+              validate:
+                - required
+          -
+            handle: description
+            field:
+              type: textarea
+              display: Description
+              instructions: 'What this component is, visually and structurally.'
+          -
+            handle: use_when
+            field:
+              type: textarea
+              display: 'Use When'
+              instructions: 'What kind of content and scenarios this component suits. When to prefer it over similar components.'
+          -
+            handle: avoid_when
+            field:
+              type: textarea
+              display: 'Avoid When'
+              instructions: 'Scenarios where a sibling component is the better choice.'
+          -
+            handle: content_expectations
+            field:
+              type: textarea
+              display: 'Content Expectations'
+              instructions: 'What content this component needs to look its best (lengths, counts, required assets).'
+          -
+            handle: pairs_with
+            field:
+              mode: select
+              collections:
+                - components
+              type: entries
+              display: 'Pairs With'
+              instructions: 'Components this one composes well with on a page.'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate:
+                - required
+              display: Slug
+              instructions: 'Must match the fieldset handle exactly (e.g. content_basic_hero).'
+          -
+            handle: builder_group
+            field:
+              options:
+                -
+                  key: hero
+                  value: Hero
+                -
+                  key: content
+                  value: Content
+                -
+                  key: callouts
+                  value: Callouts
+                -
+                  key: media
+                  value: Media
+                -
+                  key: complex
+                  value: Complex
+              max_items: 1
+              type: select
+              display: 'Builder Group'
+              instructions: 'The set group this component belongs to in the page builder.'
+          -
+            handle: component_tags
+            field:
+              type: terms
+              taxonomies:
+                - component_tags
+              create: true
+              display: Tags

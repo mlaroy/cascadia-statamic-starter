@@ -1,0 +1,64 @@
+title: 'Content - Google Map'
+fields:
+  -
+    import: group_theme
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: locations
+    field:
+      type: replicator
+      display: Locations
+      fullscreen: true
+      previews: true
+      sets:
+        locations:
+          display: Locations
+          sets:
+            location_info:
+              display: 'Location Info'
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                -
+                  handle: longitude
+                  field:
+                    type: text
+                    display: Longitude
+                    width: 50
+                -
+                  handle: latitude
+                  field:
+                    type: text
+                    display: Latitude
+                    width: 50
+                -
+                  handle: short_description
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - orderedlist
+                      - quote
+                      - link
+                      - image
+                      - table
+                    automatic_line_breaks: true
+                    type: markdown
+                    display: 'Short Description'
+                -
+                  handle: location_type
+                  field:
+                    max_items: 1
+                    create: true
+                    taxonomies:
+                      - location_types
+                    type: terms
+                    display: 'Location Type'

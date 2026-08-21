@@ -1,0 +1,14 @@
+{{# Renders group_media: image, video, or carousel. Pass `class` for spacing on the media wrapper. #}}
+{{ if media_type == 'image' }}
+    <div class="aspect-video relative overflow-hidden {{ class }}">
+        {{ glide :src="image" width="2400" height="1600" }}
+            <img src="{{ url }}" alt="{{ alt }}" width="2400" height="1600" class="w-full block absolute inset-0 object-cover" loading="lazy">
+        {{ /glide }}
+    </div>
+{{ elseif media_type == 'video' }}
+    <div class="aspect-video overflow-hidden relative {{ class }}">
+        <iframe title="Video" class="w-full h-full absolute inset-0" src="{{ video | embed_url }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+{{ elseif media_type == 'carousel' }}
+    {{ partial:partials.carousel :class="class" }}
+{{ /if }}

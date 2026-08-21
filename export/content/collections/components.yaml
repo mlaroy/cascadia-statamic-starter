@@ -1,0 +1,9 @@
+title: Components
+template: default
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets: []
+taxonomies:
+  - component_tags

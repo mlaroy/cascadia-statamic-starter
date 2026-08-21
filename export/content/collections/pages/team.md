@@ -19,6 +19,6 @@ page_blocks:
     link_to_external: false
     linked_entry: 726ad294-cf9c-40fd-b204-277118b5aed5
     background_image: hiker.jpg
-    type: image_callout
+    type: callout_image
     enabled: true
 ---

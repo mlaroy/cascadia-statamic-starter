@@ -2,50 +2,42 @@ import Splide from '@splidejs/splide';
 // or only core styles
 import '@splidejs/splide/css/core';
 
-
-export default (autoPlay = false, items = 1 ) => ({
+export default ({ autoPlay = false, perPage = 1 } = {}) => ({
     init() {
-
-        const slider = new Splide( this.$refs.carousel,  {
+        const slider = new Splide(this.$refs.carousel, {
             useIndex: true,
             arrows: false,
             autoplay: autoPlay,
-            perPage: items,
-            pagination: false
+            perPage: perPage,
+            pagination: false,
         }).mount();
 
         this.totalSlides = slider.length;
 
-        const onSlideChange = index => {
-            // console.log({index});
-            this.activeIndex = index;
-        }
+        // Splide is the only source of truth for the active slide — go()
+        // no-ops at a boundary on a non-looping carousel, so tracking
+        // activeIndex by incrementing it alongside go() (as this used to)
+        // drifts out of sync with what's actually on screen.
+        slider.on('active', (slide) => {
+            this.activeIndex = slide.index;
+            this.updateButtonState();
+        });
 
-        // Bind event listener
-        slider.on('active', (slide) => onSlideChange(slide.index));
         this.carousel = slider;
-
-        // Initialize button state
         this.updateButtonState();
     },
 
-	carousel: null,
+    carousel: null,
     activeIndex: 0,
     totalSlides: 0,
 
-	nextSlide() {
-        const slider = Alpine.raw(this.carousel);
-		slider.go('+')
-        this.activeIndex++;
-        this.updateButtonState();
-	},
+    nextSlide() {
+        Alpine.raw(this.carousel).go('+');
+    },
 
-	prevSlide() {
-		const slider = Alpine.raw(this.carousel);
-		slider.go('-');
-        this.activeIndex--;
-        this.updateButtonState();
-	},
+    prevSlide() {
+        Alpine.raw(this.carousel).go('-');
+    },
 
     updateButtonState() {
         // Disable previous button if at the start
@@ -55,5 +47,5 @@ export default (autoPlay = false, items = 1 ) => ({
     },
 
     isPrevDisabled: false,
-    isNextDisabled: false
+    isNextDisabled: false,
 });

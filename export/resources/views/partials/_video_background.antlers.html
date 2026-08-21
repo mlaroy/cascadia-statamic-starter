@@ -1,0 +1,43 @@
+{{ if video_source == 'youtube' }}
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <div class="absolute inset-0 pointer-events-none flex items-center justify-center isolate">
+        <div class="relative w-[150vw] scale-[150%] aspect-video xl:scale-100">
+            <div id="youtube-player" class="absolute inset-0 w-full h-full">
+                <!-- YouTube JS API will inject iframe here -->
+            </div>
+        </div>
+    </div>
+{{ elseif video_source == 'vimeo' }}
+    <div class="absolute inset-0 pointer-events-none flex items-center justify-center isolate">
+        <div id="player" class="relative w-[150vw] aspect-video scale-[150%] xl:scale-100">
+            <!-- iframe gets injected by Vimeo JS into here -->
+        </div>
+    </div>
+{{ else }}
+    <div id="inline-player" class="absolute inset-0 pointer-events-none flex items-center justify-center isolate">
+        <video
+            tabindex="-1"
+            class="relative w-[200vw] aspect-video scale-[200%] xl:w-[150vw] xl:scale-100"
+            x-ref="video"
+            preload="auto"
+            muted
+            loop
+            autoplay
+            playsinline
+            webkit-playsinline
+            controls
+            disablepictureinpicture
+            x-on:loadeddata="
+                if ($el.webkitEnterFullscreen) {
+                    $el.webkitEnterFullscreen = function() { return false; };
+                }
+                if ($el.requestFullscreen) {
+                    $el.requestFullscreen = function() { return false; };
+                }
+            "
+        >
+            <source src="{{ video_file }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+{{ /if }}

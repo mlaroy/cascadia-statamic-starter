@@ -1,4 +1,4 @@
-<s:partial:page_blocks.component>
+{{ partial:partials.section }}
     <div class="callout-grid py-16 lg:py-24 bg-surface">
         <div class="container space-y-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
@@ -6,14 +6,14 @@
                     <div class="flex gap-8">
                         {{ if grid_image }}
                             <div class="flex-shrink-0 flex items-start justify-center mr-4">
-                                <s:glide:grid_image width="200" height="200">
+                                {{ glide:grid_image width="200" height="200" }}
                                     <img src="{{ url }}" alt="{{ alt }}" width="200" height="200" class="object-cover object-center block size-20">
-                                </s:glide:grid_image>
+                                {{ /glide:grid_image }}
                             </div>
                         {{ /if }}
                         <div>
                             <h3 class="text-xl lg:text-2xl font-semibold mb-4 text-body text-balance">{{ grid_headline }}</h3>
-                            <div class="mb-4 text-body-muted text-lg text-balance">
+                            <div class="mb-4 text-body-muted-dark text-lg text-balance">
                                 {{ grid_content }}
                             </div>
                         </div>
@@ -22,4 +22,4 @@
             </div>
         </div>
     </div>
-</s:partial:page_blocks.component>
+{{ /partial:partials.section }}

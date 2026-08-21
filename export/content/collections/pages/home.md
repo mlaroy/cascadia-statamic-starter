@@ -11,7 +11,7 @@ page_blocks:
     id: ltgcaf0k
     main_heading: 'Cascadia Starter'
     sub_heading: 'A Starter Kit for Statamic, featuring TailwindCSS and AlpineJS'
-    type: hero
+    type: content_video_hero
     enabled: true
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     cta_text: 'Read More About It'
@@ -32,7 +32,7 @@ page_blocks:
     id: lu1r429d
     heading: 'Welcome to the Cascadia Starter Kit'
     intro_layout: horizontal
-    type: intro
+    type: content_intro
     enabled: true
     theme: accent
     link_style: inverted
@@ -69,14 +69,14 @@ page_blocks:
       - north_face.png
       - arcteryx.png
       - mec_png.png
-    type: logo_cloud
+    type: content_logo_cloud
     enabled: true
   -
     id: mfygckxt
     theme: default
     media_type: image
     video_field: 'https://www.youtube.com/watch?v=KifwE5K0OmI'
-    type: large_media
+    type: content_large_media
     enabled: true
     eyebrow_text: 'Large Media'
     heading: 'An Image or a Video'
@@ -173,7 +173,7 @@ page_blocks:
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.'
         type: tab_item
         enabled: true
-    type: tabs_explorer
+    type: content_tabs_explorer
     enabled: true
     theme: dark
     eyebrow_text: Explore
@@ -267,13 +267,13 @@ page_blocks:
         link_to_external: false
         linked_entry: aa04bb78-a9ca-4a66-8539-87849e850a65
         override_link_text: false
-    type: fifty_split
+    type: content_fifty_split
     enabled: true
     theme: default
   -
     id: lt92fsja
     heading: 'Read Our Latest News'
-    type: blog_teaser
+    type: content_blog_teaser
     enabled: true
     theme: muted
     eyebrow_text: 'Recent Posts'
@@ -292,12 +292,12 @@ page_blocks:
     team_members:
       - a11e131d-fec5-465b-b6aa-7f8eeb329c64
       - a3431075-ed07-448f-8097-2e1ecda20e60
-    type: team_members
+    type: content_team_members
     enabled: true
   -
     id: mfpmd7ot
     theme: dark
-    type: image_callout
+    type: callout_image
     enabled: true
     heading: 'Get to know the Pacific Northwest'
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -393,7 +393,7 @@ page_blocks:
       - skiing.jpg
     auto_play: true
     show_index: false
-    type: image_carousel
+    type: content_image_carousel
     enabled: true
     theme: default
     items_to_show: 1
@@ -438,7 +438,7 @@ page_blocks:
                 text: 'Aliquam sem fringilla ut morbi tincidunt augue. Augue neque gravida in fermentum et sollicitudin ac orci phasellus. Ante metus dictum at tempor commodo ullamcorper a lacus. Eu volutpat odio facilisis mauris sit. Velit aliquet sagittis id consectetur purus ut. Auctor elit sed vulputate mi sit amet mauris.'
         type: accordion_group
         enabled: true
-    type: accordion
+    type: content_accordion
     enabled: true
     theme: muted
     description:
@@ -453,7 +453,7 @@ page_blocks:
     id: lvgwz0kp
     cta_heading: 'Book Your Adventure Now'
     short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    type: cta_bumper
+    type: callout_cta_bumper
     enabled: true
     cta_link: 96920a7d-9b68-47c6-ad50-fe8906b8c6ab
     cta_text: 'Get started'

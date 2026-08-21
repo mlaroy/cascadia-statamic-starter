@@ -1,0 +1,17 @@
+title: 'Group - Team Member'
+fields:
+  -
+    handle: position
+    field:
+      type: text
+      display: Position
+      width: 50
+  -
+    handle: email
+    field:
+      input_type: email
+      type: text
+      display: Email
+      width: 50
+  -
+    import: group_social_links

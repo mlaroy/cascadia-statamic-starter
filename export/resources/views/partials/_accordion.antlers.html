@@ -1,0 +1,30 @@
+{{ items }}
+    <div x-data="{ isOpen: false }" x-id="['collapse']" class="pb-8 [&:not(:first-child)]:pt-8">
+        <button
+            type="button"
+            @click="isOpen = !isOpen"
+            :aria-expanded="isOpen"
+            :aria-controls="$id('collapse')"
+            @keydown.escape.prevent.stop="isOpen = false"
+            class="relative flex w-full text-lg lg:text-xl font-semibold text-body cursor-pointer focus:outline-none focus:ring-1 focus:ring-primary focus:ring-offset-2">
+            {{ heading }}
+
+            <span class="inline-block ml-auto cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 transform" :class="{ 'rotate-180' : isOpen }">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </span>
+        </button>
+
+        <div
+            class="accordion-content"
+            :id="$id('collapse')"
+            x-show="isOpen"
+            x-collapse
+            :aria-hidden="!isOpen">
+            <div class="pt-4 text-lg text-body/80">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+{{ /items }}

@@ -1,0 +1,31 @@
+title: 'Callout - Image'
+fields:
+  -
+    import: group_theme
+  -
+    handle: eyebrow_text
+    field:
+      type: text
+      display: 'Eyebrow Text'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: description
+    field:
+      buttons:
+        - link
+      type: markdown
+      display: Description
+  -
+    import: group_button
+  -
+    handle: background_image
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Background Image'

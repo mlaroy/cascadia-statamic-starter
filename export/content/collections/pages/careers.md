@@ -12,7 +12,7 @@ page_blocks:
     heading: Careers
     link_style: link
     link_to_external: false
-    type: basic_hero
+    type: content_basic_hero
     enabled: false
     description:
       -
@@ -39,7 +39,7 @@ page_blocks:
     link_style: button
     link_to_external: true
     external_link: 'http://statamic.com'
-    type: intro
+    type: content_intro
     enabled: true
     button_text: 'Send Resume'
     override_link_text: false
@@ -60,12 +60,12 @@ page_blocks:
       - 194889ef-8b2d-4135-8f46-50674b7acc20
       - dc87f93a-06a2-4a97-95de-d2cd063b933b
       - edff6d9a-1fbc-4b11-aa04-56e8bf1fb969
-    type: jobs
+    type: content_jobs
     enabled: true
   -
     id: mfpmd7ot
     theme: dark
-    type: image_callout
+    type: callout_image
     enabled: true
     heading: 'Get to know the Pacific Northwest'
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'

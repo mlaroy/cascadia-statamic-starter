@@ -4,9 +4,6 @@ tabs:
     display: Main
     sections:
       -
-        display: Configuration
-        collapsible: true
-        collapsed: false
         fields:
           -
             handle: title
@@ -26,23 +23,11 @@ tabs:
               display: Excerpt
               instructions: 'Displays on index pages and card views.'
           -
-            import: blog_content_with_sets
+            import: group_bard
   sidebar:
     display: Sidebar
-    collapsible: true
-    collapsed: false
     sections:
       -
-        display: SEO
-        collapsible: true
-        collapsed: false
-        fields:
-          -
-            import: seo_fields
-      -
-        display: 'Page Config'
-        collapsible: true
-        collapsed: false
         fields:
           -
             handle: slug

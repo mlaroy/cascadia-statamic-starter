@@ -1,0 +1,13 @@
+title: 'Content - Jobs'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: jobs
+    field:
+      collections:
+        - jobs
+      type: entries
+      display: Jobs

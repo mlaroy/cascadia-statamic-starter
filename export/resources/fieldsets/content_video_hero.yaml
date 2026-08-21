@@ -1,0 +1,115 @@
+title: 'Content - Video Hero'
+fields:
+  -
+    import: group_theme
+  -
+    handle: main_heading
+    field:
+      type: text
+      display: 'Main Heading'
+  -
+    handle: sub_heading
+    field:
+      type: text
+      display: 'Sub Heading'
+  -
+    handle: background_option
+    field:
+      options:
+        -
+          key: image
+          value: Image
+        -
+          key: video
+          value: Video
+      default: image
+      type: radio
+      display: 'Background Media'
+      inline: true
+      width: 50
+  -
+    handle: video_source
+    field:
+      options:
+        -
+          key: vimeo
+          value: Vimeo
+        -
+          key: youtube
+          value: YouTube
+        -
+          key: asset
+          value: 'Video Asset'
+      default: vimeo
+      type: radio
+      display: 'Video Source'
+      inline: true
+      width: 50
+      if:
+        background_option: 'equals video'
+  -
+    handle: background_image
+    field:
+      container: assets
+      type: assets
+      display: 'Background Image'
+      if:
+        background_option: 'equals image'
+  -
+    handle: vimeo_id
+    field:
+      placeholder: '449787858'
+      type: text
+      display: 'Vimeo ID'
+      if:
+        background_option: 'equals video'
+        video_source: 'equals vimeo'
+  -
+    handle: youtube_id
+    field:
+      placeholder: dQw4w9WgXcQ
+      type: text
+      display: 'YouTube ID'
+      if:
+        background_option: 'equals video'
+        video_source: 'equals youtube'
+  -
+    handle: video_file
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Video File'
+      if:
+        background_option: 'equals video'
+        video_source: 'equals asset'
+  -
+    handle: cta_link
+    field:
+      max_items: 1
+      collections:
+        - pages
+      type: entries
+      display: 'CTA Link'
+      width: 50
+  -
+    handle: cta_text
+    field:
+      placeholder: 'Learn more'
+      type: text
+      display: 'CTA Text'
+      width: 50
+  -
+    handle: show_modal
+    field:
+      type: toggle
+      display: 'Show Modal Items?'
+  -
+    import: group_modal
+  -
+    handle: darken_bg
+    field:
+      type: toggle
+      display: 'Darken BG'
+      instructions: 'Enable to add an overlay over the background, to ensure contrast with the text in the foreground.'

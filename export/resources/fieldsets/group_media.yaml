@@ -1,0 +1,76 @@
+title: 'Group - Media'
+fields:
+  -
+    handle: media_type
+    field:
+      options:
+        -
+          key: image
+          value: Image
+        -
+          key: video
+          value: Video
+        -
+          key: carousel
+          value: Carousel
+      default: image
+      type: radio
+      display: 'Media Type'
+      inline: true
+  -
+    handle: image
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: Image
+      if:
+        media_type: 'equals image'
+  -
+    handle: video
+    field:
+      type: video
+      display: Video
+      if:
+        media_type: 'equals video'
+  -
+    handle: images
+    field:
+      max_files: 8
+      mode: grid
+      container: assets
+      type: assets
+      display: Images
+      instructions: "Max 8 images, so that it doesn't get too unwieldy!"
+      if:
+        media_type: 'equals carousel'
+  -
+    handle: auto_play
+    field:
+      type: toggle
+      display: 'Auto Play'
+      width: 33
+      if:
+        media_type: 'equals carousel'
+  -
+    handle: items_to_show
+    field:
+      type: integer
+      display: 'Items to show'
+      width: 33
+      default: '1'
+      validate:
+        - 'min:1'
+        - 'max:4'
+      if:
+        media_type: 'equals carousel'
+  -
+    handle: show_index
+    field:
+      type: toggle
+      display: 'Show Index'
+      instructions: 'Toggle to display current index, and total number of images'
+      width: 33
+      if:
+        media_type: 'equals carousel'

@@ -1,0 +1,16 @@
+title: 'Content - Basic Hero'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: featured_image
+    field:
+      max_files: 1
+      mode: grid
+      container: assets
+      type: assets
+      display: 'Featured Image'
+  -
+    import: group_button

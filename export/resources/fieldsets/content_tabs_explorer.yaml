@@ -1,0 +1,45 @@
+title: 'Content - Tabs Explorer'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: tab_items
+    field:
+      type: replicator
+      display: 'Tab Items'
+      sets:
+        tabs:
+          display: Tabs
+          sets:
+            tab_item:
+              display: 'Tab Item'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    instructions: 'This is used as the Tab text to activate this item'
+                -
+                  handle: image
+                  field:
+                    mode: list
+                    container: assets
+                    allow_uploads: true
+                    show_filename: true
+                    show_set_alt: true
+                    type: assets
+                    display: Image
+                -
+                  handle: description
+                  field:
+                    buttons:
+                      - h4
+                      - bold
+                      - italic
+                      - link
+                    remove_empty_nodes: false
+                    type: bard
+                    display: Description

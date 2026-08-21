@@ -1,0 +1,39 @@
+title: 'Content - Stats'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: stat_items
+    field:
+      collapse: true
+      max_sets: 3
+      type: replicator
+      display: 'Stat Items'
+      sets:
+        stats:
+          display: Stats
+          sets:
+            stat_item:
+              display: 'Stat Item'
+              fields:
+                -
+                  handle: stat_value
+                  field:
+                    type: text
+                    display: 'Stat Value'
+                    instructions: 'Large text, the most prominent part!'
+                -
+                  handle: stat_heading
+                  field:
+                    type: text
+                    display: 'Stat Heading'
+                -
+                  handle: stat_description
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                    type: markdown
+                    display: 'Stat Description'

@@ -1,0 +1,8 @@
+title: 'Content - Image Carousel'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    import: set_image_carousel

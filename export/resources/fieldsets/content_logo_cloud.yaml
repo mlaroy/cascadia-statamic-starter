@@ -1,0 +1,14 @@
+title: 'Content - Logo Cloud'
+fields:
+  -
+    import: group_theme
+  -
+    import: group_content
+  -
+    handle: logos
+    field:
+      max_files: 6
+      mode: grid
+      container: assets
+      type: assets
+      display: Logos

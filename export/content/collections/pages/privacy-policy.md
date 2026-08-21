@@ -242,6 +242,6 @@ page_blocks:
           -
             type: text
             text: 'If you are interested in learning more please contact us.'
-    type: basic_content
+    type: content_basic_content
     enabled: true
 ---

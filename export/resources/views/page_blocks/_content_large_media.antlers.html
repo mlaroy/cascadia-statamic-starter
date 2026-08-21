@@ -1,0 +1,16 @@
+{{ partial:partials.section }}
+    <div class="large-media-container py-16 lg:py-24 bg-surface text-body">
+        <div class="container">
+            <div>
+                {{ partial:partials.content_group
+                    :eyebrow_text="eyebrow_text"
+                    :heading="heading"
+                    :content="description"
+                    center="desktop"
+                }}
+            </div>
+
+            {{ partial:partials.media class="mt-8 lg:mt-16" }}
+        </div>
+    </div>
+{{ /partial:partials.section }}

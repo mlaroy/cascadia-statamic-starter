@@ -1,0 +1,25 @@
+{{ partial:partials.section }}
+    <div class="fifty-fifty-container py-16 lg:py-24 bg-surface">
+        <div class="container space-y-16">
+            {{ sections }}
+                <div class="fifty-fifty-item flex flex-col {{ orientation == 'left' ? 'lg:flex-row-reverse' : 'lg:flex-row' }} lg:gap-8 mx-auto justify-center items-center">
+                    <div class="w-full lg:w-1/2">
+                        {{ partial:partials.media class="lg:aspect-[4/3] bg-black" }}
+                    </div>
+                    <div class="h-full w-full lg:w-1/2 p-8 lg:px-12">
+                        <div>
+                            {{ partial:partials.content_group
+                                :eyebrow_text="eyebrow_text"
+                                :heading="heading"
+                                :content="description"
+                                heading_tag="h3"
+                            }}
+
+                            {{ partial:partials.link }}
+                        </div>
+                    </div>
+                </div>
+            {{ /sections }}
+        </div>
+    </div>
+{{ /partial:partials.section }}

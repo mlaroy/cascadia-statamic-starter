@@ -1,0 +1,18 @@
+title: 'Content - Intro'
+fields:
+  -
+    import: group_theme
+  -
+    handle: intro_layout
+    field:
+      options:
+        vertical: Vertical
+        horizontal: Horizontal
+      inline: true
+      default: vertical
+      type: radio
+      display: Layout
+  -
+    import: group_content
+  -
+    import: group_button

@@ -1,0 +1,19 @@
+title: 'Set - Buttons'
+fields:
+  -
+    handle: buttons
+    field:
+      type: replicator
+      display: Buttons
+      collapse: true
+      max_sets: 3
+      sets:
+        buttons:
+          display: Buttons
+          sets:
+            button:
+              display: Button
+              icon: link
+              fields:
+                -
+                  import: group_button

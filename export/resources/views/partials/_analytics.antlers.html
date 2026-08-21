@@ -1,0 +1,22 @@
+{{ if environment == 'production' }}
+
+    {{ if site_config:enable_fathom && config:app:fathom_site_id }}
+    <!-- Fathom Analytics -->
+    <script src="https://cdn.usefathom.com/script.js"
+        data-site="{{ config:app:fathom_site_id }}"
+        defer></script>
+    <!-- End: Fathom Analytics -->
+    {{ /if }}
+
+    {{ if enable_ga && config:app:google_analytics_id }}
+    <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config:app:google_analytics_id }}"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ config:app:google_analytics_id }}', { 'anonymize_ip': true });
+        </script>
+    <!-- End: Google Analytics -->
+    {{ /if }}
+{{ /if }}

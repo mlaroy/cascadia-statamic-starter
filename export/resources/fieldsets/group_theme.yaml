@@ -1,0 +1,26 @@
+title: 'Group - Theme'
+fields:
+  -
+    handle: theme
+    field:
+      options:
+        -
+          key: default
+          value: 'Default (light)'
+        -
+          key: dark
+          value: Dark
+        -
+          key: accent
+          value: Accent
+        -
+          key: accent-dark
+          value: 'Accent Dark'
+        -
+          key: muted
+          value: Muted
+      max_items: 1
+      default: default
+      type: select
+      display: Theme
+      instructions: 'Choose a color scheme for this block'

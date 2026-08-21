@@ -112,15 +112,38 @@
     --color-button-ghost-hover: var(--color-soft);
 }
 
+/* Accent Dark theme override */
 .theme-accent-dark {
+    --color-body: var(--color-light);
+    --color-body-muted: var(--color-soft);
+
+    --color-heading: var(--color-body);
+
+    --color-eyebrow: var(--color-highlight);
+
     --color-surface: var(--color-accent-dark);
-    --color-body: var(--color-muted);
-    --color-link: var(--color-white);
-    --color-heading: var(--color-muted);
+    --color-surface-muted: var(--color-highlight-dark);
+
+    --color-surface-inverted: var(--color-light);
+    --color-surface-inverted-muted: var(--color-soft);
+
+    --color-border: var(--color-soft);
+    --color-border-muted: var(--color-muted);
+
+    --color-link: var(--color-highlight);
+    --color-link-hover: var(--color-accent);
 
     --color-button: var(--color-white);
+    --color-button-bg: var(--color-accent);
+    --color-button-hover: var(--color-dark);
+    --color-button-hover-bg: var(--color-highlight);
 
-    --color-button-ghost: var(--color-white);
+    --color-button-inverted: var(--color-surface);
+    --color-button-inverted-hover: var(--color-surface);
+    --color-button-inverted-hover-bg: var(--color-highlight);
+
+    --color-button-ghost: var(--color-body);
+    --color-button-ghost-bg: transparent;
     --color-button-ghost-hover: var(--color-soft);
 }
 
