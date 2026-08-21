@@ -44,13 +44,6 @@ return [
             'width' => 100,
         ],
         [
-            'type' => 'form',
-            'form' => 'contact_form',
-            'fields' => ['name', 'email'],
-            'limit' => 3,
-            'width' => 100,
-        ],
-        [
             'type' => 'collection',
             'collection' => 'blog',
             'limit' => 5,
