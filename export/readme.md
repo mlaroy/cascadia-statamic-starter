@@ -35,6 +35,17 @@ In addition, it has a few Sets built in that you can insert into any Bard field:
 
 Cascadia leverages Alpine.js and TailwindCSS, such that you can configure the views to your liking. For the carousel, it includes [Splide](https://splidejs.com/)
 
+## AI-Assisted Development
+
+Every component follows a strict, checkable convention — a name chain of matching fieldset, builder registration, view partial, and catalog entry — so that both developers and AI coding agents can work with the component system predictably. See `docs/COMPONENT-SYSTEM.md` for the full explanation.
+
+- **The component catalog** (`content/collections/components`, tagged via the `component_tags` taxonomy) documents what each component is for, when to use it over a sibling, and what content it needs — editable in the control panel, and readable by an AI assistant deciding which components fit a content brief.
+- **`php artisan components:audit`** checks the whole system against the conventions (name chain, builder purity, theme consistency) and exits non-zero on failure, so it can run in CI.
+- **`php artisan components:sync [--prune]`** stubs missing catalog entries and reports (or prunes) orphaned ones.
+- **`php artisan components:make <handle> --group=<group> --icon=<icon>`** scaffolds a new component's fieldset, builder registration, partial, and catalog entry in one step.
+- All three are also reachable from **System → Components** in the control panel, and from the command palette (⌘K → "Cascadia").
+- **[Laravel Boost](https://boost.laravel.com/) + [statamic-boost](https://github.com/chrisvasey/statamic-boost)** are included, giving AI coding agents (Claude Code, Cursor, etc.) MCP tools for querying the component catalog and running the conventions audit, plus guidelines that teach them the conventions automatically.
+
 ## Navigation
 
 Cascadia comes with 2 separate Navs out of the box, with the secondary nav being placed either in a smaller menu above the main nav, or in an off-canvas drawer, which can be configured in the Globals -> Site Config.

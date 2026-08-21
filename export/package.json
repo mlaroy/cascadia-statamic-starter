@@ -6,7 +6,7 @@
         "build": "vite build",
         "cp:dev": "vite --config vite-cp.config.js",
         "cp:build": "vite build --config vite-cp.config.js",
-        "kit:export": "php scripts/export-kit.php ../starter-kit-tailwind-alpine"
+        "kit:export": "php please starter-kit:export ../starter-kit-tailwind-alpine --clear"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.1.7",
