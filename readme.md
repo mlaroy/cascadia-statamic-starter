@@ -46,6 +46,17 @@ Every component follows a strict, checkable convention — a name chain of match
 - All three are also reachable from **System → Components** in the control panel, and from the command palette (⌘K → "Cascadia").
 - Optionally, adding **[Laravel Boost](https://boost.laravel.com/) + [statamic-boost](https://github.com/chrisvasey/statamic-boost)** (`composer require chrisvasey/statamic-boost` — not installed by default; check its compatibility with your Statamic version first) gives AI coding agents (Claude Code, Cursor, etc.) MCP tools for querying the component catalog and running the conventions audit, plus guidelines that teach them the conventions automatically. `config/boost.php` and `.ai/guidelines/statamic.blade.php` are already set up for when you do.
 
+### Adding Scout
+
+This kit has no dependency on [Scout](https://statamic.com/addons/mlaroy/scout) (Cascadia's editor-facing content assistant) and doesn't require or configure it — they're built to compose, not to need each other. If you do add it, point it at this kit's own conventions by publishing its config (`php artisan vendor:publish --tag=scout-config`) and setting:
+
+```php
+'page_builder_field' => 'page_blocks',
+'catalog_collection' => 'components',
+```
+
+Scout's own **System → Scout** page shows whether these are set, so it's easy to check without digging through config files.
+
 ## Navigation
 
 Cascadia comes with 2 separate Navs out of the box, with the secondary nav being placed either in a smaller menu above the main nav, or in an off-canvas drawer, which can be configured in the Globals -> Site Config.
