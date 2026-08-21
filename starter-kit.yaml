@@ -15,7 +15,7 @@ export_paths:
   - public
   - app
   - routes
-  - scripts
+  - scripts/patch-statamic-boost.php
   - .ai
   - docs
   - package.json
