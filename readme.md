@@ -44,7 +44,7 @@ Every component follows a strict, checkable convention — a name chain of match
 - **`php artisan components:sync [--prune]`** stubs missing catalog entries and reports (or prunes) orphaned ones.
 - **`php artisan components:make <handle> --group=<group> --icon=<icon>`** scaffolds a new component's fieldset, builder registration, partial, and catalog entry in one step.
 - All three are also reachable from **System → Components** in the control panel, and from the command palette (⌘K → "Cascadia").
-- **[Laravel Boost](https://boost.laravel.com/) + [statamic-boost](https://github.com/chrisvasey/statamic-boost)** are included, giving AI coding agents (Claude Code, Cursor, etc.) MCP tools for querying the component catalog and running the conventions audit, plus guidelines that teach them the conventions automatically.
+- Optionally, adding **[Laravel Boost](https://boost.laravel.com/) + [statamic-boost](https://github.com/chrisvasey/statamic-boost)** (`composer require chrisvasey/statamic-boost` — not installed by default; check its compatibility with your Statamic version first) gives AI coding agents (Claude Code, Cursor, etc.) MCP tools for querying the component catalog and running the conventions audit, plus guidelines that teach them the conventions automatically. `config/boost.php` and `.ai/guidelines/statamic.blade.php` are already set up for when you do.
 
 ## Navigation
 

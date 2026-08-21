@@ -1,5 +1,11 @@
 # Changelog
 
+## [3.0.1] - 2026-08-21
+
+### Fixed
+
+- **Breaking install failure:** `chrisvasey/statamic-boost` was a required dependency in 3.0.0, but has no release compatible with current `statamic/cms` (v6.28+) and its Inertia requirement — installing or updating to 3.0.0 failed outright with an unresolvable dependency conflict. It's no longer a required dependency; add it yourself with `composer require chrisvasey/statamic-boost` once upstream catches up (`config/boost.php` and `.ai/guidelines/statamic.blade.php` are already set up for when you do).
+
 ## [3.0.0] - 2026-08-21
 
 ### Changed
@@ -16,7 +22,6 @@
 - Three new Bard sets: Image, Embed, and Buttons.
 - An `accent-dark` theme option.
 - An `EnvironmentInfo` dashboard widget that flags non-production environments.
-- `chrisvasey/statamic-boost` for AI-assisted development against this kit's conventions.
 
 ### Fixed
 

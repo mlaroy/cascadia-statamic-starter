@@ -25,4 +25,3 @@ export_paths:
   - vite-cp.config.js
 dependencies:
   aerni/advanced-seo: ^3.2
-  chrisvasey/statamic-boost: ^1.2
